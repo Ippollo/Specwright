@@ -1,0 +1,31 @@
+{
+  "success_example": {
+    "data": {
+      "id": "123",
+      "name": "Alice",
+      "role": "admin"
+    }
+  },
+  "paginated_example": {
+    "data": [
+      { "id": "1", "name": "Alice" },
+      { "id": "2", "name": "Bob" }
+    ],
+    "meta": {
+      "page": 1,
+      "limit": 20,
+      "total": 45,
+      "has_more": true
+    }
+  },
+  "error_example": {
+    "error": {
+      "code": "VALIDATION_ERROR",
+      "message": "The request data was invalid.",
+      "details": [
+        { "field": "email", "message": "Invalid email format" },
+        { "field": "password", "message": "Too short (min 8 chars)" }
+      ]
+    }
+  }
+}
