@@ -1,27 +1,30 @@
-# Agent Skills Library
+# Antigravity Agentic Toolkit
 
-This repository contains a collection of reusable skills and protocols designed to extend the capabilities of AI agents.
+Comprehensive library of Skills, Agents, and Workflows for autonomous AI development.
 
 ## Structure
 
-The library uses a **flat structure** for efficiency. All skills are located in the root directory:
-
-```
-c:/Projects/skills/
-├── CATALOG.md          # Complete index of all skills by category
-├── [skill-name]/       # Individual skill folders
-│   ├── SKILL.md        # Main instruction file
-│   └── scripts/        # Supporting Python/JS scripts
-└── ...
-```
+- **[Agents](./agents/)**: Specialized personas (e.g., `project-planner`, `frontend-specialist`) that embody expert roles.
+- **[Workflows](./workflows/)**: Standard operating procedures (e.g., `/plan`, `/debug`) for common tasks.
+- **[Skills](./skills/)**: Atomic capabilities (e.g., `api-design-patterns`, `react-best-practices`) used by Agents.
 
 ## Getting Started
 
-1.  **Read the Catalog**: Start with [CATALOG.md](CATALOG.md) to see what's available.
-2.  **Load a Skill**: Use `view_file` on `[skill-name]/SKILL.md` to read the instructions.
-3.  **Execute**: Follow the protocol or run the scripts as defined in the skill file.
+1.  **Plan**: Use `/plan` to generate a roadmap.
+    ```bash
+    /plan "Build a new e-commerce checkout"
+    ```
+2.  **Execute**: Use specific workflows to implement.
+    ```bash
+    /design "Checkout UI with Tailwind"
+    /backend "Stripe integration API"
+    ```
+3.  **Verify**: Ensure quality.
+    ```bash
+    /test "Checkout flow"
+    /polish
+    ```
 
-## Governance
+## Catalog
 
-- **Adding Skills**: Follow the [Skill Builder](./skill-builder/SKILL.md) protocol.
-- **Managing Library**: Refer to [Skill Management](./skill-management/SKILL.md).
+See [CATALOG.md](./CATALOG.md) for a full index of available capabilities.

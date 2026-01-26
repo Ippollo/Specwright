@@ -19,7 +19,7 @@ Before starting, analyze the user request to determine the correct mode.
     - Is the user asking to _improve_, _fix_, or _audit_ an existing skill?
 
 2.  **Check Catalog**:
-    - Read `c:/Projects/skills/CATALOG.md`.
+    - Read `c:\Projects\agentic-toolkit\CATALOG.md`.
     - **No Match** → Go to **[CREATE Mode](#create-mode)**.
     - **Partial/Full Match** → Go to **[MODIFY Mode](#modify-mode)**.
 
@@ -32,7 +32,7 @@ Use when building a new skill from scratch.
 ### Step 1: Validation
 
 - **Name**: 1-64 lowercase alphanumeric chars + hyphens (`a-z-`). No consecutive hyphens.
-- **Conflict Check**: Verify `c:/Projects/skills/<skill-name>` does not exist.
+- **Conflict Check**: Verify `c:\Projects\agentic-toolkit\<skill-name>` does not exist.
 
 ### Step 2: Description
 
@@ -49,13 +49,13 @@ Ask user to choose a template based on complexity:
 
 ### Step 4: Generation
 
-1.  **Create Directory**: `c:/Projects/skills/<skill-name>/`
+1.  **Create Directory**: `c:\Projects\agentic-toolkit\<skill-name>\`
 2.  **Write SKILL.md**: Use the selected template, populated with user's name/description and custom instructions.
 3.  **Create Subdirectories**: `scripts/`, `resources/`, `docs/` (if Intermediate/Advanced).
 
 ### Step 5: Catalog Update
 
-- Append the new skill to `c:/Projects/skills/CATALOG.md`.
+- Append the new skill to `c:\Projects\agentic-toolkit\CATALOG.md`.
 - Format: `- [skill-name]: <description>`
 
 ---
@@ -104,7 +104,7 @@ Use this to certify a skill as "Production Ready":
 
 **Structure**:
 
-- [ ] Located at `c:/Projects/skills/<skill-name>/` (No nested skills)
+- [ ] Located at `c:\Projects\agentic-toolkit\<skill-name>\` (No nested skills)
 - [ ] `SKILL.md` is the main entry point
 
 **Progressive Disclosure**:
@@ -116,7 +116,7 @@ Use this to certify a skill as "Production Ready":
 ### Directory Structure
 
 ```
-c:/Projects/skills/<skill-name>/
+c:\Projects\agentic-toolkit\<skill-name>\
 ├── SKILL.md                 # CORE: Logic & Instructions
 ├── README.md                # OPTIONAL: Human-readable docs
 ├── scripts/                 # OPTIONAL: Executable tools (setup.sh, run.py)

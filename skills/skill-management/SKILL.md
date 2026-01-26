@@ -6,7 +6,7 @@ description: Guidelines for managing, organizing, and expanding the Agent Skills
 
 # Skill Management & Organization
 
-This skill defines the protocols for maintaining the `c:/Projects/Skills` library.
+This skill defines the protocols for maintaining the `c:\Projects\agentic-toolkit` library.
 
 ## Organization Structure
 
@@ -21,7 +21,7 @@ The library uses a **categorical structure** to organize skills. All skills must
 
 ### 2. The Master Catalog
 
-A `CATALOG.md` file MUST be maintained in the root (`c:/Projects/Skills/`).
+A `CATALOG.md` file MUST be maintained in the root (`c:\Projects\agentic-toolkit`).
 
 - **Purpose**: Provides a single index for the Agent to discover available skills.
 - **Maintenance**:
@@ -53,7 +53,7 @@ Before marking a skill as **Active**, ensure it meets these criteria:
 - [ ] **Valid Frontmatter**: `SKILL.md` must have `schema_version`, `name` (kebab-case), and `description`.
 - [ ] **Clear Scope**: The description is concise (under 100 chars) and actionable.
 - [ ] **Categorization**: The skill is placed in the correct `design`, `development`, `meta`, or `testing` folder.
-- [ ] **Cataloged**: An entry exists in `c:/Projects/skills/CATALOG.md` in the correct alphabetical position.
+- [ ] **Cataloged**: An entry exists in `c:\Projects\agentic-toolkit\CATALOG.md` in the correct alphabetical position.
 - [ ] **No Overlaps**: The skill does not duplicate functionality of an existing skill. If it does, follow the "Handling Overlaps" protocol.
 
 ## Handling Overlaps
