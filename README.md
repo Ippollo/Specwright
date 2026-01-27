@@ -8,6 +8,32 @@ Comprehensive library of Skills, Agents, and Workflows for autonomous AI develop
 - **[Workflows](./workflows/)**: Standard operating procedures (e.g., `/plan`, `/debug`) for common tasks.
 - **[Skills](./skills/)**: Atomic capabilities (e.g., `api-design-patterns`, `react-best-practices`) used by Agents.
 
+## Installation
+
+To add the toolkit to your current project, run the appropriate command in your terminal:
+
+### Windows (PowerShell)
+
+```bash
+iwr -useb https://raw.githubusercontent.com/Ippollo/skills/main/install.ps1 | iex
+```
+
+### macOS / Linux (Bash)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Ippollo/skills/main/install.sh | bash
+```
+
+## Global Setup (Developers)
+
+If you want the workflows available in **every** project without manual installation, you can link your local repository to your global Antigravity configuration:
+
+```powershell
+./scripts/make-global.ps1
+```
+
+---
+
 ## Getting Started
 
 1.  **Principles**: Set project guardrails.
