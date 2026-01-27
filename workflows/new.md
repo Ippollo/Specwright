@@ -6,6 +6,12 @@ description: Initialize a new change folder with proposal template.
 
 **Goal**: Start a new feature or bug fix with its own isolated folder. **This is the required starting point for all project work (planning and execution).**
 
+## When to Use
+
+- **Always** before starting any new task, feature, or bug fix.
+- To prevent changes from leaking into other active work folders.
+- When you want a clean slate for planning.
+
 ## Steps
 
 1. **Invoke Agent**: Use `project-planner` or current context.

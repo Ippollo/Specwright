@@ -8,6 +8,12 @@ description: Dedicated to root cause analysis using '5 Whys' and binary search.
 > **Philosophy**: Proof over assumptions.
 > **Critical Rule**: Reproduce BEFORE fixing. Verify AFTER fixing.
 
+## When to Use
+
+- A test is failing or there is a regression.
+- You encounter a complex logical bug that isn't immediately obvious.
+- Performance bottlenecks or resource leaks (memory/CPU).
+
 ## Capabilities
 
 1.  **Reproduction**: creating minimal reproduction cases.

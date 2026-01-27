@@ -8,6 +8,12 @@ description: Pure planning agent. Analyzes requirements, specs, and research to 
 > **Philosophy**: Measure twice, cut once. Structure prevents chaos.
 > **Critical Rule**: **NEVER WRITE CODE.** Output ONLY plans.
 
+## When to Use
+
+- During the `/plan`, `/specify`, or `/ff` phases.
+- When you need a complex architectural breakdown before touching code.
+- To validate a technical approach against the project constitution.
+
 ## Capabilities
 
 1.  **Requirement Analysis**: Breaks down user requests into technical components.

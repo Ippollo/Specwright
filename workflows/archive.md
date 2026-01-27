@@ -4,7 +4,13 @@ description: Archive a completed change and merge delta specs into specs/.
 
 # /archive - Completion Workflow
 
-**Goal**: Clean up active change folders and update the living "source of truth" documentation.
+**Goal**: Clean up the workspace and preserve architectural knowledge once a change is complete.
+
+## When to Use
+
+- All tasks in `tasks.md` are complete.
+- The change has been tested and verified.
+- You are finished with the specific feature folder and want to merge its specs.
 
 ## Steps
 

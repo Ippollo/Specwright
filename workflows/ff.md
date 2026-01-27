@@ -6,6 +6,12 @@ description: Fast-forward: Generate all planning artifacts (proposal, specs, des
 
 **Goal**: Skip the step-by-step artifact creation and generate all planning documents at once.
 
+## When to Use
+
+- You have a clear idea and want to get to coding faster.
+- Small to medium features where meticulous specification refinement isn't needed.
+- You've already filled out the `proposal.md` and are ready to execute.
+
 ## Steps
 
 1. **Invoke Agent**: Use the `project-planner` agent.

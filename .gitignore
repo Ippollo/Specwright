@@ -1,0 +1,28 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+.nova/
+.zed/
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+
+# Project specific
+.gemini/
+.agent/
+!/.agent/workflows/
+node_modules/
+dist/
+build/
+bin/
+obj/
+out/
