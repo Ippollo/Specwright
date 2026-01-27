@@ -45,9 +45,16 @@ Skills related to quality assurance and verification.
 
 ## Meta
 
-Skills related to agent processes, governance, and library management.
+Skills and workflows related to agent processes, governance, and library management.
 
-- [documentation-standards](./skills/documentation-standards/SKILL.md): Comprehensive documentation protocols with decision tree, templates for README/Changelog/ADR/Gotchas, and quality checklists.
+- [/constitution](./workflows/constitution.md): Workflow for establishing persistent project principles and guardrails.
+- [/investigate](./workflows/investigate.md): Deep codebase investigation to understand existing patterns before planning.
+- [/new](./workflows/new.md): Workflow for initializing a new change folder with proposal templates.
+- [/specify](./workflows/specify.md): Workflow for creating feature specifications with prioritized user stories.
+- [/clarify](./workflows/clarify.md): Structured gap-filling workflow for refining specifications.
+- [/ff](./workflows/ff.md): Fast-forward workflow to generate all planning artifacts in one pass.
+- [/archive](./workflows/archive.md): Workflow for archiving completed changes and merging living specs.
+- [documentation-standards](./skills/documentation-standards/SKILL.md): Comprehensive documentation protocols with templates for SPEC, CONSTITUTION, ADR, and quality checklists.
 - [prompt-engineering](./skills/prompt-engineering/SKILL.md): Techniques and patterns for effective LLM prompting.
 - [second-opinion](./skills/second-opinion/SKILL.md): Expert review protocol for stress-testing plans and decisions.
 - [skill-builder](./skills/skill-builder/SKILL.md): Gap detection and interactive wizard for creating new skills.

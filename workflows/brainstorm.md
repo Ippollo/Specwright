@@ -112,4 +112,11 @@ What direction would you like to explore?
 - **No code** - this is about ideas, not implementation
 - **Visual when helpful** - use diagrams for architecture
 - **Honest tradeoffs** - don't hide complexity
-- **Defer to user** - present options, let them decide
+- **Next Steps** - suggest `/investigate` for technical analysis or `/new` to start planning
+
+## Next Steps
+
+When direction is clear:
+
+- Use `/investigate` for technical deep-dives into existing code
+- Use `/new [name]` to initialize a change folder

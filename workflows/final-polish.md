@@ -22,4 +22,4 @@ description: Pre-submission cleanup and verification checklist
     - Agent runs final lint/test checks.
 4.  **Handoff**:
     - If verified, Agent explicitly notifies user:
-      > "Code verified. Ready for deployment via `/deploy`".
+      > "Code verified. Ready for deployment via `/deploy` or archive via `/archive`".

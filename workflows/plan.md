@@ -1,26 +1,32 @@
 ---
-description: Create project plan using project-planner agent. No code writing - only plan file generation.
+description: Create project plan and research using project-planner agent. No code writing.
 ---
 
 # /plan - Project Planning Mode
 
-**Goal**: Create a detailed implementation plan.
+**Goal**: Create a detailed implementation plan and research document.
 
 ## Steps
 
 1.  **Invoke Agent**: Use the `project-planner` agent.
     - Path: `../agents/project-planner.md`
-2.  **Context**: Provide the user's request.
+2.  **Context**:
+    - Provide user's request.
+    - Reference `docs/CONSTITUTION.md` (principles).
+    - Reference `changes/{slug}/specs/` (requirements).
 3.  **Execution**:
-    - The agent will analyze the request.
-    - The agent will generate `docs/PLAN-{slug}.md`.
+    - Agent analyzes against principles and requirements.
+    - Agent performs technical research.
+    - Agent generates `changes/{slug}/research.md`.
+    - Agent generates `changes/{slug}/design.md`.
+    - Agent generates `changes/{slug}/tasks.md` with dependency-aware tasks.
 4.  **Completion**:
-    - Agent notifies user of the plan file.
-    - Agent suggests next steps (e.g., "Review plan, then run /create").
+    - Agent notifies user of generated files.
+    - Agent suggests review, then moving to implementation.
 
 ## Usage
 
 ```bash
-/plan "Build a new login page with JWT"
-/plan "Refactor the backend for performance"
+/plan "Build feature based on SPEC-auth-v1"
+/plan "Refactor backend for performance"
 ```

@@ -10,27 +10,38 @@ Comprehensive library of Skills, Agents, and Workflows for autonomous AI develop
 
 ## Getting Started
 
-1.  **Ideate**: Use `/brainstorm` to explore options.
+1.  **Principles**: Set project guardrails.
     ```bash
-    /brainstorm "Authentication system for my app"
+    /constitution
     ```
-2.  **Plan**: Use `/plan` to generate a roadmap.
+2.  **Ideate**: Compare high-level options.
     ```bash
-    /plan "Build a new e-commerce checkout"
+    /brainstorm "Authentication approach"
     ```
-3.  **Execute**: Use specific workflows to implement.
+3.  **Investigate**: Deep-dive into existing code (if needed).
     ```bash
-    /design "Checkout UI with Tailwind"
-    /backend "Stripe integration API"
+    /investigate "Current auth implementation"
     ```
-4.  **Verify**: Ensure quality.
+4.  **New Change**: Initialize isolated change folder.
     ```bash
-    /test "Checkout flow"
+    /new feature-name
+    ```
+5.  **Plan**: Choose your pace.
+    ```bash
+    /ff  # Fast: Generate all planning docs at once
+    # OR
+    /specify -> /clarify -> /plan  # Meticulous: Step-by-step
+    ```
+6.  **Execute**: Implement from task list.
+    ```bash
+    # Work through changes/feature-name/tasks.md
+    /design "Implementation details"
+    ```
+7.  **Verify & Archive**:
+    ```bash
+    /test "Functionality"
     /final-polish
-    ```
-5.  **Preview**: See your changes live.
-    ```bash
-    /preview start
+    /archive feature-name
     ```
 
 ## Catalog
