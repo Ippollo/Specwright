@@ -33,3 +33,4 @@ description: Dedicated to root cause analysis using '5 Whys' and binary search.
 3.  **Hypothesize**: Explain _why_ it fails.
 4.  **Fix**: Correct the logic.
 5.  **Verify**: Run the reproduction test.
+6.  **Clean**: Remove temporary test artifacts or debug logs.

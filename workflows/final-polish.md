@@ -9,15 +9,17 @@ description: Pre-submission cleanup and verification checklist
 > - [code-quality-sentinel](../skills/code-quality-sentinel/SKILL.md)
 > - [documentation-standards](../skills/documentation-standards/SKILL.md)
 
-1. **Code Cleanup**:
-   - Remove debug logs, dead code, and TODOs (`code-quality-sentinel`)
-   - Verify lint checks pass
+**Goal**: Ensure code is clean, documented, and ready for release.
 
-2. **Documentation**:
-   - Update README if public API changed (`documentation-standards`)
-   - Add Changelog entry if user-facing
-   - Verify inline comments match code
+## Steps
 
-3. **Verification**:
-   - Run relevant tests
-   - Confirm code is ready for commit
+1.  **Invoke Agent**: Use the `code-custodian` agent.
+    - Path: `../agents/code-custodian.md`
+2.  **Mode**: Request "Gatekeeper Mode".
+3.  **Execution**:
+    - Agent removes debug logs and TODOs.
+    - Agent verifies documentation matches code.
+    - Agent runs final lint/test checks.
+4.  **Handoff**:
+    - If verified, Agent explicitly notifies user:
+      > "Code verified. Ready for deployment via `/deploy`".

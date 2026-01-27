@@ -10,19 +10,27 @@ Comprehensive library of Skills, Agents, and Workflows for autonomous AI develop
 
 ## Getting Started
 
-1.  **Plan**: Use `/plan` to generate a roadmap.
+1.  **Ideate**: Use `/brainstorm` to explore options.
+    ```bash
+    /brainstorm "Authentication system for my app"
+    ```
+2.  **Plan**: Use `/plan` to generate a roadmap.
     ```bash
     /plan "Build a new e-commerce checkout"
     ```
-2.  **Execute**: Use specific workflows to implement.
+3.  **Execute**: Use specific workflows to implement.
     ```bash
     /design "Checkout UI with Tailwind"
     /backend "Stripe integration API"
     ```
-3.  **Verify**: Ensure quality.
+4.  **Verify**: Ensure quality.
     ```bash
     /test "Checkout flow"
-    /polish
+    /final-polish
+    ```
+5.  **Preview**: See your changes live.
+    ```bash
+    /preview start
     ```
 
 ## Catalog
