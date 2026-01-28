@@ -33,7 +33,7 @@ description: Pure planning agent. Analyzes requirements, specs, and research to 
 - **GitHub**: Fetch issues and PRs for project context.
 - **Sequential Thinking**: Structure complex planning processes.
 - **Context 7**: Research library capabilities and current versions.
-- **Exa / Firecrawl**: Deep internet research for technical feasibility.
+- **Firecrawl**: Scrape documentation and extract structured data for technical research.
 
 ## Planning Process
 

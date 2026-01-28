@@ -1,11 +1,11 @@
 # Antigravity Agentic Toolkit
 
-Comprehensive library of Skills, Agents, and Workflows for autonomous AI development.
+My personal library of Skills, Agents, and Workflows for **Antigravity** (my AI coding assistant).
 
-## Project Status
+## About
 
 > [!NOTE]
-> This is a personal toolkit shared for the benefit of the community. It is provided "as-is," and I may not be actively maintaining it or responding to issues/pull requests. Feel free to use and adapt it for your own needs!
+> This is the toolkit I use with Antigravity. It's not intended as a general-purpose community project, though others are welcome to reference it and adapt it for their own needs.
 
 ## Structure
 
@@ -15,7 +15,7 @@ Comprehensive library of Skills, Agents, and Workflows for autonomous AI develop
 
 ## Installation
 
-To add the toolkit to your current project, run the appropriate command in your terminal:
+To add my toolkit to a new project, run the appropriate command in your terminal:
 
 ### Windows (PowerShell)
 
@@ -29,9 +29,9 @@ iwr -useb https://raw.githubusercontent.com/Ippollo/skills/main/install.ps1 | ie
 curl -fsSL https://raw.githubusercontent.com/Ippollo/skills/main/install.sh | bash
 ```
 
-## Global Setup (Developers)
+## Global Setup
 
-If you want the workflows available in **every** project without manual installation, you can link your local repository to your global Antigravity configuration:
+To make my workflows available in **every** project without manual installation, link the local repository to the global Antigravity configuration:
 
 ```powershell
 ./scripts/make-global.ps1
@@ -39,15 +39,15 @@ If you want the workflows available in **every** project without manual installa
 
 ---
 
-## 📖 User Guide
+## 📖 My Workflow
 
-For a smooth experience, please refer to the documentation:
+For reference on how I use this toolkit:
 
-1.  **[Getting Started](./docs/GETTING_STARTED.md)**: 10-minute tutorial for new users.
+1.  **[Getting Started](./docs/GETTING_STARTED.md)**: How I set up new projects.
 2.  **[Quick Reference](./docs/QUICK_REFERENCE.md)**: One-page cheat sheet for all commands.
-3.  **[MCP Recommendations](./docs/MCP_RECOMMENDATIONS.md)**: Recommended MCP servers for enhanced capabilities.
-4.  **[Scenario: New Feature](./docs/scenarios/new-feature.md)**: Step-by-step big feature workflow.
-5.  **[Scenario: Debugging](./docs/scenarios/debugging.md)**: Systematically finding and fixing bugs.
+3.  **[MCP Recommendations](./docs/MCP_RECOMMENDATIONS.md)**: My MCP server setup for Antigravity.
+4.  **[Scenario: New Feature](./docs/scenarios/new-feature.md)**: My step-by-step feature workflow.
+5.  **[Scenario: Debugging](./docs/scenarios/debugging.md)**: How I systematically find and fix bugs.
 
 ## 🚀 Recommended Flow
 

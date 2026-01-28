@@ -1,8 +1,8 @@
-# Skill Catalog
+# My Skill Catalog
 
-This catalog lists all available skills in the `c:\Projects\agentic-toolkit` library, organized by category.
+The collection of skills I've taught **Antigravity** in my `c:\Projects\agentic-toolkit` library, organized by category.
 
-> **Note**: All skills are located in the root `skills/` folder. Categories below are logical groupings.
+> **Note**: All skills are located in the root `skills/` folder. Categories below are logical groupings for my reference.
 
 ## Frontend
 
@@ -35,6 +35,7 @@ Skills related to infrastructure, deployment, and version control.
 
 - [deployment-pipeline](./skills/deployment-pipeline/SKILL.md): Protocols for CI/CD, containerization, and safe deployment strategies.
 - [git-wizard](./skills/git-wizard/SKILL.md): Advanced Git workflows, conflict resolution, and version control.
+- [firecrawl-cli](./skills/firecrawl-cli/SKILL.md): Advanced web scraping, crawling, and content extraction via command-line interface.
 
 ## Testing
 
