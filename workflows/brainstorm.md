@@ -110,7 +110,7 @@ What direction would you like to explore?
 ## Recommended MCP Servers
 
 - **Sequential Thinking**: Structure complex ideation processes.
-- **Exa**: Find similar products and solutions for inspiration.
+- **Firecrawl**: Extract content from competitor sites or documentation for inspiration.
 
 ## Key Principles
 
