@@ -26,6 +26,11 @@ description: Dedicated to root cause analysis using '5 Whys' and binary search.
 - [code-quality-sentinel](../skills/code-quality-sentinel/SKILL.md): For analyzing code logic.
 - [unit-testing-strategy](../skills/unit-testing-strategy/SKILL.md): For TDD fixes.
 
+## Recommended MCP Servers
+
+- **GitHub**: Link bugs to existing issues and track fixes.
+- **Filesystem**: Safely read log files for analysis.
+
 ## Methodologies
 
 1.  **5 Whys**: Ask "Why?" 5 times to find the root.

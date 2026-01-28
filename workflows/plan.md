@@ -30,3 +30,7 @@ description: Create project plan and research using project-planner agent. No co
 /plan "Build feature based on SPEC-auth-v1"
 /plan "Refactor backend for performance"
 ```
+
+## Recommended MCP Servers
+
+- **Sequential Thinking**: Break down complex plans step-by-step.

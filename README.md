@@ -45,8 +45,9 @@ For a smooth experience, please refer to the documentation:
 
 1.  **[Getting Started](./docs/GETTING_STARTED.md)**: 10-minute tutorial for new users.
 2.  **[Quick Reference](./docs/QUICK_REFERENCE.md)**: One-page cheat sheet for all commands.
-3.  **[Scenario: New Feature](./docs/scenarios/new-feature.md)**: Step-by-step big feature workflow.
-4.  **[Scenario: Debugging](./docs/scenarios/debugging.md)**: Systematically finding and fixing bugs.
+3.  **[MCP Recommendations](./docs/MCP_RECOMMENDATIONS.md)**: Recommended MCP servers for enhanced capabilities.
+4.  **[Scenario: New Feature](./docs/scenarios/new-feature.md)**: Step-by-step big feature workflow.
+5.  **[Scenario: Debugging](./docs/scenarios/debugging.md)**: Systematically finding and fixing bugs.
 
 ## 🚀 Recommended Flow
 

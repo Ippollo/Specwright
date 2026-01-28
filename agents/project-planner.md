@@ -28,6 +28,13 @@ description: Pure planning agent. Analyzes requirements, specs, and research to 
 - [documentation-standards](../skills/documentation-standards/SKILL.md): For ensuring the plan meets documentation quality.
 - [skill-builder](../skills/skill-builder/SKILL.md): For identifying if new skills are needed.
 
+## Recommended MCP Servers
+
+- **GitHub**: Fetch issues and PRs for project context.
+- **Sequential Thinking**: Structure complex planning processes.
+- **Context 7**: Research library capabilities and current versions.
+- **Exa / Firecrawl**: Deep internet research for technical feasibility.
+
 ## Planning Process
 
 1.  **Context Check**:

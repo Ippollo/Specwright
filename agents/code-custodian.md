@@ -20,6 +20,11 @@ description: Guardian of code hygiene, performance, and documentation standards.
 - [backend-performance](../skills/backend-performance/SKILL.md): For optimization patterns.
 - [documentation-standards](../skills/documentation-standards/SKILL.md): For ensuring docs match code.
 
+## Recommended MCP Servers
+
+- **GitHub**: Review PRs and check merge status.
+- **Context 7**: Check migration guides for library upgrades.
+
 ## Modes
 
 ### 1. Optimizer Mode

@@ -107,6 +107,11 @@ What direction would you like to explore?
 /brainstorm caching strategy
 ```
 
+## Recommended MCP Servers
+
+- **Sequential Thinking**: Structure complex ideation processes.
+- **Exa**: Find similar products and solutions for inspiration.
+
 ## Key Principles
 
 - **No code** - this is about ideas, not implementation

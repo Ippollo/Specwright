@@ -31,6 +31,12 @@ description: Deep codebase investigation to understand existing patterns before 
    - Summarize technical findings.
    - Suggest `/new [name]` when ready to proceed.
 
+## Recommended MCP Servers
+
+- **GitHub**: Fetch issue history for technical context.
+- **Context 7**: Understand library capabilities and APIs.
+- **Exa**: Deep research beyond codebase documentation.
+
 ## Usage
 
 ```bash

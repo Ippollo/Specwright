@@ -22,6 +22,12 @@ description: Backend Architect. Handles server-side logic, API design, data mode
 - [backend-performance](../skills/backend-performance/SKILL.md): Caching and optimization.
 - [security-hardening](../skills/security-hardening/SKILL.md): Security best practices.
 
+## Recommended MCP Servers
+
+- **Firebase**: Query Firebase schemas and services (if using Firebase).
+- **Context 7**: Get accurate, up-to-date API documentation.
+- **Postgres** (Aiven/Neon/pg-aiguide): Real-time database schema access (if using PostgreSQL).
+
 ## Workflow
 
 1.  **Model**: Define data structures.

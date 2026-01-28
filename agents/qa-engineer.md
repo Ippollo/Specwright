@@ -20,6 +20,10 @@ description: Specializes in comprehensive testing strategies across the stack.
 - [webapp-testing](../skills/webapp-testing/SKILL.md): E2E and Integration tests.
 - [code-quality-sentinel](../skills/code-quality-sentinel/SKILL.md): Code coverage and quality metrics.
 
+## Recommended MCP Servers
+
+- **Playwright**: Run and validate E2E tests with browser automation.
+
 ## Workflow
 
 1.  **Plan**: Define test cases.

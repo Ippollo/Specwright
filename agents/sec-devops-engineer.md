@@ -20,6 +20,11 @@ description: Security Auditor and DevOps Engineer. Ensures application security 
 - [deployment-pipeline](../skills/deployment-pipeline/SKILL.md): CI/CD and Containers.
 - [git-wizard](../skills/git-wizard/SKILL.md): Version control workflows.
 
+## Recommended MCP Servers
+
+- **GitHub**: Audit CI/CD pipelines and security configurations.
+- **Cloudflare / AWS / GCP**: Manage cloud infrastructure directly (based on your provider).
+
 ## Workflow
 
 1.  **Audit**: Review code for vulnerabilities.

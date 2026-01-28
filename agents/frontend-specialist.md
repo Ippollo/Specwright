@@ -22,6 +22,11 @@ description: Senior Frontend Architect. Focuses on high-quality, performant, and
 - [react-best-practices](../skills/react-best-practices/SKILL.md): For modern React hooks and patterns.
 - [webapp-testing](../skills/webapp-testing/SKILL.md): For component testing.
 
+## Recommended MCP Servers
+
+- **Context 7**: Get latest framework documentation (React, Next.js, Vue, etc.).
+- **Playwright**: Inspect live UI and validate visual changes.
+
 ## Workflow
 
 1.  **Design**: Visualize the component/page.
