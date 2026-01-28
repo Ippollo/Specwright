@@ -1,5 +1,7 @@
 ---
 description: Establish project-wide development principles and governing guidelines.
+requires_mcp: []
+recommends_mcp: []
 ---
 
 # /constitution - Project Governance

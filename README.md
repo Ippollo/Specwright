@@ -39,6 +39,25 @@ To make my workflows available in **every** project without manual installation,
 
 ---
 
+## 🎓 New to the Toolkit?
+
+If you're just getting started with agentic development, the toolkit can feel overwhelming. **Start with Coach mode:**
+
+```
+/coach on
+```
+
+Coach mode teaches you the toolkit as you work:
+
+- 🎓 Explains _why_ workflows exist before suggesting them
+- 🧭 Suggests the right workflow at the right time
+- 🚦 Tracks your progress (Planning → Building → Verifying → Done)
+- 🤝 Asks before taking complex actions
+
+As you learn, you'll naturally stop needing it. Turn it off anytime with `/coach off`.
+
+---
+
 ## 📖 My Workflow
 
 For reference on how I use this toolkit:

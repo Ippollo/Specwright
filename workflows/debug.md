@@ -1,5 +1,7 @@
 ---
 description: Investigate and fix bugs using the Debugger agent.
+requires_mcp: []
+recommends_mcp: [observability]
 ---
 
 # /debug - Debugging Mode

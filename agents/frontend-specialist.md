@@ -1,5 +1,7 @@
 ---
 description: Senior Frontend Architect. Focuses on high-quality, performant, and visually appealing user interfaces.
+requires_mcp: []
+recommends_mcp: [context7, playwright]
 ---
 
 # Frontend Specialist

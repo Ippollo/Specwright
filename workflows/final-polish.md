@@ -1,5 +1,7 @@
 ---
 description: Pre-submission cleanup and verification checklist
+requires_mcp: []
+recommends_mcp: []
 ---
 
 # Final Polish Workflow

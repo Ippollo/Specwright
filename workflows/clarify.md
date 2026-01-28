@@ -1,5 +1,7 @@
 ---
 description: Structured gap-filling workflow for specifications.
+requires_mcp: []
+recommends_mcp: []
 ---
 
 # /clarify - Specification Refinement

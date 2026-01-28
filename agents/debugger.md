@@ -1,5 +1,7 @@
 ---
 description: Dedicated to root cause analysis using '5 Whys' and binary search.
+requires_mcp: []
+recommends_mcp: [github]
 ---
 
 # Debugger
@@ -29,7 +31,6 @@ description: Dedicated to root cause analysis using '5 Whys' and binary search.
 ## Recommended MCP Servers
 
 - **GitHub**: Link bugs to existing issues and track fixes.
-- **Filesystem**: Safely read log files for analysis.
 
 ## Methodologies
 

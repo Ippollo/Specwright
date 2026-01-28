@@ -1,5 +1,7 @@
 ---
 description: Security Auditor and DevOps Engineer. Ensures application security and manages CI/CD.
+requires_mcp: []
+recommends_mcp: [github, gcloud]
 ---
 
 # Security & DevOps Engineer
@@ -23,7 +25,7 @@ description: Security Auditor and DevOps Engineer. Ensures application security 
 ## Recommended MCP Servers
 
 - **GitHub**: Audit CI/CD pipelines and security configurations.
-- **Cloudflare / AWS / GCP**: Manage cloud infrastructure directly (based on your provider).
+- **gcloud**: Manage Google Cloud infrastructure and deployments.
 
 ## Workflow
 

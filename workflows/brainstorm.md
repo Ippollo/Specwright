@@ -1,5 +1,7 @@
 ---
 description: Structured idea exploration before planning. Explores multiple options with trade-offs.
+requires_mcp: []
+recommends_mcp: [sequential-thinking, firecrawl-mcp]
 ---
 
 # /brainstorm - Structured Idea Exploration

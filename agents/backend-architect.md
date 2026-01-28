@@ -1,5 +1,7 @@
 ---
 description: Backend Architect. Handles server-side logic, API design, data modeling, and performance.
+requires_mcp: []
+recommends_mcp: [firebase-mcp-server, context7]
 ---
 
 # Backend Architect
@@ -26,7 +28,6 @@ description: Backend Architect. Handles server-side logic, API design, data mode
 
 - **Firebase**: Query Firebase schemas and services (if using Firebase).
 - **Context 7**: Get accurate, up-to-date API documentation.
-- **Postgres** (Aiven/Neon/pg-aiguide): Real-time database schema access (if using PostgreSQL).
 
 ## Workflow
 

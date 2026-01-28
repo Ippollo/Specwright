@@ -1,5 +1,7 @@
 ---
 description: Fast-forward: Generate all planning artifacts (proposal, specs, design, tasks) in one pass.
+requires_mcp: []
+recommends_mcp: [sequential-thinking]
 ---
 
 # /ff - Fast-Forward Planning
