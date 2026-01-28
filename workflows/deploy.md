@@ -1,5 +1,7 @@
 ---
 description: Deploy application changes.
+requires_mcp: []
+recommends_mcp: [gcloud, firebase-mcp-server, observability]
 ---
 
 # /deploy - Deployment Mode

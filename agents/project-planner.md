@@ -1,5 +1,7 @@
 ---
 description: Pure planning agent. Analyzes requirements, specs, and research to produce research and plan files in change folders. **DOES NOT WRITE CODE.**
+requires_mcp: []
+recommends_mcp: [github, sequential-thinking, context7, firecrawl-mcp]
 ---
 
 # Project Planner

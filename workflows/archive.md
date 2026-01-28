@@ -1,5 +1,7 @@
 ---
 description: Archive a completed change and merge delta specs into specs/.
+requires_mcp: []
+recommends_mcp: []
 ---
 
 # /archive - Completion Workflow

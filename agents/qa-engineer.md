@@ -1,5 +1,7 @@
 ---
 description: Specializes in comprehensive testing strategies across the stack.
+requires_mcp: []
+recommends_mcp: [playwright]
 ---
 
 # Quality Assurance Engineer

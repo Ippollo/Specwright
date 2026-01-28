@@ -1,5 +1,7 @@
 ---
 description: Create project plan and research using project-planner agent. No code writing.
+requires_mcp: []
+recommends_mcp: [sequential-thinking]
 ---
 
 # /plan - Project Planning Mode

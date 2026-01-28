@@ -1,5 +1,7 @@
 ---
 description: Perform security audits and hardening.
+requires_mcp: []
+recommends_mcp: []
 ---
 
 # /security - Security Mode

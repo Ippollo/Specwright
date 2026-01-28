@@ -48,6 +48,7 @@ Skills related to quality assurance and verification.
 
 Skills and workflows related to agent processes, governance, and library management.
 
+- [/coach](./workflows/coach.md): **Start here if you're new!** Learning mode that teaches the toolkit while working.
 - [/constitution](./workflows/constitution.md): Workflow for establishing persistent project principles and guardrails.
 - [/investigate](./workflows/investigate.md): Deep codebase investigation to understand existing patterns before planning.
 - [/new](./workflows/new.md): Workflow for initializing a new change folder with proposal templates.

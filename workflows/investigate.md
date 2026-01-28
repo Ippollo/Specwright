@@ -1,5 +1,7 @@
 ---
 description: Deep codebase investigation to understand existing patterns before planning.
+requires_mcp: []
+recommends_mcp: [github, context7, firecrawl-mcp]
 ---
 
 # /investigate - Codebase Investigation

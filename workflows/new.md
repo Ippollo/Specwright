@@ -1,5 +1,7 @@
 ---
 description: Initialize a new change folder with proposal template.
+requires_mcp: []
+recommends_mcp: []
 ---
 
 # /new - New Change Workflow

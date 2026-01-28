@@ -1,5 +1,7 @@
 ---
 description: Create feature specifications with prioritized user stories and acceptance criteria.
+requires_mcp: []
+recommends_mcp: []
 ---
 
 # /specify - Feature Specification

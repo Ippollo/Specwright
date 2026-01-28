@@ -1,5 +1,7 @@
 ---
 description: Design and implement UI components using Frontend Specialist.
+requires_mcp: []
+recommends_mcp: []
 ---
 
 # /design - Design Mode

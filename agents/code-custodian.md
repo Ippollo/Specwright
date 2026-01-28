@@ -1,5 +1,7 @@
 ---
 description: Guardian of code hygiene, performance, and documentation standards.
+requires_mcp: []
+recommends_mcp: [github, context7]
 ---
 
 # Code Custodian

@@ -1,5 +1,7 @@
 ---
 description: "Conducts a rigorous, multi-perspective review of the current plan or idea."
+requires_mcp: []
+recommends_mcp: [sequential-thinking]
 ---
 
 # Second Opinion (Expert Critique)

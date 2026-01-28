@@ -1,5 +1,7 @@
 ---
 description: Design APIs and server logic using Backend Architect.
+requires_mcp: []
+recommends_mcp: [context7]
 ---
 
 # /backend - Backend Mode

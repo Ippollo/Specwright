@@ -1,5 +1,7 @@
 ---
 description: Enhance and improve existing code through refactoring and optimization.
+requires_mcp: []
+recommends_mcp: []
 ---
 
 # /enhance - Code Enhancement

@@ -1,5 +1,7 @@
 ---
 description: comprehensive testing (Unit, Integration, E2E).
+requires_mcp: []
+recommends_mcp: [playwright]
 ---
 
 # /test - Testing Mode

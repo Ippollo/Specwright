@@ -1,5 +1,7 @@
 ---
 description: Start, stop, and manage local development server for previewing changes.
+requires_mcp: []
+recommends_mcp: []
 ---
 
 # /preview - Development Server Management
