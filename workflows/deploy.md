@@ -1,5 +1,6 @@
 ---
 description: Deploy application changes.
+quick_summary: "Check CI/CD, verify pre-deploy checks, trigger deployment pipeline."
 requires_mcp: []
 recommends_mcp: [gcloud, firebase-mcp-server, observability]
 ---

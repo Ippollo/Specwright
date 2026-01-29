@@ -1,5 +1,6 @@
 ---
 description: Fast-forward: Generate all planning artifacts (proposal, specs, design, tasks) in one pass.
+quick_summary: "Generate specs/, design.md, tasks.md in one pass. Fast track to implementation."
 requires_mcp: []
 recommends_mcp: [sequential-thinking]
 ---

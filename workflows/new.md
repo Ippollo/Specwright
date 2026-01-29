@@ -1,5 +1,6 @@
 ---
 description: Initialize a new change folder with proposal template.
+quick_summary: "Create changes/{slug}/ folder with proposal.md. Required starting point."
 requires_mcp: []
 recommends_mcp: []
 ---

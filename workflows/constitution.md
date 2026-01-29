@@ -1,5 +1,6 @@
 ---
 description: Establish project-wide development principles and governing guidelines.
+quick_summary: "Create/update docs/CONSTITUTION.md with project rules and principles."
 requires_mcp: []
 recommends_mcp: []
 ---
