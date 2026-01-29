@@ -1,5 +1,6 @@
 ---
 description: Create project plan and research using project-planner agent. No code writing.
+quick_summary: "Generate research.md, design.md, tasks.md using project-planner agent."
 requires_mcp: []
 recommends_mcp: [sequential-thinking]
 ---

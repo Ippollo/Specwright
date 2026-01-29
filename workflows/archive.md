@@ -1,5 +1,6 @@
 ---
 description: Archive a completed change and merge delta specs into specs/.
+quick_summary: "Move changes/{slug}/ to archive/, merge specs. Run after all tasks complete."
 requires_mcp: []
 recommends_mcp: []
 ---

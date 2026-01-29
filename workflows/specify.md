@@ -1,5 +1,6 @@
 ---
 description: Create feature specifications with prioritized user stories and acceptance criteria.
+quick_summary: "Create specs with P1/P2/P3 priorities and acceptance criteria. Define What/Why before How."
 requires_mcp: []
 recommends_mcp: []
 ---

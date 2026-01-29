@@ -1,5 +1,6 @@
 ---
 description: Structured gap-filling workflow for specifications.
+quick_summary: "Resolve [NEEDS CLARIFICATION] tags in specs. Sequential Q&A until plan-ready."
 requires_mcp: []
 recommends_mcp: []
 ---

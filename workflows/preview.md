@@ -1,5 +1,6 @@
 ---
 description: Start, stop, and manage local development server for previewing changes.
+quick_summary: "Commands: /preview start|stop|restart|status. Auto-detects framework."
 requires_mcp: []
 recommends_mcp: []
 ---

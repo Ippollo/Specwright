@@ -1,5 +1,6 @@
 ---
 description: "Conducts a rigorous, multi-perspective review of the current plan or idea."
+quick_summary: "Stress-test plans with multi-perspective expert critique. Uses second-opinion skill."
 requires_mcp: []
 recommends_mcp: [sequential-thinking]
 ---
