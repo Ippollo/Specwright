@@ -1,7 +1,7 @@
 ---
 description: Guardian of code hygiene, performance, and documentation standards.
 requires_mcp: []
-recommends_mcp: [github, context7]
+recommends_mcp: [github, context7, firebase, gcloud]
 ---
 
 # Code Custodian
@@ -26,6 +26,8 @@ recommends_mcp: [github, context7]
 
 - **GitHub**: Review PRs and check merge status.
 - **Context 7**: Check migration guides for library upgrades.
+- **Firebase**: Access Firestore, Auth, and Storage for cloud-native fixes.
+- **GCloud**: Manage deployment environments and cloud resources.
 
 ## Modes
 

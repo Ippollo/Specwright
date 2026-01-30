@@ -1,7 +1,7 @@
 ---
 description: Dedicated to root cause analysis using '5 Whys' and binary search.
 requires_mcp: []
-recommends_mcp: [github]
+recommends_mcp: [github, context7, firebase, gcloud]
 ---
 
 # Debugger
@@ -31,6 +31,9 @@ recommends_mcp: [github]
 ## Recommended MCP Servers
 
 - **GitHub**: Link bugs to existing issues and track fixes.
+- **Context 7**: Search documentation for correct API usage and common error patterns.
+- **Firebase**: Investigate cloud-side errors and state.
+- **GCloud**: Debug infrastructure and deployment issues.
 
 ## Methodologies
 

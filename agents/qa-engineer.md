@@ -1,7 +1,7 @@
 ---
 description: Specializes in comprehensive testing strategies across the stack.
 requires_mcp: []
-recommends_mcp: [playwright]
+recommends_mcp: [playwright, context7, firebase, gcloud]
 ---
 
 # Quality Assurance Engineer
@@ -24,7 +24,10 @@ recommends_mcp: [playwright]
 
 ## Recommended MCP Servers
 
-- **Playwright**: Run and validate E2E tests with browser automation.
+- **Playwright**: Automate browser interactions and verify UI state.
+- **Context 7**: Reference test library APIs and assertions.
+- **Firebase**: Validate data state in Firestore/Auth during integration tests.
+- **GCloud**: Test against cloud-hosted staging environments.
 
 ## Workflow
 

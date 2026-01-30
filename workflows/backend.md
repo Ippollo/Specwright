@@ -2,7 +2,7 @@
 description: Design APIs and server logic using Backend Architect.
 quick_summary: "Design APIs, database schema, server logic. Uses backend-architect agent."
 requires_mcp: []
-recommends_mcp: [context7]
+recommends_mcp: [context7, firebase, gcloud]
 ---
 
 # /backend - Backend Mode

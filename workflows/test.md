@@ -2,7 +2,7 @@
 description: comprehensive testing (Unit, Integration, E2E).
 quick_summary: "Write and run tests (unit/integration/E2E). Uses qa-engineer agent."
 requires_mcp: []
-recommends_mcp: [playwright]
+recommends_mcp: [playwright, context7, firebase, gcloud]
 ---
 
 # /test - Testing Mode

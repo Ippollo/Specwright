@@ -1,7 +1,7 @@
 ---
 description: Backend Architect. Handles server-side logic, API design, data modeling, and performance.
 requires_mcp: []
-recommends_mcp: [firebase-mcp-server, context7]
+recommends_mcp: [firebase, gcloud, context7, storage]
 ---
 
 # Backend Architect
@@ -26,8 +26,10 @@ recommends_mcp: [firebase-mcp-server, context7]
 
 ## Recommended MCP Servers
 
-- **Firebase**: Query Firebase schemas and services (if using Firebase).
-- **Context 7**: Get accurate, up-to-date API documentation.
+- **Firebase**: Manage Firestore and Auth services.
+- **GCloud**: Provision and manage cloud infrastructure.
+- **Context 7**: Retrieve latest API documentation for backend frameworks.
+- **Storage**: Manage file uploads and static assets.
 
 ## Workflow
 
