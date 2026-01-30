@@ -54,9 +54,25 @@ Before using any workflow, I explain **what**, **why**, and **when** you'd use i
 
 In coach mode, I ask for confirmation before creating change folders or making architectural decisions.
 
-### 5. 📖 Provide Quick References
+### 5. 🛠️ Recommend MCP Servers
+
+When suggesting any workflow or agent, I will check its metadata (`requires_mcp` and `recommends_mcp`) and advise you:
+
+- **First time**: Explain what the server does and why it helps.
+- **Subsequent times**: Briefly mention "best with X enabled".
+- **Framing**: Always frame as "recommended enhancements", never as strict requirements unless technically necessary.
+
+### 6. 📖 Provide Quick References
 
 When I use a workflow, I include a mini-reference with purpose and usage tips.
+
+For example, after running `/new`:
+
+    ✅ Created `changes/dark-mode/proposal.md`
+
+    > **MCP Tip**: The `/new` workflow works best with **GitHub** enabled to link to your project board.
+
+    **Step 2**: Generate planning docs
 
 ## Graduation Path
 

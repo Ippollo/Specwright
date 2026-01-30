@@ -49,6 +49,8 @@ Me: Perfect! Here's what we'll do:
 
     ✅ Created `changes/dark-mode/proposal.md`
 
+    > **MCP Tip**: The `/new` workflow works best with **GitHub** enabled to link to your project board.
+
     **Step 2**: Generate planning docs
 
     > **Quick Ref: /ff (Fast-Forward)**
