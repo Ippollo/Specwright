@@ -2,7 +2,7 @@
 description: Investigate and fix bugs using the Debugger agent.
 quick_summary: "Reproduce, analyze root cause, propose fix. Uses debugger agent."
 requires_mcp: []
-recommends_mcp: [observability]
+recommends_mcp: [observability, context7, firebase, gcloud]
 ---
 
 # /debug - Debugging Mode

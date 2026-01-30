@@ -2,7 +2,7 @@
 description: Design and implement UI components using Frontend Specialist.
 quick_summary: "Create UI components with frontend-specialist agent. Checks design system."
 requires_mcp: []
-recommends_mcp: []
+recommends_mcp: [context7, playwright, firebase, gcloud]
 ---
 
 # /design - Design Mode

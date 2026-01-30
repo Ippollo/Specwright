@@ -2,7 +2,7 @@
 description: Pre-submission cleanup and verification checklist
 quick_summary: "Remove debug logs/TODOs, verify docs, run final lint/test. Gatekeeper mode."
 requires_mcp: []
-recommends_mcp: []
+recommends_mcp: [context7, github, sequential-thinking]
 ---
 
 # Final Polish Workflow

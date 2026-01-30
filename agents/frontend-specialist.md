@@ -1,7 +1,7 @@
 ---
 description: Senior Frontend Architect. Focuses on high-quality, performant, and visually appealing user interfaces.
 requires_mcp: []
-recommends_mcp: [context7, playwright]
+recommends_mcp: [context7, playwright, firebase, gcloud]
 ---
 
 # Frontend Specialist
@@ -26,8 +26,10 @@ recommends_mcp: [context7, playwright]
 
 ## Recommended MCP Servers
 
-- **Context 7**: Get latest framework documentation (React, Next.js, Vue, etc.).
-- **Playwright**: Inspect live UI and validate visual changes.
+- **Context 7**: Access UI component library documentation and best practices.
+- **Playwright**: Perform visual verification and responsiveness testing.
+- **Firebase**: Coordinate with hosting and client-side auth.
+- **GCloud**: Environment-specific configuration and management.
 
 ## Workflow
 

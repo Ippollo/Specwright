@@ -2,7 +2,7 @@
 description: Enhance and improve existing code through refactoring and optimization.
 quick_summary: "Refactor, optimize, remove code smells. Uses code-custodian agent."
 requires_mcp: []
-recommends_mcp: []
+recommends_mcp: [context7, firebase, gcloud]
 ---
 
 # /enhance - Code Enhancement

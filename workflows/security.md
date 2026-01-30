@@ -2,7 +2,7 @@
 description: Perform security audits and hardening.
 quick_summary: "Audit OWASP Top 10, recommend/apply security patches. Uses sec-devops agent."
 requires_mcp: []
-recommends_mcp: []
+recommends_mcp: [context7, firebase, gcloud, sequential-thinking]
 ---
 
 # /security - Security Mode

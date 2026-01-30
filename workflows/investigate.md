@@ -2,7 +2,8 @@
 description: Deep codebase investigation to understand existing patterns before planning.
 quick_summary: "Analyze code patterns, trace dependencies, document findings. Technical deep-dive."
 requires_mcp: []
-recommends_mcp: [github, context7, firecrawl-mcp]
+recommends_mcp:
+  [github, context7, firecrawl-mcp, firebase, gcloud, observability]
 ---
 
 # /investigate - Codebase Investigation

@@ -2,7 +2,7 @@
 description: Structured idea exploration before planning. Explores multiple options with trade-offs.
 quick_summary: "Explore 3+ options with pros/cons before committing. Output: recommendations with tradeoffs."
 requires_mcp: []
-recommends_mcp: [sequential-thinking, firecrawl-mcp]
+recommends_mcp: [sequential-thinking, firecrawl-mcp, context7]
 ---
 
 # /brainstorm - Structured Idea Exploration
