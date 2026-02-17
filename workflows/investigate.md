@@ -41,6 +41,10 @@ recommends_mcp:
 - **Context 7**: Understand library capabilities and APIs.
 - **Firecrawl**: Scrape documentation pages and extract structured data beyond codebase.
 
+## Conditional Skills
+
+- [gemini-api-dev](../skills/gemini-api-dev/SKILL.md): Load when investigating Gemini API integration, model usage, or SDK issues.
+
 ## Usage
 
 ```bash

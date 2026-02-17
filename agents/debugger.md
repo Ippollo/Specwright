@@ -27,6 +27,7 @@ recommends_mcp: [github, context7, firebase, gcloud]
 - [webapp-testing](../skills/webapp-testing/SKILL.md): For writing reproduction tests.
 - [code-quality-sentinel](../skills/code-quality-sentinel/SKILL.md): For analyzing code logic.
 - [unit-testing-strategy](../skills/unit-testing-strategy/SKILL.md): For TDD fixes.
+- [gemini-api-dev](../skills/gemini-api-dev/SKILL.md): Correct API usage and model specs. _(Use when debugging Gemini API errors.)_
 
 ## Recommended MCP Servers
 
