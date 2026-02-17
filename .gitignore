@@ -6,6 +6,7 @@ desktop.ini
 # IDEs and Editors
 .vscode/
 .idea/
+.obsidian/
 *.swp
 *.swo
 .nova/
@@ -26,3 +27,17 @@ build/
 bin/
 obj/
 out/
+
+# Secrets & Local Config
+.env*
+.npmrc
+*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Other
+.history/
+__pycache__/
