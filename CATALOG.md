@@ -23,6 +23,12 @@ Skills related to server-side development and data management.
 - [data-modeling](./skills/data-modeling/SKILL.md): Database schema design, relationship patterns, and migration workflows (SQL/NoSQL).
 - [security-hardening](./skills/security-hardening/SKILL.md): Protocols for securing web apps (OWASP Top 10, Auth Patterns, Audit Workflows).
 
+## AI / Machine Learning
+
+Skills related to AI model integration and ML workflows.
+
+- [gemini-api-dev](./skills/gemini-api-dev/SKILL.md): Gemini API development — current models, SDK quickstarts (Python/JS/Go/Java), function calling, structured output, multimodal, and official doc links.
+
 ## Architecture
 
 Skills related to high-level system design.
@@ -81,3 +87,8 @@ Understanding how skills interact is key to effective usage:
 
 - **Documentation & Architecture**:
   - `system-design-architect` delegates ADRs to `documentation-standards` for the canonical template.
+
+- **AI Integration**:
+  - Use `gemini-api-dev` with `backend-architect` when building AI-powered services.
+  - Use `gemini-api-dev` with `project-planner` when researching or scoping Gemini features.
+  - Use `gemini-api-dev` with `debugger` when tracing Gemini API errors.

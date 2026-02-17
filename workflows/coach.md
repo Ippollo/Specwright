@@ -31,15 +31,16 @@ Before using any workflow, I explain **what**, **why**, and **when** you'd use i
 
 ### 2. 🧭 Suggest Workflows at Key Moments
 
-| When I Notice...                 | I'll Suggest...          |
-| -------------------------------- | ------------------------ |
-| "I want to build..." or "Add..." | `/new` → `/ff` → `/plan` |
-| "Something's broken..."          | `/debug`                 |
-| "Should I use X or Y?"           | `/brainstorm`            |
-| "Let's make this component..."   | `/design`                |
-| "I need an API for..."           | `/backend`               |
-| "Is this code good?"             | `/enhance`               |
-| "I'm done with this feature"     | `/archive`               |
+| When I Notice...                 | I'll Suggest...                     |
+| -------------------------------- | ----------------------------------- |
+| "I want to build..." or "Add..." | `/new` → `/ff` → `/plan`            |
+| "Something's broken..."          | `/debug`                            |
+| "Should I use X or Y?"           | `/brainstorm`                       |
+| "Let's make this component..."   | `/design`                           |
+| "I need an API for..."           | `/backend`                          |
+| "I need AI/Gemini..."            | `/backend` + `gemini-api-dev` skill |
+| "Is this code good?"             | `/enhance`                          |
+| "I'm done with this feature"     | `/archive`                          |
 
 ### 3. 🚦 Track Your Phase
 

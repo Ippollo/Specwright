@@ -30,6 +30,7 @@ recommends_mcp:
 - [system-design-architect](../skills/system-design-architect/SKILL.md): For high-level system design.
 - [documentation-standards](../skills/documentation-standards/SKILL.md): For ensuring the plan meets documentation quality.
 - [skill-builder](../skills/skill-builder/SKILL.md): For identifying if new skills are needed.
+- [gemini-api-dev](../skills/gemini-api-dev/SKILL.md): Current Gemini models, SDKs, and capabilities. _(Use when planning AI-powered features.)_
 
 ## Recommended MCP Servers
 

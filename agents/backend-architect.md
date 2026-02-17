@@ -23,6 +23,7 @@ recommends_mcp: [firebase, gcloud, context7, storage]
 - [data-modeling](../skills/data-modeling/SKILL.md): Database schemas.
 - [backend-performance](../skills/backend-performance/SKILL.md): Caching and optimization.
 - [security-hardening](../skills/security-hardening/SKILL.md): Security best practices.
+- [gemini-api-dev](../skills/gemini-api-dev/SKILL.md): Gemini API integration — models, SDKs, function calling, structured output. _(Use when building AI-powered features.)_
 
 ## Recommended MCP Servers
 

@@ -13,6 +13,7 @@ recommends_mcp: [context7, firebase, gcloud]
 
 1.  **Invoke Agent**: Use the `backend-architect` agent.
     - Path: `../agents/backend-architect.md`
+    - If implementing **AI/Gemini features**, also load: `../skills/gemini-api-dev/SKILL.md`
 2.  **Context**: Provide the feature requirement.
 3.  **Execution**:
     - Agent designs API contract.
