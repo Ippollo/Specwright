@@ -1,0 +1,22 @@
+/* Optimize Mermaid diagrams for wider display in Obsidian */
+
+/* 
+ * Apply this CSS as a Snippet in Obsidian:
+ * 1. Settings > Appearance > CSS Snippets
+ * 2. Click folder icon to open snippets folder
+ * 3. Save this file as 'mermaid-full-width.css'
+ * 4. Enable the snippet in Obsidian
+ */
+
+.mermaid {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* Ensure the SVG scales with the container */
+.mermaid svg {
+  max-width: 100% !important;
+  height: auto !important;
+}
