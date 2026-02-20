@@ -24,6 +24,7 @@ recommends_mcp:
 3.  **Research & Feasibility**: Investigates technical options and versions, producing `research.md` in the change folder.
 4.  **Skill Selection**: Identifies which skills/agents are needed for the task.
 5.  **Plan Generation**: Creates detailed `design.md` and `tasks.md` files with dependency-aware tasks in the change folder.
+6.  **Workflow Routing**: Classifies each task by its executing workflow (see below).
 
 ## Primary Skills
 
@@ -51,6 +52,7 @@ recommends_mcp:
     - **Header**: Goal and Context.
     - **Architecture**: Tech stack + High-level approach.
     - **TaskList**: Detailed checklist with `[P]` markers for parallel work.
+    - **Workflow Labels**: Tag every task with the workflow that should execute it.
     - **Verification**: Checkpoints for each user story.
 5.  **Audit**: Cross-check plan against Constitution and Spec.
 6.  **Handover**: Instruct user to review and then execute.
@@ -76,11 +78,31 @@ Focus on "What" and "How".
 
 ### Phase 1: [P1 Journey]
 
-- [ ] Task 1
-- [ ] [P] Task 2 (parallelizable)
+- [ ] `/backend` — Task description
+- [ ] `/design` — [P] Task description (parallelizable)
 - **CHECKPOINT**: [Verification]
 
 ## Verification
 
 - [ ] Test Case 1
+```
+
+## Workflow Routing Reference
+
+When generating `tasks.md`, classify **every** task with one of these workflow labels:
+
+| Label       | Use When                                                          |
+| ----------- | ----------------------------------------------------------------- |
+| `/backend`  | APIs, database schema, services, hooks, server logic, data models |
+| `/design`   | UI components, pages, layouts, styling, responsiveness            |
+| `/enhance`  | Refactoring, optimization, code smell removal, performance        |
+| `/test`     | Writing or updating unit, integration, or E2E tests               |
+| `/debug`    | Investigating and fixing bugs                                     |
+| `/security` | Security audits, rule hardening, auth changes                     |
+
+Place the label at the start of each task line, before the description:
+
+```
+- [ ] `/backend` — Add CRUD functions for activities collection
+- [ ] `/design` — [P] Build ActivityCard component
 ```
