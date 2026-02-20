@@ -23,10 +23,11 @@ recommends_mcp:
     - Agent performs technical research.
     - Agent generates `changes/{slug}/research.md`.
     - Agent generates `changes/{slug}/design.md`.
-    - Agent generates `changes/{slug}/tasks.md` with dependency-aware tasks.
+    - Agent generates `changes/{slug}/tasks.md` with dependency-aware, **workflow-routed** tasks.
+    - Each task is tagged with its executing workflow (`/backend`, `/design`, `/enhance`, `/test`, `/debug`, `/security`).
 4.  **Completion**:
     - Agent notifies user of generated files.
-    - Agent suggests review, then moving to implementation.
+    - Agent suggests review, then executing tasks by workflow label.
 
 ## Usage
 
