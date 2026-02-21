@@ -26,7 +26,8 @@ recommends_mcp: [sequential-thinking]
    - Generate `changes/{slug}/design.md` using `templates/change/design-template.md`.
    - Generate `changes/{slug}/tasks.md` using `templates/task-template.md`.
 4. **Completion**:
-   - Instruct user to review then move to implementation.
+   - Instruct user to review generated files.
+   - Suggest `/work` to begin pipeline execution.
 
 ## Usage
 

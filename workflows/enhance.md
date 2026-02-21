@@ -22,3 +22,13 @@ recommends_mcp: [context7, firebase, gcloud]
     - Agent proposes and applies refactors.
     - Agent runs tests to ensure no regressions.
     - _Loop continues until metrics are met._
+
+## Task Filtering
+
+When a `tasks.md` is present in the active change folder:
+
+1. **Scan** `tasks.md` for incomplete tasks tagged with `/enhance`.
+2. **Execute only** those tasks, in order.
+3. **Mark each** `[x]` in `tasks.md` as it completes.
+4. **Run CHECKPOINT** if one follows the completed tasks.
+5. **Auto-advance**: When all `/enhance` tasks are done, proceed to the next pipeline stage (`/test`). Run the test workflow and continue.

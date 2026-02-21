@@ -75,16 +75,19 @@ This generates:
 
 I open `changes/user-profile/tasks.md` as my source of truth.
 
-For UI tasks, I use:
+I use `/work` to auto-execute tasks through the pipeline:
 
 ```bash
-/design "Implement avatar upload component with glassmorphism"
+/work
 ```
 
-For backend tasks, I use:
+This auto-advances through: `/backend` → `/design` → `/security` → `/enhance` → `/test`, loading the right agent for each stage.
+
+To run a specific stage only:
 
 ```bash
-/backend "Create API endpoint for profile updates"
+/work backend
+/work design
 ```
 
 ### Phase 3: Verify & Archive
