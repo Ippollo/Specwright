@@ -54,12 +54,20 @@ Generate the technical plan.
 
 _Creates: `changes/dark-mode-support/design.md` and `tasks.md`._
 
-### Step 6: Targeted Execution
+### Step 6: Pipeline Execution
 
-Implement the UI with the Frontend Specialist.
+Run the task pipeline. `/work` reads `tasks.md`, groups tasks by workflow tag, and auto-advances through the stages:
 
 ```bash
-/design "Create ThemeProvider and Toggle component with smooth transitions"
+/work
+```
+
+_Executes: `/backend` → `/design` → `/security` → `/enhance` → `/test`, loading the right agent for each._
+
+To run a single stage:
+
+```bash
+/work design
 ```
 
 ### Step 7: Verification

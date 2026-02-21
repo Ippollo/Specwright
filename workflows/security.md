@@ -18,3 +18,13 @@ recommends_mcp: [context7, firebase, gcloud, sequential-thinking]
     - Agent performs vulnerability scan (conceptual).
     - Agent checks against OWASP Top 10.
     - Agent recommends/applies hardening patches.
+
+## Task Filtering
+
+When a `tasks.md` is present in the active change folder:
+
+1. **Scan** `tasks.md` for incomplete tasks tagged with `/security`.
+2. **Execute only** those tasks, in order.
+3. **Mark each** `[x]` in `tasks.md` as it completes.
+4. **Run CHECKPOINT** if one follows the completed tasks.
+5. **Auto-advance**: When all `/security` tasks are done, proceed to the next pipeline stage (`/enhance`). Load the `code-custodian` agent and continue.

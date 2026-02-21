@@ -6,33 +6,34 @@ One-page cheat sheet for common commands and agent flows.
 
 1. **Ideate**: Brainstorm and research. Use `/brainstorm` and `/investigate`.
 2. **Plan**: Define specs and tasks. Use `/new`, `/specify`, `/clarify`, `/plan`, or `/ff`.
-3. **Execute**: Build and verify. Use `/design`, `/backend`, `/test`, `/archive`.
+3. **Execute**: Build and verify. Use `/work` to auto-run the pipeline, or `/backend`, `/design`, etc. individually.
 
 ---
 
 ## 🛠 Workflows
 
-| Command           | Objective       | Use Case                                             |
-| :---------------- | :-------------- | :--------------------------------------------------- |
-| `/brainstorm`     | Explore options | Comparing different technical approaches.            |
-| `/investigate`    | Deep-dive code  | Understanding existing logic before changing it.     |
-| `/new`            | Start change    | **Required** starting point for any feature/fix.     |
-| `/specify`        | Create specs    | Defining user stories and requirements.              |
-| `/clarify`        | Fix gaps        | Identifying missing info in specifications.          |
-| `/plan`           | Create tasks    | Generating `design.md` and `tasks.md`.               |
-| `/ff`             | Fast-Forward    | Generates spec, design, and tasks in one pass.       |
-| `/design`         | Frontend work   | Building UI components and styles.                   |
-| `/backend`        | Server logic    | Designing APIs and backend architecture.             |
-| `/test`           | Verification    | Running unit, integration, and E2E tests.            |
-| `/debug`          | Fix bugs        | Investigating and resolving issues.                  |
-| `/enhance`        | Refactor        | Improving existing code quality/speed.               |
-| `/security`       | Audit           | Hardening code against vulnerabilities.              |
-| `/final-polish`   | Cleanup         | Pre-submission checklist and verification.           |
-| `/archive`        | Close change    | Moving delta specs to `specs/` and archiving folder. |
-| `/preview`        | Dev server      | Manage local server for previewing changes.          |
-| `/second-opinion` | Review          | Stress-testing plans with an expert persona.         |
-| `/constitution`   | Rules           | Setting project-wide guardrails.                     |
-| `/deploy`         | Release         | Deploying changes to production.                     |
+| Command           | Objective       | Use Case                                                                  |
+| :---------------- | :-------------- | :------------------------------------------------------------------------ |
+| `/brainstorm`     | Explore options | Comparing different technical approaches.                                 |
+| `/investigate`    | Deep-dive code  | Understanding existing logic before changing it.                          |
+| `/new`            | Start change    | **Required** starting point for any feature/fix.                          |
+| `/specify`        | Create specs    | Defining user stories and requirements.                                   |
+| `/clarify`        | Fix gaps        | Identifying missing info in specifications.                               |
+| `/plan`           | Create tasks    | Generating `design.md` and `tasks.md`.                                    |
+| `/ff`             | Fast-Forward    | Generates spec, design, and tasks in one pass.                            |
+| `/work`           | **Pipeline**    | Auto-executes tasks by tag: backend → design → security → enhance → test. |
+| `/design`         | Frontend work   | Building UI components and styles.                                        |
+| `/backend`        | Server logic    | Designing APIs and backend architecture.                                  |
+| `/test`           | Verification    | Running unit, integration, and E2E tests.                                 |
+| `/debug`          | Fix bugs        | Investigating and resolving issues.                                       |
+| `/enhance`        | Refactor        | Improving existing code quality/speed.                                    |
+| `/security`       | Audit           | Hardening code against vulnerabilities.                                   |
+| `/final-polish`   | Cleanup         | Pre-submission checklist and verification.                                |
+| `/archive`        | Close change    | Moving delta specs to `specs/` and archiving folder.                      |
+| `/preview`        | Dev server      | Manage local server for previewing changes.                               |
+| `/second-opinion` | Review          | Stress-testing plans with an expert persona.                              |
+| `/constitution`   | Rules           | Setting project-wide guardrails.                                          |
+| `/deploy`         | Release         | Deploying changes to production.                                          |
 
 ---
 
@@ -56,4 +57,5 @@ One-page cheat sheet for common commands and agent flows.
 - **Always `/new`**: Never work directly in the main branch. Isolated folders prevent chaos.
 - **Spec First**: Use `/specify` before `/plan`. Clear requirements = better code.
 - **Measure Twice**: Use `Project Planner` for complex changes.
+- **Use `/work`**: After planning, let `/work` drive execution through the pipeline automatically.
 - **Global linking**: Run `./scripts/make-global.ps1` to use these commands in any project.

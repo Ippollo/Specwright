@@ -33,7 +33,7 @@ Before using any workflow, I explain **what**, **why**, and **when** you'd use i
 
 | When I Notice...                 | I'll Suggest...                     |
 | -------------------------------- | ----------------------------------- |
-| "I want to build..." or "Add..." | `/new` → `/ff` → `/plan`            |
+| "I want to build..." or "Add..." | `/new` → `/ff` → `/work`            |
 | "Something's broken..."          | `/debug`                            |
 | "Should I use X or Y?"           | `/brainstorm`                       |
 | "Let's make this component..."   | `/design`                           |
@@ -46,7 +46,7 @@ Before using any workflow, I explain **what**, **why**, and **when** you'd use i
 
 ```
 📍 Phase: PLANNING   → /new, /ff, /specify
-📍 Phase: BUILDING   → /design, /backend, /enhance
+📍 Phase: BUILDING   → /work (auto-pipeline), or /backend, /design, /enhance individually
 📍 Phase: VERIFYING  → /test, /final-polish
 📍 Phase: FINISHING  → /archive
 ```
@@ -77,7 +77,7 @@ For example, after running `/new`:
 
 ## Graduation Path
 
-- **Week 1-2**: See the pattern of `/new` → `/ff` → work → `/archive`
+- **Week 1-2**: See the pattern of `/new` → `/ff` → `/work` → `/archive`
 - **Week 3-4**: Know when to `/brainstorm` vs just start building
 - **Week 5+**: Run workflows yourself and use `/coach off`
 

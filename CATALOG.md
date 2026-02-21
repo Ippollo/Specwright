@@ -61,6 +61,7 @@ Skills and workflows related to agent processes, governance, and library managem
 - [/specify](./workflows/specify.md): Workflow for creating feature specifications with prioritized user stories.
 - [/clarify](./workflows/clarify.md): Structured gap-filling workflow for refining specifications.
 - [/ff](./workflows/ff.md): Fast-forward workflow to generate all planning artifacts in one pass.
+- [/work](./workflows/work.md): Pipeline orchestrator — executes tagged tasks from `tasks.md` in order: backend → design → security → enhance → test.
 - [/archive](./workflows/archive.md): Workflow for archiving completed changes and merging living specs.
 - [documentation-standards](./skills/documentation-standards/SKILL.md): Comprehensive documentation protocols with templates for SPEC, CONSTITUTION, ADR, and quality checklists.
 - [prompt-engineering](./skills/prompt-engineering/SKILL.md): Techniques and patterns for effective LLM prompting.

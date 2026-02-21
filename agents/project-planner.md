@@ -106,3 +106,19 @@ Place the label at the start of each task line, before the description:
 - [ ] `/backend` — Add CRUD functions for activities collection
 - [ ] `/design` — [P] Build ActivityCard component
 ```
+
+## Pipeline Execution Order
+
+Tasks are executed via `/work` in this dependency order. When generating tasks within each phase, **order tasks to respect this pipeline**:
+
+```
+/backend → /design → /security → /enhance → /test
+```
+
+- `/backend` tasks create the data foundation (types, services, hooks).
+- `/design` tasks build UI on top of backend contracts.
+- `/security` tasks audit the complete implementation.
+- `/enhance` tasks optimize and clean up.
+- `/test` tasks are batched at the end for full verification.
+
+Within a single phase, place `/backend` tasks before `/design` tasks. Place `/security`, `/enhance`, and `/test` tasks after feature work, typically in a "Hardening" phase near the end.

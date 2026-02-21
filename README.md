@@ -72,7 +72,7 @@ For reference on how I use this toolkit:
 
 1.  **Initialize**: `/new feature-name`
 2.  **Plan**: `/ff "Describe feature"`
-3.  **Build**: Mark tasks `[x]` in the task list.
+3.  **Build**: `/work` — auto-executes tasks by tag: `backend → design → security → enhance → test`
 4.  **Finish**: `/archive feature-name`
 
 ---

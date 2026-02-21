@@ -19,3 +19,13 @@ recommends_mcp: [context7, firebase, gcloud]
     - Agent designs API contract.
     - Agent models database schema.
     - Agent implements logic with performance in mind.
+
+## Task Filtering
+
+When a `tasks.md` is present in the active change folder:
+
+1. **Scan** `tasks.md` for incomplete tasks tagged with `/backend`.
+2. **Execute only** those tasks, in order.
+3. **Mark each** `[x]` in `tasks.md` as it completes.
+4. **Run CHECKPOINT** if one follows the completed tasks.
+5. **Auto-advance**: When all `/backend` tasks are done, proceed to the next pipeline stage (`/design`). Load the `frontend-specialist` agent and continue.
