@@ -31,6 +31,7 @@ One-page cheat sheet for common commands and agent flows.
 | `/final-polish`   | Cleanup         | Pre-submission checklist and verification.                                |
 | `/archive`        | Close change    | Moving delta specs to `specs/` and archiving folder.                      |
 | `/preview`        | Dev server      | Manage local server for previewing changes.                               |
+| `/review`         | Quality audit   | Specialist review pipeline for agent auto-proceeded work.                 |
 | `/second-opinion` | Review          | Stress-testing plans with an expert persona.                              |
 | `/constitution`   | Rules           | Setting project-wide guardrails.                                          |
 | `/deploy`         | Release         | Deploying changes to production.                                          |
@@ -54,6 +55,7 @@ One-page cheat sheet for common commands and agent flows.
 ## 💡 Quick Tips
 
 - **Start with `/constitution`**: Set project rules before any coding begins.
+- **Trust but verify**: After the agent auto-proceeds, run `/review` to spot-check quality.
 - **Always `/new`**: Never work directly in the main branch. Isolated folders prevent chaos.
 - **Spec First**: Use `/specify` before `/plan`. Clear requirements = better code.
 - **Measure Twice**: Use `Project Planner` for complex changes.
