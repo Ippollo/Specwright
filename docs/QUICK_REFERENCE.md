@@ -52,6 +52,24 @@ One-page cheat sheet for common commands and agent flows.
 
 ---
 
+## ⚙️ MCP Settings
+
+Keep exactly **50 tools enabled** across 8 servers to cover all workflows without manual toggling.
+See [MCP_SETTINGS.md](./MCP_SETTINGS.md) for the full enable/disable list per server.
+
+| Server              | Enabled |
+| ------------------- | :-----: |
+| context7            |   2/2   |
+| firebase            |  18/31  |
+| gcloud              |   1/1   |
+| github              |  8/26   |
+| playwright          |  10/22  |
+| sequential-thinking |   1/1   |
+| firecrawl-mcp       |  4/12   |
+| observability       |  6/13   |
+
+---
+
 ## 💡 Quick Tips
 
 - **Start with `/constitution`**: Set project rules before any coding begins.
