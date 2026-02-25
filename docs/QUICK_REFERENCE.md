@@ -5,7 +5,7 @@ One-page cheat sheet for common commands and agent flows.
 ## 🚀 The Three Phases
 
 1. **Ideate**: Brainstorm and research. Use `/brainstorm` and `/investigate`.
-2. **Plan**: Define specs and tasks. Use `/new`, `/specify`, `/clarify`, `/plan`, or `/ff`.
+2. **Plan**: Define specs and tasks. Use `/new`, `/specify`, `/clarify`, and `/plan`.
 3. **Execute**: Build and verify. Use `/work` to auto-run the pipeline, or `/backend`, `/design`, etc. individually.
 
 ---
@@ -20,7 +20,6 @@ One-page cheat sheet for common commands and agent flows.
 | `/specify`        | Create specs    | Defining user stories and requirements.                                   |
 | `/clarify`        | Fix gaps        | Identifying missing info in specifications.                               |
 | `/plan`           | Create tasks    | Generating `design.md` and `tasks.md`.                                    |
-| `/ff`             | Fast-Forward    | Generates spec, design, and tasks in one pass.                            |
 | `/work`           | **Pipeline**    | Auto-executes tasks by tag: backend → design → security → enhance → test. |
 | `/design`         | Frontend work   | Building UI components and styles.                                        |
 | `/backend`        | Server logic    | Designing APIs and backend architecture.                                  |
@@ -35,6 +34,7 @@ One-page cheat sheet for common commands and agent flows.
 | `/second-opinion` | Review          | Stress-testing plans with an expert persona.                              |
 | `/constitution`   | Rules           | Setting project-wide guardrails.                                          |
 | `/deploy`         | Release         | Deploying changes to production.                                          |
+| `/coach`          | Learning mode   | Teaches the toolkit while you work. Toggle with `/coach on/off`.          |
 
 ---
 

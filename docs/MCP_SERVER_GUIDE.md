@@ -25,7 +25,7 @@ Instead of enabling all servers upfront, this toolkit uses a **progressive disco
 | Server                  | Use Cases                                    | Workflows/Agents                                                                       |
 | ----------------------- | -------------------------------------------- | -------------------------------------------------------------------------------------- |
 | **context7**            | Library API research, framework docs         | `/backend`, `/investigate`, `backend-architect`, `project-planner`                     |
-| **sequential-thinking** | Complex planning, structured analysis        | `/brainstorm`, `/plan`, `/ff`, `/second-opinion`, `project-planner`                    |
+| **sequential-thinking** | Complex planning, structured analysis        | `/brainstorm`, `/plan`, `/second-opinion`, `project-planner`                           |
 | **github**              | Issue tracking, PR reviews, codebase context | `/investigate`, `debugger`, `code-custodian`, `project-planner`, `sec-devops-engineer` |
 | **playwright**          | E2E testing, UI validation                   | `/test`, `qa-engineer`, `frontend-specialist`                                          |
 | **firecrawl-mcp**       | Documentation scraping, competitive research | `/brainstorm`, `/investigate`, `project-planner`                                       |
@@ -42,23 +42,26 @@ Instead of enabling all servers upfront, this toolkit uses a **progressive disco
 
 ### Planning Phase
 
+- `/new` → (none)
 - `/brainstorm` → `sequential-thinking`, `firecrawl-mcp`
-- `/plan` → `sequential-thinking`
-- `/ff` → `sequential-thinking`
 - `/specify` → (none)
 - `/clarify` → (none)
+- `/plan` → `sequential-thinking`
 - `/investigate` → `github`, `context7`, `firecrawl-mcp`
 
 ### Building Phase
 
+- `/work` → (none — orchestrates other workflows)
 - `/design` → (none)
 - `/backend` → `context7`
 - `/enhance` → (none)
+- `/review` → (none — orchestrates specialist agents)
 
 ### Verification Phase
 
 - `/test` → `playwright`
 - `/debug` → `observability`
+- `/preview` → (none)
 - `/final-polish` → (none)
 
 ### Deployment & Completion

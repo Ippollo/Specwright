@@ -24,7 +24,7 @@ ls
 
 | Files Present                       | Status                | Next Step                     |
 | ----------------------------------- | --------------------- | ----------------------------- |
-| `proposal.md` only                  | Planning started      | Run `/specify` or `/ff`       |
+| `proposal.md` only                  | Planning started      | Run `/specify` then `/plan`   |
 | `proposal.md` + `specs/`            | Requirements done     | Run `/plan`                   |
 | `specs/` + `design.md` + `tasks.md` | Planning complete     | Start implementation          |
 | Everything + code changes           | Partially implemented | Review tasks, continue coding |

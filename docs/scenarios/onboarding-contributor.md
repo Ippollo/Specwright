@@ -200,7 +200,8 @@ Explore specialized workflows.
 /clarify
 
 # For fast iteration
-/ff
+/specify "Quick description of the change"
+/plan
 ```
 
 ---
@@ -214,7 +215,7 @@ Explore specialized workflows.
 **Rule of thumb:**
 
 - Typos, comments, docs → Just fix it
-- One-line code changes → Use `/ff` mode
+- One-line code changes → Use `/new` + `/specify` + `/plan`
 - Multi-file changes → Full workflow
 
 ---
@@ -309,13 +310,14 @@ Before making any change, understand the current state.
 
 ---
 
-### 3. Use `/ff` for Learning
+### 3. Use `/specify` + `/plan` for Learning
 
-Fast-forward mode lets you see the full workflow output quickly.
+The planning workflow lets you see the full output quickly.
 
 ```bash
 /new learning-example
-/ff
+/specify "Brief description of the change"
+/plan
 # Review the generated specs, design, and tasks
 # Learn the expected structure
 ```

@@ -48,14 +48,15 @@ For truly trivial changes, skip the toolkit entirely.
 
 ---
 
-### Option 2: Fast-Forward Mode (Recommended)
+### Option 2: Minimal Planning (Recommended)
 
 For small fixes that still benefit from structure.
 
 ```bash
 /new fix-login-button-color
 # Edit the proposal.md with a one-line description
-/ff
+/specify "Fix login button using wrong color"
+/plan
 # Implement the fix
 /archive fix-login-button-color
 ```
@@ -173,7 +174,8 @@ throw new Error("Failed to authenticate user");
 ```bash
 /new fix-button-color
 # Quick proposal
-/ff
+/specify "Fix button color to brand blue"
+/plan
 # Make the change
 /archive fix-button-color
 ```
@@ -221,7 +223,7 @@ Is it a one-line change in one file?
 └─ No → Continue...
 
 Is the solution obvious and low-risk?
-├─ Yes → Use /ff mode
+├─ Yes → Use /new + /specify + /plan
 └─ No → Use full workflow (see new-feature.md)
 ```
 
@@ -229,7 +231,7 @@ Is the solution obvious and low-risk?
 
 ## Pro Tips
 
-- **When in doubt, use `/ff`**: It's fast but still creates an audit trail
+- **When in doubt, use `/new`**: It's fast but still creates an audit trail
 - **Don't skip `/archive`**: Even quick fixes deserve documentation
 - **Use `/test` for hotfixes**: Production bugs often have edge cases you missed
 - **Set a threshold**: Agree with your team on what counts as "quick fix" vs "feature"
