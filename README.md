@@ -5,7 +5,7 @@ My personal library of Skills, Agents, and Workflows for **Antigravity** (my AI 
 ## About
 
 > [!NOTE]
-> This is the toolkit I use with Antigravity. It's not intended as a general-purpose community project, though others are welcome to reference it and adapt it for their own needs.
+> This is the toolkit I built for my own workflow with Antigravity. It works great for me, and it might for you too — fork it, adapt it, make it yours.
 
 ## Structure
 
