@@ -51,7 +51,7 @@ This creates `docs/CONSTITUTION.md`. I edit this file to include my tech stack p
 
 ## 4. My 3-Phase Workflow
 
-### Phase 1: Planning (`/new` & `/ff`)
+### Phase 1: Planning (`/new` → `/specify` → `/plan`)
 
 I start a new feature:
 
@@ -59,10 +59,11 @@ I start a new feature:
 /new user-profile
 ```
 
-For high-velocity work, I use the Fast-Forward command to generate all planning docs:
+Then I define the requirements and generate the plan:
 
 ```bash
-/ff "Add user profile page with avatar upload and bio edit"
+/specify "Add user profile page with avatar upload and bio edit"
+/plan
 ```
 
 This generates:

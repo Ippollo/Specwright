@@ -25,7 +25,7 @@ recommends_mcp: []
    - Copy `templates/change/proposal-template.md` → `changes/{slug}/proposal.md`.
 4. **Completion**:
    - Prompt user to fill in the proposal.
-   - Suggest `/ff` to generate all artifacts or `/specify` to work incrementally.
+   - Suggest `/specify` to define requirements, then `/plan` to generate the design and tasks.
 
 ## Usage
 

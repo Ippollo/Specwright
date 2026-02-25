@@ -6,6 +6,9 @@ The Agentic Toolkit is designed around a structured lifecycle that moves from ab
 
 ```mermaid
 graph TD
+    %% Governance
+    Constitution["/constitution<br/>(Project Rules)"] -.-> Start
+
     %% Entry Points
     Start([User Request]) --> Investigate["/investigate<br/>(Technical Research)"]
     Start --> Brainstorm["/brainstorm<br/>(Ideation & Options)"]
@@ -20,17 +23,15 @@ graph TD
         Specify --> Clarify["/clarify<br/>(Fill Gaps)"]
         Clarify --> Specify
         Specify --> Plan["/plan<br/>(Technical Design)"]
-
-        %% Fast Track
-        New -.-> FF["/ff<br/>(Fast-Forward)"]
-        FF --> Plan
     end
 
     %% Execution Phase
     subgraph "Execution Phase"
-        Plan --> Backend["/backend<br/>(Server Logic)"]
-        Plan --> Design["/design<br/>(UI/Frontend)"]
-        Plan --> Enhance["/enhance<br/>(Refactor/Optimize)"]
+        Plan --> Work["/work<br/>(Pipeline Orchestrator)"]
+        Work --> Backend["/backend<br/>(Server Logic)"]
+        Work --> Design["/design<br/>(UI/Frontend)"]
+        Work --> Security["/security<br/>(Audit & Harden)"]
+        Work --> Enhance["/enhance<br/>(Refactor/Optimize)"]
 
         Backend --> Debug["/debug<br/>(Fix Issues)"]
         Design --> Debug
@@ -42,8 +43,10 @@ graph TD
         Debug --> Preview["/preview<br/>(Local Dev Server)"]
         Backend --> Test["/test<br/>(Unit/E2E Tests)"]
         Design --> Preview
+        Work --> Review["/review<br/>(Quality Audit)"]
         Preview --> Final["/final-polish<br/>(Cleanup)"]
         Test --> Final
+        Review --> Final
     end
 
     Final --> Deploy["/deploy<br/>(Production)"]
@@ -51,10 +54,12 @@ graph TD
     Archive --> End([Complete])
 
     %% Styling
-    style FF stroke-dasharray: 5 5
+    style Constitution fill:#ffe0b2,stroke:#333
+    style Work fill:#ffd,stroke:#333
     style New fill:#f9f,stroke:#333
     style Archive fill:#dfd,stroke:#333
     style Plan fill:#bbf,stroke:#333
+    style Review fill:#fdf,stroke:#333
 ```
 
 ---
@@ -70,10 +75,12 @@ The **Happy Path** is the most robust way to ensure high-quality output. It foll
 5.  **`/test` & `/preview`**: Verify the work functions correctly and looks great.
 6.  **`/archive`**: The final step. It merges your "Delta Specs" into the main documentation and cleans up the change folder.
 
-## ⚡ Fast-Tracks & Support
+## ⚡ Automation & Support
 
-- **`/ff` (Fast-Forward)**: Use this for simple tasks where you want to jump from a Proposal to a full Plan/Task list in one step.
+- **`/work` (Pipeline)**: Auto-executes tasks by workflow tag: `/backend` → `/design` → `/security` → `/enhance` → `/test`. Use after planning is complete.
+- **`/review` (Quality Audit)**: Runs specialist agents over auto-proceeded work to catch issues.
 - **`/brainstorm` & `/investigate`**: Use these **before** you even run `/new`. They help you decide if a change is viable or what the best approach might be.
+- **`/second-opinion`**: Stress-test any plan or design decision with a rigorous expert review. Use ad-hoc at any stage.
 - **`/coach`**: Can be toggled on at any time to help you learn which tool to use next!
 
 ## 🛠️ Maintenance Workflows

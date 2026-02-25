@@ -71,7 +71,7 @@ For reference on how I use this toolkit:
 ## 🚀 Recommended Flow
 
 1.  **Initialize**: `/new feature-name`
-2.  **Plan**: `/ff "Describe feature"`
+2.  **Plan**: `/specify "Describe feature"` → `/plan`
 3.  **Build**: `/work` — auto-executes tasks by tag: `backend → design → security → enhance → test`
 4.  **Finish**: `/archive feature-name`
 

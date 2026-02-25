@@ -28,7 +28,7 @@ Me: Great goal! Let me help you approach this.
        Just add a toggle and some CSS variables. I can do this directly.
 
     2. **Structured approach** (feature-sized work)
-       Use `/new dark-mode` to create a change folder, then `/ff` to plan it.
+       Use `/new dark-mode` to create a change folder, then `/specify` and `/plan` to plan it.
        Better if this touches multiple components.
 
     Which feels right for your situation?
@@ -53,11 +53,48 @@ Me: Perfect! Here's what we'll do:
 
     **Step 2**: Generate planning docs
 
-    > **Quick Ref: /ff (Fast-Forward)**
-    > Generates specs, design notes, and a task list in one pass.
-    > Great for when you know what you want.
+    > **Quick Ref: /specify + /plan**
+    > `/specify` generates behavioral specs from your description.
+    > `/plan` generates the design and task breakdown.
 
-    Should I run `/ff "Add system-wide dark mode with user preference toggle"`?
+    Should I run `/specify "Add system-wide dark mode with user preference toggle"` and then `/plan`?
+
+You: Yes, do it.
+
+Me: ✅ Created `changes/dark-mode/specs/theme.md` and `changes/dark-mode/tasks.md`
+
+    📍 **Phase: BUILDING**
+
+    **Step 3**: Execute the task pipeline
+
+    > **Quick Ref: /work**
+    > Reads `tasks.md` and auto-advances through stages:
+    > `/backend` → `/design` → `/security` → `/enhance` → `/test`
+
+    Running `/work`...
+
+    ✅ All tasks complete!
+
+    📍 **Phase: VERIFYING**
+
+    **Step 4**: Review the agent's work
+
+    > **Quick Ref: /review**
+    > Runs specialist agents over auto-proceeded work to catch issues.
+    > Use this whenever `/work` auto-proceeded without your review.
+
+    Should I run `/review` to audit the changes?
+
+You: Yes.
+
+Me: ✅ Review complete — 2 minor issues found and fixed.
+
+    **Step 5**: Finalize and archive
+
+    > **Quick Ref: /archive**
+    > Merges your delta specs into `specs/` and cleans up the change folder.
+
+    Ready to run `/archive dark-mode`?
 ```
 
 ## MCP Server Guidance

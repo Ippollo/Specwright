@@ -114,7 +114,7 @@ Document how the team should use the toolkit going forward.
 All new features and fixes should follow this process:
 
 1. Run `/new [feature-name]` to create a change folder
-2. Use `/specify` for complex features, `/ff` for simple ones
+2. Use `/specify` for complex features, `/specify` + `/plan` for simple ones
 3. Implement using `/design`, `/backend`, etc.
 4. Run `/final-polish` before submitting PR
 5. Run `/archive` after merging
@@ -168,10 +168,9 @@ Don't force the entire team to switch overnight.
 
 ### "The team thinks this is too much ceremony"
 
-**Solution:** Start with `/ff` (fast-forward) mode:
+**Solution:** Start with `/specify` + `/plan` for a streamlined process:
 
-- Skips the step-by-step refinement
-- Generates all artifacts in one pass
+- Generates all artifacts in a few steps
 - Still provides structure without slowing down
 
 ---

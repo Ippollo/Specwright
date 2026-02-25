@@ -13,7 +13,7 @@ recommends_mcp:
 
 ## When to Use
 
-- During the `/plan`, `/specify`, or `/ff` phases.
+- During the `/plan` or `/specify` phases.
 - When you need a complex architectural breakdown before touching code.
 - To validate a technical approach against the project constitution.
 

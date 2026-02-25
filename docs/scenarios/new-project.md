@@ -131,15 +131,16 @@ Clean up and preserve the work.
 
 ---
 
-## Alternative: Fast-Forward Mode
+## Alternative: Streamlined Planning
 
 For simpler features where you have a clear vision:
 
 ```bash
 /new onboarding-tutorial
 # Fill in the proposal.md
-/ff
-# Generates specs, design, and tasks in one pass
+/specify "Brief description of the onboarding tutorial"
+/plan
+# Generates specs, design, and tasks
 ```
 
 ---
