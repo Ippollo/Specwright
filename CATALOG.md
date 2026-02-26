@@ -62,6 +62,7 @@ Skills and workflows related to agent processes, governance, and library managem
 - [/clarify](./workflows/clarify.md): Structured gap-filling workflow for refining specifications.
 - [/work](./workflows/work.md): Pipeline orchestrator — executes tagged tasks from `tasks.md` in order: backend → design → security → enhance → test.
 - [/review](./workflows/review.md): Specialist review pipeline — runs backend, design, security, and enhance agents to review and fix auto-proceeded work.
+- [/commit](./workflows/commit.md): Stage, commit (conventional), and push changes. Always pushes.
 - [/archive](./workflows/archive.md): Workflow for archiving completed changes and merging living specs.
 - [documentation-standards](./skills/documentation-standards/SKILL.md): Comprehensive documentation protocols with templates for SPEC, CONSTITUTION, ADR, and quality checklists.
 - [prompt-engineering](./skills/prompt-engineering/SKILL.md): Techniques and patterns for effective LLM prompting.

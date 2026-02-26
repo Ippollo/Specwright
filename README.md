@@ -73,7 +73,8 @@ For reference on how I use this toolkit:
 1.  **Initialize**: `/new feature-name`
 2.  **Plan**: `/specify "Describe feature"` → `/plan`
 3.  **Build**: `/work` — auto-executes tasks by tag: `backend → design → security → enhance → test`
-4.  **Finish**: `/archive feature-name`
+4.  **Commit**: `/commit` — stage, commit (conventional), and push
+5.  **Finish**: `/archive feature-name`
 
 ---
 

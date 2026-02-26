@@ -137,6 +137,7 @@ Use the toolkit for your first task.
 
 # Finalize
 /final-polish
+/commit
 /archive add-email-validation
 ```
 

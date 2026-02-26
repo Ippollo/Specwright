@@ -28,6 +28,7 @@ One-page cheat sheet for common commands and agent flows.
 | `/enhance`        | Refactor        | Improving existing code quality/speed.                                    |
 | `/security`       | Audit           | Hardening code against vulnerabilities.                                   |
 | `/final-polish`   | Cleanup         | Pre-submission checklist and verification.                                |
+| `/commit`         | Save & push     | Stage, conventional commit, and push. Always pushes.                      |
 | `/archive`        | Close change    | Moving delta specs to `specs/` and archiving folder.                      |
 | `/preview`        | Dev server      | Manage local server for previewing changes.                               |
 | `/review`         | Quality audit   | Specialist review pipeline for agent auto-proceeded work.                 |

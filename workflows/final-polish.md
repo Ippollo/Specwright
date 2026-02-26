@@ -25,4 +25,4 @@ recommends_mcp: [context7, github, sequential-thinking]
     - Agent runs final lint/test checks.
 4.  **Handoff**:
     - If verified, Agent explicitly notifies user:
-      > "Code verified. Ready for deployment via `/deploy` or archive via `/archive`".
+      > "Code verified. Ready to commit via `/commit`, then deploy via `/deploy` or archive via `/archive`".
