@@ -60,12 +60,12 @@ recommends_mcp: [context7, firebase, gcloud, playwright, sequential-thinking]
    - **Fix** any issues found. Report what was changed.
 
 6. **Consolidated Verdict**: Combine findings from all four reviews into a single summary.
-   - ✅ **Looks Good** — All reviews pass, no changes needed. Ready for `/deploy` or `/archive`.
+   - ✅ **Looks Good** — All reviews pass, no changes needed. Ready for `/commit`.
    - 🔧 **Fixed** — Issues found and resolved. Summary of what was changed.
    - ⚠️ **Needs User Input** — Issues found that require a decision from the user.
 
 7. **Handoff**: Based on verdict, suggest next steps:
-   - ✅ / 🔧 → Proceed to `/deploy` or `/archive`.
+   - ✅ / 🔧 → Proceed to `/commit`, then `/deploy` or `/archive`.
    - ⚠️ → User reviews flagged items and provides direction.
 
 ## Skipping Stages

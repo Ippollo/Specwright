@@ -89,7 +89,16 @@ You: Yes.
 
 Me: ✅ Review complete — 2 minor issues found and fixed.
 
-    **Step 5**: Finalize and archive
+    **Step 5**: Commit and push
+
+    > **Quick Ref: /commit**
+    > Stages, creates a conventional commit, and pushes. Always pushes.
+
+    Running `/commit`...
+
+    ✅ Committed and pushed!
+
+    **Step 6**: Finalize and archive
 
     > **Quick Ref: /archive**
     > Merges your delta specs into `specs/` and cleans up the change folder.

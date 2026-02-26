@@ -78,7 +78,15 @@ Run tests to ensure it works as expected.
 /test "Theme toggle persistence and style application"
 ```
 
-### Step 8: Archive
+### Step 8: Commit & Push
+
+Save your work with a conventional commit and push.
+
+```bash
+/commit
+```
+
+### Step 9: Archive
 
 Clean up and finalize.
 
@@ -92,4 +100,5 @@ Clean up and finalize.
 
 1. **Consistency**: `/specify` ensures you don't forget edge cases.
 2. **Isolation**: `/new` keeps changes separate from other work.
-3. **Audit Trail**: `/archive` preserves the "Why" (specs) even after the code is merged.
+3. **Reliable commits**: `/commit` ensures every change is committed and pushed the same way.
+4. **Audit Trail**: `/archive` preserves the "Why" (specs) even after the code is merged.

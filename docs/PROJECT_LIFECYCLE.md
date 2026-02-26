@@ -49,8 +49,9 @@ graph TD
         Review --> Final
     end
 
-    Final --> Deploy["/deploy<br/>(Production)"]
-    Deploy --> Archive["/archive<br/>(Merge & Cleanup)"]
+    Final --> Commit["/commit<br/>(Stage, Commit, Push)"]
+    Commit --> Deploy["/deploy<br/>(Production)"]
+    Commit --> Archive["/archive<br/>(Merge & Cleanup)"]
     Archive --> End([Complete])
 
     %% Styling
@@ -58,6 +59,7 @@ graph TD
     style Work fill:#ffd,stroke:#333
     style New fill:#f9f,stroke:#333
     style Archive fill:#dfd,stroke:#333
+    style Commit fill:#cef,stroke:#333
     style Plan fill:#bbf,stroke:#333
     style Review fill:#fdf,stroke:#333
 ```
@@ -73,7 +75,8 @@ The **Happy Path** is the most robust way to ensure high-quality output. It foll
 3.  **`/plan`**: Design **how** it will be built (Architecture & Task List).
 4.  **Implementation**: Use specialized agents like **`/backend`** or **`/design`**.
 5.  **`/test` & `/preview`**: Verify the work functions correctly and looks great.
-6.  **`/archive`**: The final step. It merges your "Delta Specs" into the main documentation and cleans up the change folder.
+6.  **`/commit`**: Stage, commit (conventional), and push your changes. Always pushes.
+7.  **`/archive`**: The final step. It merges your "Delta Specs" into the main documentation and cleans up the change folder.
 
 ## ⚡ Automation & Support
 

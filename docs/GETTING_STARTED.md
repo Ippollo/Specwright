@@ -100,6 +100,12 @@ Once all tasks are marked `[x]`, I verify the work:
 /final-polish
 ```
 
+Then I commit and push:
+
+```bash
+/commit
+```
+
 Finally, I merge the change and cleanup:
 
 ```bash

@@ -31,22 +31,22 @@ Before using any workflow, I explain **what**, **why**, and **when** you'd use i
 
 ### 2. 🧭 Suggest Workflows at Key Moments
 
-| When I Notice...                  | I'll Suggest...                          |
-| --------------------------------- | ---------------------------------------- |
-| "I want to build..." or "Add..."  | `/new` → `/specify` → `/plan` → `/work`  |
-| "Something's broken..."           | `/debug`                                 |
-| "Should I use X or Y?"            | `/brainstorm`                            |
-| "How does this work?"             | `/investigate`                           |
-| "Let's make this component..."    | `/design`                                |
-| "I need an API for..."            | `/backend`                               |
-| "I need AI/Gemini..."             | `/backend` + `gemini-api-dev` skill      |
-| "Is this code good?"              | `/enhance`                               |
-| "Is this secure?"                 | `/security`                              |
-| "I'm not sure about this plan..." | `/second-opinion`                        |
-| "Did the agent do a good job?"    | `/review`                                |
-| "Let me see it in the browser"    | `/preview`                               |
-| "I'm done with this feature"      | `/final-polish` → `/deploy` → `/archive` |
-| Starting a brand new project      | `/constitution` → `/new`                 |
+| When I Notice...                  | I'll Suggest...                                       |
+| --------------------------------- | ----------------------------------------------------- |
+| "I want to build..." or "Add..."  | `/new` → `/specify` → `/plan` → `/work`               |
+| "Something's broken..."           | `/debug`                                              |
+| "Should I use X or Y?"            | `/brainstorm`                                         |
+| "How does this work?"             | `/investigate`                                        |
+| "Let's make this component..."    | `/design`                                             |
+| "I need an API for..."            | `/backend`                                            |
+| "I need AI/Gemini..."             | `/backend` + `gemini-api-dev` skill                   |
+| "Is this code good?"              | `/enhance`                                            |
+| "Is this secure?"                 | `/security`                                           |
+| "I'm not sure about this plan..." | `/second-opinion`                                     |
+| "Did the agent do a good job?"    | `/review`                                             |
+| "Let me see it in the browser"    | `/preview`                                            |
+| "I'm done with this feature"      | `/final-polish` → `/commit` → `/deploy` or `/archive` |
+| Starting a brand new project      | `/constitution` → `/new`                              |
 
 ### 3. 🚦 Track Your Phase
 
@@ -54,7 +54,7 @@ Before using any workflow, I explain **what**, **why**, and **when** you'd use i
 📍 Phase: PLANNING   → /constitution, /new, /specify, /clarify, /plan
 📍 Phase: BUILDING   → /work (auto-pipeline), or /backend, /design, /security, /enhance individually
 📍 Phase: VERIFYING  → /test, /preview, /review, /final-polish
-📍 Phase: FINISHING  → /deploy, /archive
+📍 Phase: FINISHING  → /commit, /deploy, /archive
 ```
 
 ### 4. 🤝 Ask Before Complex Actions
@@ -83,7 +83,7 @@ For example, after running `/new`:
 
 ## Graduation Path
 
-- **Week 1-2**: See the pattern of `/new` → `/specify` → `/plan` → `/work` → `/review` → `/archive`
+- **Week 1-2**: See the pattern of `/new` → `/specify` → `/plan` → `/work` → `/review` → `/commit` → `/archive`
 - **Week 3-4**: Know when to `/brainstorm` vs just start building; use `/second-opinion` for validation
 - **Week 5+**: Run workflows yourself and use `/coach off`
 
