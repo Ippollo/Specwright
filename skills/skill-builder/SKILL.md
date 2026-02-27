@@ -20,6 +20,7 @@ Before starting, analyze the user request to determine the correct mode.
 
 2.  **Check Catalog**:
     - Read `c:\Projects\agentic-toolkit\CATALOG.md`.
+    - Also check `.agents/skills/` in the current project for local skills.
     - **No Match** → Go to **[CREATE Mode](#create-mode)**.
     - **Partial/Full Match** → Go to **[MODIFY Mode](#modify-mode)**.
 
@@ -28,6 +29,17 @@ Before starting, analyze the user request to determine the correct mode.
 ## CREATE Mode
 
 Use when building a new skill from scratch.
+
+### Step 0.5: Scope Selection
+
+Ask the user:
+
+> _"Should this be a **global** skill (useful across any project) or a **local** skill (specific to this project)?"_
+
+- **Global** → Creates in `c:\Projects\agentic-toolkit\skills\<skill-name>\`
+- **Local** → Creates in `.agents/skills/<skill-name>\` within the current project
+
+If invoked from `/discover` gap-filling, default to **local**.
 
 ### Step 1: Validation
 
@@ -49,14 +61,29 @@ Ask user to choose a template based on complexity:
 
 ### Step 4: Generation
 
-1.  **Create Directory**: `c:\Projects\agentic-toolkit\<skill-name>\`
+**If Global:**
+
+1.  **Create Directory**: `c:\Projects\agentic-toolkit\skills\<skill-name>\`
 2.  **Write SKILL.md**: Use the selected template, populated with user's name/description and custom instructions.
 3.  **Create Subdirectories**: `scripts/`, `resources/`, `docs/` (if Intermediate/Advanced).
 
-### Step 5: Catalog Update
+**If Local:**
+
+1.  **Create Directory**: `.agents/skills/<skill-name>\` (create `.agents/skills/` if it doesn't exist).
+2.  **Write SKILL.md**: Same format as global skills.
+3.  **Create Subdirectories**: Same as global (if Intermediate/Advanced).
+
+### Step 5: Registration
+
+**If Global:**
 
 - Append the new skill to `c:\Projects\agentic-toolkit\CATALOG.md`.
 - Format: `- [skill-name]: <description>`
+
+**If Local:**
+
+- Update the project's `.agents/project-profile.md` "Local Skills" section (if the file exists).
+- Format: `- \`skill-name\` — description`
 
 ---
 

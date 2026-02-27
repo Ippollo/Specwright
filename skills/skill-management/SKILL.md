@@ -56,6 +56,47 @@ Before marking a skill as **Active**, ensure it meets these criteria:
 - [ ] **Cataloged**: An entry exists in `c:\Projects\agentic-toolkit\CATALOG.md` in the correct alphabetical position.
 - [ ] **No Overlaps**: The skill does not duplicate functionality of an existing skill. If it does, follow the "Handling Overlaps" protocol.
 
+## Project-Local Skills
+
+Projects can define their own lightweight skills to capture project-specific patterns, conventions, and domain knowledge.
+
+### Location & Format
+
+- **Path**: `.agents/skills/<skill-name>/SKILL.md` within the project repository.
+- **Format**: Identical to global skills — `SKILL.md` with YAML frontmatter (`name`, `description`).
+- **Discovery**: Run `/discover` to scan for existing local skills or scaffold new ones.
+
+### Resolution Order
+
+When the agent looks for a skill:
+
+1. Check `.agents/skills/` in the current project **first**.
+2. Fall back to the global toolkit (`c:\Projects\agentic-toolkit\skills\`).
+3. If names collide, the **local skill overrides** the global skill for that project.
+
+### Scope Guidance
+
+Local skills **should** capture:
+
+- Project-specific API conventions or naming patterns
+- Domain-specific checklists (e.g., compliance, data migration)
+- Internal tooling or scripts unique to the project
+- Tribal knowledge that doesn't generalize
+
+Local skills **should NOT** be used for:
+
+- General-purpose knowledge that applies across projects (promote to global instead)
+- Duplicating global skills with minor tweaks (use project profile conventions instead)
+
+### Promotion to Global
+
+When a local skill proves valuable across multiple projects:
+
+1. Copy the skill folder to `c:\Projects\agentic-toolkit\skills\`.
+2. Run through the **Quality Assurance Checklist** (above).
+3. Add an entry to `CATALOG.md`.
+4. Remove or replace the local copy with a note pointing to the global version.
+
 ## Handling Overlaps
 
 If a new skill overlaps with an existing one:
