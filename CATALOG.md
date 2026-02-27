@@ -56,6 +56,7 @@ Skills and workflows related to agent processes, governance, and library managem
 
 - [/coach](./workflows/coach.md): **Start here if you're new!** Learning mode that teaches the toolkit while working.
 - [/constitution](./workflows/constitution.md): Workflow for establishing persistent project principles and guardrails.
+- [/discover](./workflows/discover.md): Scan project to identify relevant skills, detect gaps, and generate a project profile.
 - [/investigate](./workflows/investigate.md): Deep codebase investigation to understand existing patterns before planning.
 - [/new](./workflows/new.md): Workflow for initializing a new change folder with proposal templates.
 - [/specify](./workflows/specify.md): Workflow for creating feature specifications with prioritized user stories.
