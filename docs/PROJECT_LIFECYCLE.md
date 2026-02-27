@@ -40,11 +40,11 @@ graph TD
 
     %% Verification & Completion
     subgraph "Verification Phase"
-        Debug --> Preview["/preview<br/>(Local Dev Server)"]
+        Debug --> Serve["/serve<br/>(Local Dev Server)"]
         Backend --> Test["/test<br/>(Unit/E2E Tests)"]
-        Design --> Preview
+        Design --> Serve
         Work --> Review["/review<br/>(Quality Audit)"]
-        Preview --> Final["/final-polish<br/>(Cleanup)"]
+        Serve --> Final["/final-polish<br/>(Cleanup)"]
         Test --> Final
         Review --> Final
     end
@@ -53,6 +53,15 @@ graph TD
     Commit --> Deploy["/deploy<br/>(Production)"]
     Commit --> Archive["/archive<br/>(Merge & Cleanup)"]
     Archive --> End([Complete])
+
+    %% Mega-workflows
+    Start -. "/build" .-> Specify
+    Specify -. auto .-> Plan
+    Plan -. auto .-> Work
+    Work -. auto .-> Review
+    Review -. auto .-> Final
+    Commit -. "/finish" .-> Deploy
+    Deploy -. auto .-> Archive
 
     %% Styling
     style Constitution fill:#ffe0b2,stroke:#333
@@ -74,12 +83,23 @@ The **Happy Path** is the most robust way to ensure high-quality output. It foll
 2.  **`/specify`**: Define **what** the feature does and **why** (User Stories & Acceptance Criteria).
 3.  **`/plan`**: Design **how** it will be built (Architecture & Task List).
 4.  **Implementation**: Use specialized agents like **`/backend`** or **`/design`**.
-5.  **`/test` & `/preview`**: Verify the work functions correctly and looks great.
+5.  **`/test` & `/serve`**: Verify the work functions correctly and looks great.
 6.  **`/commit`**: Stage, commit (conventional), and push your changes. Always pushes.
 7.  **`/archive`**: The final step. It merges your "Delta Specs" into the main documentation and cleans up the change folder.
 
+### ⚡ The Streamlined Flow
+
+For maximum efficiency, two mega-commands cover the entire lifecycle:
+
+1. **`/new`**: Initialize the change folder.
+2. **`/build`**: Chains `/specify` → `/plan` → `/work` → `/review` → `/final-polish`. User approves spec and plan; everything else auto-proceeds.
+3. **User tests**: Verify in the browser, run through acceptance criteria.
+4. **`/finish`**: Chains `/commit` → `/deploy` → `/archive`. One command to ship and close.
+
 ## ⚡ Automation & Support
 
+- **`/build` (Full Pipeline)**: Mega-command that chains specify → plan → work → review → final-polish. The recommended path for new features.
+- **`/finish` (Ship & Close)**: Chains commit → deploy → archive. Use after testing.
 - **`/work` (Pipeline)**: Auto-executes tasks by workflow tag: `/backend` → `/design` → `/security` → `/enhance` → `/test`. Use after planning is complete.
 - **`/review` (Quality Audit)**: Runs specialist agents over auto-proceeded work to catch issues.
 - **`/brainstorm` & `/investigate`**: Use these **before** you even run `/new`. They help you decide if a change is viable or what the best approach might be.

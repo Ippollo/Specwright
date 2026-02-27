@@ -61,7 +61,7 @@ Instead of enabling all servers upfront, this toolkit uses a **progressive disco
 
 - `/test` → `playwright`
 - `/debug` → `observability`
-- `/preview` → (none)
+- `/serve` → (none)
 - `/final-polish` → (none)
 
 ### Deployment & Completion
