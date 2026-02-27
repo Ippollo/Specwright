@@ -1,21 +1,21 @@
 ---
 description: Start, stop, and manage local development server for previewing changes.
-quick_summary: "Commands: /preview start|stop|restart|status. Auto-detects framework."
+quick_summary: "Commands: /serve start|stop|restart|status. Auto-detects framework."
 requires_mcp: []
 recommends_mcp: []
 ---
 
-# /preview - Development Server Management
+# /serve - Development Server Management
 
 **Goal**: Manage local development server for live preview of your application.
 
 ## Commands
 
 ```
-/preview           - Show current status
-/preview start     - Start development server
-/preview stop      - Stop server
-/preview restart   - Restart server
+/serve           - Show current status
+/serve start     - Start development server
+/serve stop      - Stop server
+/serve restart   - Restart server
 ```
 
 ## Usage Examples
@@ -23,13 +23,13 @@ recommends_mcp: []
 ### Start Server
 
 ```
-/preview start
+/serve start
 
 Response:
-🚀 Starting preview...
+🚀 Starting server...
    Detecting project type...
 
-✅ Preview ready!
+✅ Server ready!
    URL: http://localhost:3000
    Type: Next.js
 ```
@@ -37,10 +37,10 @@ Response:
 ### Status Check
 
 ```
-/preview
+/serve
 
 Response:
-=== Preview Status ===
+=== Server Status ===
 
 🌐 URL: http://localhost:3000
 📁 Project: c:/Projects/agentic-toolkit
@@ -51,10 +51,10 @@ Response:
 ### Stop Server
 
 ```
-/preview stop
+/serve stop
 
 Response:
-⏹️ Stopping preview server...
+⏹️ Stopping server...
 ✅ Server stopped.
 ```
 

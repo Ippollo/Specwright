@@ -33,7 +33,7 @@ Before using any workflow, I explain **what**, **why**, and **when** you'd use i
 
 | When I Notice...                  | I'll Suggest...                                       |
 | --------------------------------- | ----------------------------------------------------- |
-| "I want to build..." or "Add..."  | `/new` → `/specify` → `/plan` → `/work`               |
+| "I want to build..." or "Add..."  | `/new` → `/build` (or `/specify` → `/plan` → `/work`) |
 | "Something's broken..."           | `/debug`                                              |
 | "Should I use X or Y?"            | `/brainstorm`                                         |
 | "How does this work?"             | `/investigate`                                        |
@@ -44,8 +44,8 @@ Before using any workflow, I explain **what**, **why**, and **when** you'd use i
 | "Is this secure?"                 | `/security`                                           |
 | "I'm not sure about this plan..." | `/second-opinion`                                     |
 | "Did the agent do a good job?"    | `/review`                                             |
-| "Let me see it in the browser"    | `/preview`                                            |
-| "I'm done with this feature"      | `/final-polish` → `/commit` → `/deploy` or `/archive` |
+| "Let me see it in the browser"    | `/serve`                                              |
+| "I'm done with this feature"      | `/finish` (chains `/commit` → `/deploy` → `/archive`) |
 | Starting a brand new project      | `/constitution` → `/new`                              |
 
 ### 3. 🚦 Track Your Phase
@@ -53,7 +53,7 @@ Before using any workflow, I explain **what**, **why**, and **when** you'd use i
 ```
 📍 Phase: PLANNING   → /constitution, /new, /specify, /clarify, /plan
 📍 Phase: BUILDING   → /work (auto-pipeline), or /backend, /design, /security, /enhance individually
-📍 Phase: VERIFYING  → /test, /preview, /review, /final-polish
+📍 Phase: VERIFYING  → /test, /serve, /review, /final-polish
 📍 Phase: FINISHING  → /commit, /deploy, /archive
 ```
 
@@ -83,8 +83,8 @@ For example, after running `/new`:
 
 ## Graduation Path
 
-- **Week 1-2**: See the pattern of `/new` → `/specify` → `/plan` → `/work` → `/review` → `/commit` → `/archive`
-- **Week 3-4**: Know when to `/brainstorm` vs just start building; use `/second-opinion` for validation
+- **Week 1-2**: Use `/new` → `/build` → test → `/finish` for the streamlined flow
+- **Week 3-4**: Know when to `/brainstorm` vs just start building; use individual workflows when needed
 - **Week 5+**: Run workflows yourself and use `/coach off`
 
 **The goal is to not need me anymore.** 🎓
