@@ -11,6 +11,8 @@ recommends_mcp: [playwright, context7, firebase, gcloud]
 
 ## Steps
 
+// turbo-all
+
 1.  **Invoke Agent**: Use the `qa-engineer` agent.
     - Path: `../agents/qa-engineer.md`
 2.  **Context**: Provide feature or bug fix to test.

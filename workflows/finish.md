@@ -28,6 +28,8 @@ recommends_mcp: [github, gcloud, firebase, observability]
 
 ## Steps
 
+// turbo-all
+
 1. **Commit Phase**: Invoke `/commit` workflow.
    - Run `git status` and `git diff --stat` to summarize changes.
    - Stage all changes with `git add -A`.

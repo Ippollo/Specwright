@@ -11,6 +11,8 @@ recommends_mcp: [observability, context7, firebase, gcloud]
 
 ## Steps
 
+// turbo-all
+
 1.  **Invoke Agent**: Use the `debugger` agent.
     - Path: `../agents/debugger.md`
 2.  **Context**: Provide the bug report or error message.

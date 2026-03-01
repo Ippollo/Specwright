@@ -11,6 +11,8 @@ recommends_mcp: [github, gcloud, firebase, observability]
 
 ## Steps
 
+// turbo-all
+
 1.  **Invoke Agent**: Use the `sec-devops-engineer` agent.
     - Path: `../agents/sec-devops-engineer.md`
 2.  **Execution**:

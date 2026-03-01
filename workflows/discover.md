@@ -18,6 +18,8 @@ recommends_mcp: [context7, github]
 
 ## Steps
 
+// turbo-all
+
 ### Step 1: Scan Project
 
 Analyze the project to detect its technology stack. Check these sources:

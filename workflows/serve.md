@@ -11,6 +11,8 @@ recommends_mcp: []
 
 ## Commands
 
+// turbo-all
+
 ```
 /serve           - Show current status
 /serve start     - Start development server
