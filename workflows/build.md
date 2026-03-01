@@ -39,6 +39,8 @@ recommends_mcp:
 
 ## Steps
 
+// turbo-all
+
 0. **Constitution Check** _(first run only)_:
    - Check if `docs/CONSTITUTION.md` exists in the project.
    - If **missing**: Suggest running `/constitution` first to establish project rules. Explain that all agents (backend, frontend, security, etc.) reference the constitution to make consistent decisions.

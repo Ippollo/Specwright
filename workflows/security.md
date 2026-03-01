@@ -11,6 +11,8 @@ recommends_mcp: [context7, firebase, gcloud, sequential-thinking]
 
 ## Steps
 
+// turbo-all
+
 1.  **Invoke Agent**: Use the `sec-devops-engineer` agent.
     - Path: `../agents/sec-devops-engineer.md`
 2.  **Context**: Provide scope (codebase or specific feature).

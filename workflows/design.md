@@ -11,6 +11,8 @@ recommends_mcp: [context7, playwright, firebase, gcloud]
 
 ## Steps
 
+// turbo-all
+
 1.  **Invoke Agent**: Use the `frontend-specialist` agent.
     - Path: `../agents/frontend-specialist.md`
 2.  **Context**: Provide the design requirement.

@@ -30,6 +30,8 @@ recommends_mcp: [context7, firebase, gcloud, playwright, sequential-thinking]
 
 ## Steps
 
+// turbo-all
+
 1. **Identify Scope**: Locate the auto-proceeded work.
    - Check the active change folder (`changes/{slug}/`) for the implementation plan and `tasks.md`.
    - If no change folder exists, identify modified files from the most recent agent session.

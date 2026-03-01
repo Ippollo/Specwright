@@ -24,6 +24,8 @@ recommends_mcp: [context7, github, sequential-thinking]
 
 ## Steps
 
+// turbo-all
+
 1. **Invoke Agent**: Load the `code-custodian` agent (`../agents/code-custodian.md`).
    - Request **Gatekeeper Mode**.
 

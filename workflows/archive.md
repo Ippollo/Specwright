@@ -17,6 +17,8 @@ recommends_mcp: []
 
 ## Steps
 
+// turbo-all
+
 1. **Invoke Agent**: Use `project-planner` or `code-custodian`.
 2. **Verification**:
    - Ensure all tasks in `changes/{slug}/tasks.md` are checked off.

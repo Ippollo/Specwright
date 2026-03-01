@@ -25,6 +25,8 @@ recommends_mcp: [context7, firebase, gcloud, playwright, sequential-thinking]
 
 ## Steps
 
+// turbo-all
+
 1. **Locate tasks.md**: Find `tasks.md` in the active change folder (`changes/{slug}/tasks.md`).
 2. **Scan for incomplete tasks**: Parse all lines matching `- [ ] /tag — description`.
 3. **Group by tag**: Organize tasks into pipeline stages.

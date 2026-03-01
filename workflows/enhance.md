@@ -14,6 +14,8 @@ recommends_mcp: [context7, firebase, gcloud]
 
 ## Steps
 
+// turbo-all
+
 1.  **Invoke Agent**: Use the `code-custodian` agent.
     - Path: `../agents/code-custodian.md`
 2.  **Mode**: Request "Optimizer Mode".

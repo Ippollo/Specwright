@@ -26,6 +26,8 @@ recommends_mcp:
 
 ## Steps
 
+// turbo-all
+
 1. **Invoke Agent**: Use `project-planner` or current context.
 2. **Execution**:
    - Search and read relevant source files.
