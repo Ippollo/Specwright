@@ -13,29 +13,49 @@ My personal library of Skills, Agents, and Workflows for **Antigravity** (my AI 
 - **[Workflows](./workflows/)**: Standard operating procedures (e.g., `/plan`, `/debug`) for common tasks.
 - **[Skills](./skills/)**: Atomic capabilities (e.g., `api-design-patterns`, `react-best-practices`) used by Agents.
 
-## Installation
+## Setup
 
-To add my toolkit to a new project, run the appropriate command in your terminal:
+There are three ways to use this toolkit. Pick the one that fits your workflow.
 
-### Windows (PowerShell)
+### ⭐ Option 1: Add as a Workspace Folder (Recommended)
+
+The simplest and most reliable approach. In VS Code:
+
+1. **File → Add Folder to Workspace...**
+2. Select your local clone of this toolkit (e.g., `c:\Projects\agentic-toolkit`)
+3. Save the workspace when prompted
+
+> [!TIP]
+> This is the recommended method because the toolkit folder becomes a trusted part of your workspace — **no "Allow access" permission prompts**, always up to date, and Antigravity sees all workflows, agents, and skills immediately.
+
+Repeat this for each project workspace where you want the toolkit available.
+
+### Option 2: Global Setup
+
+To make workflows available in **every** project without adding a folder each time, link the local repository to the global Antigravity configuration:
+
+```powershell
+./scripts/make-global.ps1
+```
+
+### Option 3: Per-Project Install
+
+To copy the toolkit into a single project:
+
+**Windows (PowerShell):**
 
 ```bash
 iwr -useb https://raw.githubusercontent.com/Ippollo/skills/main/install.ps1 | iex
 ```
 
-### macOS / Linux (Bash)
+**macOS / Linux (Bash):**
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Ippollo/skills/main/install.sh | bash
 ```
 
-## Global Setup
-
-To make my workflows available in **every** project without manual installation, link the local repository to the global Antigravity configuration:
-
-```powershell
-./scripts/make-global.ps1
-```
+> [!NOTE]
+> Per-project installs create a local copy. You won't get updates automatically — re-run the installer to pull the latest version.
 
 ---
 
