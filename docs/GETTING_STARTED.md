@@ -2,21 +2,24 @@
 
 This is how I initialize new projects with **Antigravity** and my agentic toolkit.
 
-## 1. Verify Installation
+## 1. Add the Toolkit to Your Workspace
 
-Ensure the toolkit is linked to the project. If not installed yet:
+The fastest way to get started is to add the toolkit as a workspace folder:
 
-**Windows (PowerShell):**
+1. **File → Add Folder to Workspace...**
+2. Select your local clone of this toolkit (e.g., `c:\Projects\agentic-toolkit`)
+3. Save the workspace when prompted
 
-```powershell
-iwr -useb https://raw.githubusercontent.com/Ippollo/skills/main/install.ps1 | iex
-```
+This gives Antigravity full access to all workflows, agents, and skills — with **no permission prompts**.
 
-**macOS / Linux (Bash):**
+> [!TIP]
+> If you don't have the toolkit cloned locally yet, grab it first:
+>
+> ```bash
+> git clone https://github.com/Ippollo/skills.git agentic-toolkit
+> ```
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/Ippollo/skills/main/install.sh | bash
-```
+**Alternative: Per-project install** — If you prefer a self-contained copy inside your project, run the install script instead. See the [README](../README.md#option-3-per-project-install) for details.
 
 Run `/new test-initialization` to verify. You should see a `changes/test-initialization/` folder created.
 
