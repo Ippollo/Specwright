@@ -21,7 +21,7 @@ recommends_mcp:
 ## Pipeline
 
 ```
-/specify → /clarify (if needed) → /plan → (user approves) → /work → /review → /final-polish → done
+/specify → /clarify (if needed) → /plan → (user approves) → /analyze → /work → /review → /final-polish → done
 ```
 
 | Stage           | What Happens                                                   | User Gate? |
@@ -29,6 +29,7 @@ recommends_mcp:
 | `/specify`      | Generate behavioral specs and acceptance criteria              | ✅ Review  |
 | `/clarify`      | Fill gaps if `[NEEDS CLARIFICATION]` markers found             | Auto       |
 | `/plan`         | Generate design.md and tasks.md                                | ✅ Review  |
+| `/analyze`      | Cross-artifact consistency check (spec → plan → tasks)         | Auto       |
 | `/work`         | Execute pipeline: backend → design → security → enhance → test | Auto       |
 | `/review`       | Specialist review: backend → design → security → enhance       | Auto       |
 | `/final-polish` | Cleanup: debug artifacts, TODOs, dead code, docs, lint         | Auto       |
@@ -58,21 +59,27 @@ recommends_mcp:
    - Generate `research.md`, `design.md`, and `tasks.md`.
    - **Gate**: Notify user to review the plan. Wait for approval.
 
-3. **Execution Phase**: Invoke `/work` workflow.
+3. **Analysis Phase**: Invoke `/analyze` workflow.
+   - Read spec, plan, and tasks artifacts.
+   - Run consistency checks: coverage, constraint compliance, verify completeness, scope creep.
+   - If ❌ failures found: pause, report to user, wait for fixes before continuing.
+   - If ✅ or ⚠️ only: auto-proceed.
+
+4. **Execution Phase**: Invoke `/work` workflow.
    - Auto-execute all tasks by pipeline tag: `/backend` → `/design` → `/security` → `/enhance` → `/test`.
    - No user gate — auto-proceeds through all stages.
 
-4. **Review Phase**: Invoke `/review` workflow.
+5. **Review Phase**: Invoke `/review` workflow.
    - Run specialist review pipeline: backend → design → security → enhance.
    - Auto-fix any issues found.
    - No user gate — auto-proceeds.
 
-5. **Polish Phase**: Invoke `/final-polish` workflow.
+6. **Polish Phase**: Invoke `/final-polish` workflow.
    - Remove debug artifacts, triage TODOs, prune dead code, sync docs, run lint/test.
    - Auto-fix any issues found.
    - No user gate — auto-proceeds.
 
-6. **Completion**: Notify user with consolidated summary.
+7. **Completion**: Notify user with consolidated summary.
    - Present verdict from `/review` and `/final-polish`.
    - Suggest user testing, then `/finish` when satisfied.
 

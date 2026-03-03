@@ -22,6 +22,9 @@ recommends_mcp: [sequential-thinking, github, firecrawl-mcp]
    - Use Given/When/Then for acceptance criteria.
    - Describe what's changing (delta) relative to current state.
    - Flag areas needing more detail with `[NEEDS CLARIFICATION]`.
+   - Populate `## Constraints` with explicit Must / Must Not / Out of Scope items.
+   - Populate `## Current State` with relevant existing files and patterns (prevents agent exploration costs).
+   - Populate each Task entry with a concrete `**Verify:**` step (command or manual check).
 4. **Completion**:
    - Suggest next step: `/clarify` (if gaps exist) or `/plan`.
 

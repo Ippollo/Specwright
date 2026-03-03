@@ -54,7 +54,7 @@ This creates `docs/CONSTITUTION.md`. I edit this file to include my tech stack p
 
 ## 4. My 3-Phase Workflow
 
-### Phase 1: Planning (`/new` → `/specify` → `/plan`)
+### Phase 1: Planning (`/new` → `/specify` → `/plan` → `/analyze`)
 
 I start a new feature:
 
@@ -74,6 +74,14 @@ This generates:
 - `changes/user-profile/specs/user-profile.md`
 - `changes/user-profile/design.md`
 - `changes/user-profile/tasks.md`
+
+Before writing any code, I run a consistency check:
+
+```bash
+/analyze
+```
+
+This audits that the spec, plan, and tasks are aligned — catching scope drift or missing coverage before the pipeline starts.
 
 ### Phase 2: Implementation
 

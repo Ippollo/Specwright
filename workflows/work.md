@@ -9,6 +9,9 @@ recommends_mcp: [context7, firebase, gcloud, playwright, sequential-thinking]
 
 **Goal**: Execute `tasks.md` tasks by workflow tag, auto-advancing through the full pipeline.
 
+> [!TIP]
+> Run `/analyze` before starting `/work` to verify spec → plan → tasks consistency. Catching misalignment now is much cheaper than mid-implementation rework.
+
 ## Pipeline Order
 
 ```
