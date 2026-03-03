@@ -42,6 +42,9 @@ recommends_mcp:
 
 // turbo-all
 
+> [!IMPORTANT]
+> **No skipping.** Every numbered step below is mandatory, without exception. An agent MUST NOT skip, abbreviate, or auto-complete any stage — including `/review` and `/final-polish` — regardless of perceived scope or time pressure. Proceeding to Step 7 without completing Steps 3–6 is a workflow violation.
+
 0. **Constitution Check** _(first run only)_:
    - Check if `docs/CONSTITUTION.md` exists in the project.
    - If **missing**: Suggest running `/constitution` first to establish project rules. Explain that all agents (backend, frontend, security, etc.) reference the constitution to make consistent decisions.
@@ -65,19 +68,22 @@ recommends_mcp:
    - If ❌ failures found: pause, report to user, wait for fixes before continuing.
    - If ✅ or ⚠️ only: auto-proceed.
 
-4. **Execution Phase**: Invoke `/work` workflow.
+4. **[MANDATORY] Execution Phase**: Invoke `/work` workflow.
    - Auto-execute all tasks by pipeline tag: `/backend` → `/design` → `/security` → `/enhance` → `/test`.
    - No user gate — auto-proceeds through all stages.
+   - Do NOT skip any `/work` sub-stages, even if the tasks.md appears to have no tasks for a given tag. Complete the full pipeline.
 
-5. **Review Phase**: Invoke `/review` workflow.
+5. **[MANDATORY] Review Phase**: Invoke `/review` workflow.
    - Run specialist review pipeline: backend → design → security → enhance.
    - Auto-fix any issues found.
    - No user gate — auto-proceeds.
+   - Do NOT skip this phase even if the Execution Phase had no issues.
 
-6. **Polish Phase**: Invoke `/final-polish` workflow.
+6. **[MANDATORY] Polish Phase**: Invoke `/final-polish` workflow.
    - Remove debug artifacts, triage TODOs, prune dead code, sync docs, run lint/test.
    - Auto-fix any issues found.
    - No user gate — auto-proceeds.
+   - Do NOT skip this phase regardless of prior phase outcomes.
 
 7. **Completion**: Notify user with consolidated summary.
    - Present verdict from `/review` and `/final-polish`.
