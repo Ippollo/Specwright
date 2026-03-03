@@ -3,7 +3,7 @@
 A spec-driven development framework for AI coding assistants. Define requirements, plan the architecture, build with specialist agents, and ship with confidence — all through simple slash commands.
 
 > [!NOTE]
-> This toolkit was built for [Antigravity](https://github.com/Ippollo/Specwright) (Gemini in VS Code), but the methodology works with any AI coding assistant that supports custom instructions.
+> This toolkit was built for [Antigravity](https://github.com/Ippollo/Specwright), Google's AI-powered IDE, but the methodology works with any AI coding assistant that supports custom instructions.
 
 ## The Problem
 
