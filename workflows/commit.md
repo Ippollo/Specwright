@@ -54,14 +54,19 @@ recommends_mcp: [github]
    git push
    ```
 
-   - If the branch has no upstream, use `git push -u origin HEAD`.
+   - If the branch has no upstream, run `git push -u origin HEAD` instead.
+   - Send as a **background command** (do not block waiting for it to complete — it may appear to hang even after success).
+   - Wait up to **15 seconds** for output, then proceed to Step 6 regardless.
 
 6. **Verify**:
+
    ```bash
    git log --oneline -1
    ```
 
-   - Confirm the commit hash and message, then notify the user.
+   - Run this independently of Step 5 — do NOT re-wait for the push process.
+   - Confirm the local commit hash and message are correct, then notify the user.
+   - The push is considered complete once the command exits without error (even if you moved on).
 
 ## Usage
 
