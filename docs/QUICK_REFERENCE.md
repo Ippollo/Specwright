@@ -1,4 +1,4 @@
-# Quick Reference: Agentic Toolkit
+# Quick Reference: Specwright
 
 One-page cheat sheet for common commands and agent flows.
 

@@ -1,6 +1,6 @@
 # Scenario: Onboarding a New Contributor
 
-This guide helps new team members get productive quickly on a project that already uses the agentic toolkit.
+This guide helps new team members get productive quickly on a project that already uses Specwright.
 
 ## The Goal
 

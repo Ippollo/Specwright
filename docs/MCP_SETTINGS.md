@@ -1,6 +1,6 @@
 # Recommended MCP Settings
 
-This document defines the **always-on** MCP tool configuration for the agentic toolkit.
+This document defines the **always-on** MCP tool configuration for Specwright.
 Keep exactly these 50 tools enabled to cover all workflows without manual toggling.
 
 > **Last reviewed**: 2026-02-23 — based on analysis of all 23 workflows and 7 agents.
