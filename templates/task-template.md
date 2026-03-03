@@ -11,14 +11,14 @@
 
 ## Phase 1: Foundation (User Story: [P1 Title])
 
-- [ ] `/backend` — 1.1 [Task Description] (File: [path])
+- [ ] `/backend` — 1.1 [Task Description] (File: [path]) (Traces: SC-001)
 - [ ] `/backend` — 1.2 [P] [Task Description] (File: [path])
-- [ ] `/design` — 1.3 [P] [Task Description] (File: [path])
+- [ ] `/design` — 1.3 [P] [Task Description] (File: [path]) (Traces: SC-002)
 - [ ] **CHECKPOINT**: [How to verify Phase 1]
 
 ## Phase 2: Core Feature (User Story: [P2 Title])
 
-- [ ] `/backend` — 2.1 [Task Description] (File: [path])
+- [ ] `/backend` — 2.1 [Task Description] (File: [path]) (Traces: SC-003)
 - [ ] `/design` — 2.2 [P] [Task Description] (File: [path])
 - [ ] **CHECKPOINT**: [How to verify Phase 2]
 
@@ -36,6 +36,7 @@
 - `[P]`: Can be executed in **parallel**.
 - `[!]`: High-risk or complex task.
 - `[T]`: Testing task (TDD required).
+- `(Traces: SC-xxx)`: Links this task to a Success Criterion in the spec. Optional — populate where the mapping is clear.
 
 ## Workflow Tags
 

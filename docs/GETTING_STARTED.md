@@ -115,7 +115,7 @@ Finally, I merge the change and cleanup:
 /archive user-profile
 ```
 
-The tool moves my specs to the root `./specs/` folder and deletes the `changes/` subdirectory.
+The tool snapshots your specs, moves them to the root `./specs/` folder, and deletes the `changes/` subdirectory.
 
 ## Next Steps
 

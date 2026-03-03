@@ -1,103 +1,146 @@
 # Antigravity Agentic Toolkit
 
-My personal library of Skills, Agents, and Workflows for **Antigravity** (my AI coding assistant).
-
-## About
+A spec-driven development framework for AI coding assistants. Define requirements, plan the architecture, build with specialist agents, and ship with confidence — all through simple slash commands.
 
 > [!NOTE]
-> This is the toolkit I built for my own workflow with Antigravity. It works great for me, and it might for you too — fork it, adapt it, make it yours.
+> This toolkit was built for [Antigravity](https://github.com/Ippollo/skills) (Gemini in VS Code), but the methodology works with any AI coding assistant that supports custom instructions.
 
-## Structure
+## The Problem
 
-- **[Agents](./agents/)**: Specialized personas (e.g., `project-planner`, `frontend-specialist`) that embody expert roles.
-- **[Workflows](./workflows/)**: Standard operating procedures (e.g., `/plan`, `/debug`) for common tasks.
-- **[Skills](./skills/)**: Atomic capabilities (e.g., `api-design-patterns`, `react-best-practices`) used by Agents.
+AI coding assistants are powerful, but without structure they encourage **vibe coding** — ad-hoc prompts, no requirements, no review, and no traceability. The result is fast but fragile: code that works until it doesn't, and no record of _why_ it was built that way.
 
-## Setup
+## The Solution
 
-There are three ways to use this toolkit. Pick the one that fits your workflow.
+This toolkit wraps your AI assistant in a **Spec-Driven Development (SDD)** lifecycle:
 
-### ⭐ Option 1: Add as a Workspace Folder (Recommended)
+```
+/new → /specify → /plan → /work → /review → /final-polish → /commit → /archive
+```
 
-The simplest and most reliable approach. In VS Code:
+Every feature starts with a **specification**, gets a **plan**, is built by **specialist agents**, passes a **multi-stage review**, and is **archived with full traceability** back to the original requirements.
 
-1. **File → Add Folder to Workspace...**
-2. Select your local clone of this toolkit (e.g., `c:\Projects\agentic-toolkit`)
-3. Save the workspace when prompted
+### What You Get
+
+- 🎯 **Spec-first workflow** — Define _what_ and _why_ before writing any code
+- 🧠 **7 specialist agents** — Backend Architect, Frontend Specialist, Debugger, QA Engineer, Security Engineer, Code Custodian, and Project Planner
+- ⚡ **26 slash commands** — From `/brainstorm` to `/archive`, every phase has a workflow
+- 🔒 **Quality gates** — Human approval at spec and plan stages; automated review after
+- 📋 **Full traceability** — Requirements → tasks → code → tests → versioned spec snapshots
+- 📚 **17+ skills** — Deep knowledge in API design, testing, security, performance, and more
+
+## Quick Start
+
+### 1. Clone & Add to Workspace
+
+```bash
+git clone https://github.com/Ippollo/skills.git agentic-toolkit
+```
+
+In VS Code: **File → Add Folder to Workspace...** → select the `agentic-toolkit` folder → Save.
 
 > [!TIP]
-> This is the recommended method because the toolkit folder becomes a trusted part of your workspace — **no "Allow access" permission prompts**, always up to date, and Antigravity sees all workflows, agents, and skills immediately.
+> Adding as a workspace folder is the recommended method — no permission prompts, always up to date, and your AI assistant sees everything immediately.
 
-Repeat this for each project workspace where you want the toolkit available.
+<details>
+<summary>Alternative: Global or Per-Project Install</summary>
 
-### Option 2: Global Setup
-
-To make workflows available in **every** project without adding a folder each time, link the local repository to the global Antigravity configuration:
+**Global** (available in every project):
 
 ```powershell
 ./scripts/make-global.ps1
 ```
 
-### Option 3: Per-Project Install
-
-To copy the toolkit into a single project:
-
-**Windows (PowerShell):**
+**Per-Project** (isolated copy):
 
 ```bash
+# Windows
 iwr -useb https://raw.githubusercontent.com/Ippollo/skills/main/install.ps1 | iex
-```
 
-**macOS / Linux (Bash):**
-
-```bash
+# macOS / Linux
 curl -fsSL https://raw.githubusercontent.com/Ippollo/skills/main/install.sh | bash
 ```
 
-> [!NOTE]
-> Per-project installs create a local copy. You won't get updates automatically — re-run the installer to pull the latest version.
+Per-project installs create a local copy. Re-run to update.
 
----
+</details>
 
-## 🎓 New to the Toolkit?
+### 2. Set Your Project Rules
 
-If you're just getting started with agentic development, the toolkit can feel overwhelming. **Start with Coach mode:**
+```
+/constitution
+```
+
+This creates `docs/CONSTITUTION.md` — your project's guardrails (tech stack, conventions, preferences). All agents reference it.
+
+### 3. Build Something
+
+The fastest path from idea to shipped code:
+
+```
+/new my-feature          # Initialize a change folder
+/build                   # Chains: specify → plan → work → review → final-polish
+                         # You approve the spec and plan; everything else auto-proceeds
+/finish                  # Chains: commit → deploy → archive
+```
+
+Or run each phase yourself:
+
+| Phase      | Commands                      | What Happens                                               |
+| ---------- | ----------------------------- | ---------------------------------------------------------- |
+| **Ideate** | `/brainstorm`, `/investigate` | Explore options, research the codebase                     |
+| **Plan**   | `/new` → `/specify` → `/plan` | Define requirements, generate tasks                        |
+| **Build**  | `/work`                       | Auto-execute: backend → design → security → enhance → test |
+| **Verify** | `/review`, `/final-polish`    | Specialist review, cleanup, acceptance verification        |
+| **Ship**   | `/commit` → `/archive`        | Conventional commit, spec snapshot, archive                |
+
+## 🎓 New to Agentic Development?
+
+The toolkit can feel overwhelming at first. **Start with Coach mode:**
 
 ```
 /coach on
 ```
-
-Coach mode teaches you the toolkit as you work:
 
 - 🎓 Explains _why_ workflows exist before suggesting them
 - 🧭 Suggests the right workflow at the right time
 - 🚦 Tracks your progress (Planning → Building → Verifying → Done)
 - 🤝 Asks before taking complex actions
 
-As you learn, you'll naturally stop needing it. Turn it off anytime with `/coach off`.
+Turn it off anytime with `/coach off`.
 
----
+## What's Inside
 
-## 📖 My Workflow
+| Component                     | Count | Purpose                                                                               |
+| ----------------------------- | ----- | ------------------------------------------------------------------------------------- |
+| **[Workflows](./workflows/)** | 26    | Slash commands for every phase of development                                         |
+| **[Agents](./agents/)**       | 7     | Specialist personas (planner, architect, designer, debugger, QA, security, custodian) |
+| **[Skills](./skills/)**       | 17+   | Deep knowledge bases (API patterns, testing, security, performance, Gemini API, etc.) |
+| **[Templates](./templates/)** | 4     | Spec, task, proposal, and delta-spec templates                                        |
 
-For reference on how I use this toolkit:
+See [CATALOG.md](./CATALOG.md) for the full index.
 
-1.  **[Getting Started](./docs/GETTING_STARTED.md)**: How I set up new projects.
-2.  **[Quick Reference](./docs/QUICK_REFERENCE.md)**: One-page cheat sheet for all commands.
-3.  **[MCP Recommendations](./docs/MCP_RECOMMENDATIONS.md)**: My MCP server setup for Antigravity.
-4.  **[Scenario: New Feature](./docs/scenarios/new-feature.md)**: My step-by-step feature workflow.
-5.  **[Scenario: Debugging](./docs/scenarios/debugging.md)**: How I systematically find and fix bugs.
+## Documentation
 
-## 🚀 Recommended Flow
+| Doc                                                  | Purpose                               |
+| ---------------------------------------------------- | ------------------------------------- |
+| [Getting Started](./docs/GETTING_STARTED.md)         | Detailed setup walkthrough            |
+| [Quick Reference](./docs/QUICK_REFERENCE.md)         | One-page cheat sheet for all commands |
+| [Project Lifecycle](./docs/PROJECT_LIFECYCLE.md)     | Visual map of the complete workflow   |
+| [MCP Recommendations](./docs/MCP_RECOMMENDATIONS.md) | Recommended MCP server configuration  |
 
-1.  **Initialize**: `/new feature-name`
-2.  **Plan**: `/specify "Describe feature"` → `/plan`
-3.  **Build**: `/work` — auto-executes tasks by tag: `backend → design → security → enhance → test`
-4.  **Commit**: `/commit` — stage, commit (conventional), and push
-5.  **Finish**: `/archive feature-name`
+### Scenario Guides
 
----
+| Scenario                    | Guide                                                                   |
+| --------------------------- | ----------------------------------------------------------------------- |
+| Building a new feature      | [new-feature.md](./docs/scenarios/new-feature.md)                       |
+| Starting a new project      | [new-project.md](./docs/scenarios/new-project.md)                       |
+| Joining an existing project | [existing-project.md](./docs/scenarios/existing-project.md)             |
+| Debugging a bug             | [debugging.md](./docs/scenarios/debugging.md)                           |
+| Quick fix / hotfix          | [quick-fix.md](./docs/scenarios/quick-fix.md)                           |
+| Large refactoring           | [large-refactoring.md](./docs/scenarios/large-refactoring.md)           |
+| Resuming after a break      | [resuming-work.md](./docs/scenarios/resuming-work.md)                   |
+| Onboarding a contributor    | [onboarding-contributor.md](./docs/scenarios/onboarding-contributor.md) |
 
-## Catalog
+## License
 
-See [CATALOG.md](./CATALOG.md) for a full index of available capabilities.
+[MIT](./LICENSE) — fork it, adapt it, make it yours.

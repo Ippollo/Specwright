@@ -23,11 +23,16 @@ recommends_mcp: []
 2. **Verification**:
    - Ensure all tasks in `changes/{slug}/tasks.md` are checked off.
    - Use `docs/CONSTITUTION.md` to verify completion.
-3. **Execution**:
+3. **Snapshot Spec**:
+   - Get the current short commit hash (`git rev-parse --short HEAD`).
+   - If `changes/{slug}/specs/` exists:
+     - Copy spec files → `specs/{slug}.md` (living version, merged/overwritten).
+     - Copy spec files → `specs/snapshots/{slug}--{short-hash}.md` (frozen snapshot).
+   - The snapshot preserves the exact spec state at ship time for future reference.
+4. **Execution**:
    - Move `changes/{slug}/` → `archive/YYYY-MM-DD-{slug}/`.
-   - If `changes/{slug}/specs/` exists, merge those delta specs into the main project `specs/` directory.
-4. **Completion**:
-   - Notify user that the change is archived and living specs updated.
+5. **Completion**:
+   - Notify user that the change is archived, living specs updated, and snapshot preserved.
 
 ## Usage
 

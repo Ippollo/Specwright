@@ -60,3 +60,15 @@ _To be filled during /plan phase._
 
 - **Tech Stack**: [Draft choices]
 - **Dependencies**: [Draft choices]
+
+---
+
+## 6. Acceptance Traceability
+
+> [!TIP]
+> Initially blank during `/specify`. Populated during `/plan` (verification method) and `/work` (status updates). Audited during `/final-polish`.
+
+| ID     | Criterion                  | Verification                                  | Status |
+| ------ | -------------------------- | --------------------------------------------- | ------ |
+| SC-001 | [From §4 Success Criteria] | [test file:function or "Manual: description"] | ⏳     |
+| SC-002 | [From §4 Success Criteria] | [test file:function or "Manual: description"] | ⏳     |

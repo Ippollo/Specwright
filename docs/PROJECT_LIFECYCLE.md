@@ -85,7 +85,7 @@ The **Happy Path** is the most robust way to ensure high-quality output. It foll
 4.  **Implementation**: Use specialized agents like **`/backend`** or **`/design`**.
 5.  **`/test` & `/serve`**: Verify the work functions correctly and looks great.
 6.  **`/commit`**: Stage, commit (conventional), and push your changes. Always pushes.
-7.  **`/archive`**: The final step. It merges your "Delta Specs" into the main documentation and cleans up the change folder.
+7.  **`/archive`**: The final step. It snapshots your specs (frozen copy tagged with commit hash), merges them into the main documentation, and cleans up the change folder.
 
 ### ⚡ The Streamlined Flow
 
