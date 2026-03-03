@@ -64,12 +64,20 @@ recommends_mcp: [context7, github, sequential-thinking]
    - If either fails, **fix** the issues and re-run.
    - **Action**: Report pass/fail status.
 
-7. **Verdict**: Summarize findings from all five phases.
+7. **Phase 6 — Acceptance Verification**: Cross-reference the spec against test evidence.
+   - Locate the spec's `§4 Success Criteria` and `§6 Acceptance Traceability` table.
+   - For each criterion, verify the `Verification` column has a value (test file:function or manual description).
+   - For each criterion, verify the `Status` column is ✅ (not ⏳ or blank).
+   - If any criterion is uncovered: flag it as ⚠️ with a clear message (e.g., "SC-003 has no verification method").
+   - **Action**: Update the traceability table with final status. Report coverage summary.
+   - _If no spec or traceability table exists, skip this phase silently._
+
+8. **Verdict**: Summarize findings from all six phases.
    - ✅ **Clean** — No issues found. Ready to commit.
    - 🔧 **Cleaned** — Issues found and resolved. Summary of what was changed.
-   - ⚠️ **Needs User Input** — Items that require a decision (e.g., ambiguous TODOs, intentional debug logging).
+   - ⚠️ **Needs User Input** — Items that require a decision (e.g., ambiguous TODOs, intentional debug logging, uncovered acceptance criteria).
 
-8. **Handoff**: Based on verdict, suggest next steps:
+9. **Handoff**: Based on verdict, suggest next steps:
    - ✅ / 🔧 → Proceed to `/commit`, then `/deploy` or `/archive`.
    - ⚠️ → User reviews flagged items and provides direction.
 
