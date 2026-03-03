@@ -1,9 +1,9 @@
 #!/bin/bash
 # Agentic Toolkit Installer (Bash)
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/Ippollo/skills/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/Ippollo/Specwright/main/install.sh | bash
 
-REPO_URL="https://github.com/Ippollo/skills.git"
+REPO_URL="https://github.com/Ippollo/Specwright.git"
 REPO_URL_ALT="https://github.com/Ippollo/agentic-toolkit.git"
 TEMP_DIR="/tmp/agentic-toolkit-temp"
 

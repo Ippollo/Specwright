@@ -3,7 +3,7 @@
 A spec-driven development framework for AI coding assistants. Define requirements, plan the architecture, build with specialist agents, and ship with confidence — all through simple slash commands.
 
 > [!NOTE]
-> This toolkit was built for [Antigravity](https://github.com/Ippollo/skills) (Gemini in VS Code), but the methodology works with any AI coding assistant that supports custom instructions.
+> This toolkit was built for [Antigravity](https://github.com/Ippollo/Specwright) (Gemini in VS Code), but the methodology works with any AI coding assistant that supports custom instructions.
 
 ## The Problem
 
@@ -33,10 +33,10 @@ Every feature starts with a **specification**, gets a **plan**, is built by **sp
 ### 1. Clone & Add to Workspace
 
 ```bash
-git clone https://github.com/Ippollo/skills.git agentic-toolkit
+git clone https://github.com/Ippollo/Specwright.git specwright
 ```
 
-In VS Code: **File → Add Folder to Workspace...** → select the `agentic-toolkit` folder → Save.
+In VS Code: **File → Add Folder to Workspace...** → select the `specwright` folder → Save.
 
 > [!TIP]
 > Adding as a workspace folder is the recommended method — no permission prompts, always up to date, and your AI assistant sees everything immediately.
@@ -54,10 +54,10 @@ In VS Code: **File → Add Folder to Workspace...** → select the `agentic-tool
 
 ```bash
 # Windows
-iwr -useb https://raw.githubusercontent.com/Ippollo/skills/main/install.ps1 | iex
+iwr -useb https://raw.githubusercontent.com/Ippollo/Specwright/main/install.ps1 | iex
 
 # macOS / Linux
-curl -fsSL https://raw.githubusercontent.com/Ippollo/skills/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Ippollo/Specwright/main/install.sh | bash
 ```
 
 Per-project installs create a local copy. Re-run to update.

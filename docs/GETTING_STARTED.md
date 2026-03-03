@@ -16,7 +16,7 @@ This gives Antigravity full access to all workflows, agents, and skills — with
 > If you don't have the toolkit cloned locally yet, grab it first:
 >
 > ```bash
-> git clone https://github.com/Ippollo/skills.git agentic-toolkit
+> git clone https://github.com/Ippollo/Specwright.git specwright
 > ```
 
 **Alternative: Per-project install** — If you prefer a self-contained copy inside your project, run the install script instead. See the [README](../README.md#option-3-per-project-install) for details.
