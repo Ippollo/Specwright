@@ -54,7 +54,17 @@ Generate the technical plan.
 
 _Creates: `changes/dark-mode-support/design.md` and `tasks.md`._
 
-### Step 6: Pipeline Execution
+### Step 6: Consistency Check
+
+Before running the pipeline, verify that the spec, plan, and tasks are aligned.
+
+```bash
+/analyze
+```
+
+_Checks that all user stories are covered in the plan, all tasks trace to requirements, and every task has a Verify step._
+
+### Step 7: Pipeline Execution
 
 Run the task pipeline. `/work` reads `tasks.md`, groups tasks by workflow tag, and auto-advances through the stages:
 
@@ -70,7 +80,7 @@ To run a single stage:
 /work design
 ```
 
-### Step 7: Verification
+### Step 8: Verification
 
 Run tests to ensure it works as expected.
 
@@ -78,7 +88,7 @@ Run tests to ensure it works as expected.
 /test "Theme toggle persistence and style application"
 ```
 
-### Step 8: Commit & Push
+### Step 9: Commit & Push
 
 Save your work with a conventional commit and push.
 
@@ -86,7 +96,7 @@ Save your work with a conventional commit and push.
 /commit
 ```
 
-### Step 9: Archive
+### Step 10: Archive
 
 Clean up and finalize.
 

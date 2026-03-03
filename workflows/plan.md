@@ -27,7 +27,7 @@ recommends_mcp:
     - Each task is tagged with its executing workflow (`/backend`, `/design`, `/enhance`, `/test`, `/debug`, `/security`).
 4.  **Completion**:
     - Agent notifies user of generated files.
-    - Agent suggests review, then `/work` to begin pipeline execution.
+    - Agent suggests review, then `/analyze` to verify spec → plan → tasks consistency before `/work`.
 
 ## Usage
 

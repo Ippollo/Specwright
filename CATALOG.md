@@ -59,9 +59,11 @@ Skills and workflows related to agent processes, governance, and library managem
 - [/discover](./workflows/discover.md): Scan project to identify relevant skills, detect gaps, and generate a project profile.
 - [/investigate](./workflows/investigate.md): Deep codebase investigation to understand existing patterns before planning.
 - [/new](./workflows/new.md): Workflow for initializing a new change folder with proposal templates.
-- [/specify](./workflows/specify.md): Workflow for creating feature specifications with prioritized user stories.
+- [/specify](./workflows/specify.md): Workflow for creating feature specifications with prioritized user stories, constraints (Must/Must Not/Out of Scope), and current state context.
 - [/clarify](./workflows/clarify.md): Structured gap-filling workflow for refining specifications.
-- [/work](./workflows/work.md): Pipeline orchestrator — executes tagged tasks from `tasks.md` in order: backend → design → security → enhance → test.
+- [/plan](./workflows/plan.md): Workflow for creating a detailed implementation plan with research, design, and dependency-aware tasks.
+- [/analyze](./workflows/analyze.md): Pre-implementation cross-artifact consistency check — verifies spec → plan → tasks alignment before any code is written.
+- [/work](./workflows/work.md): Pipeline orchestrator — executes tagged tasks from `tasks.md` in order: backend → design → security → enhance → test. Run `/analyze` first.
 - [/review](./workflows/review.md): Specialist review pipeline — runs backend, design, security, and enhance agents to review and fix auto-proceeded work.
 - [/commit](./workflows/commit.md): Stage, commit (conventional), and push changes. Always pushes.
 - [/archive](./workflows/archive.md): Workflow for archiving completed changes and merging living specs.

@@ -27,7 +27,8 @@ graph TD
 
     %% Execution Phase
     subgraph "Execution Phase"
-        Plan --> Work["/work<br/>(Pipeline Orchestrator)"]
+        Plan --> Analyze["/analyze<br/>(Consistency Check)"]
+        Analyze --> Work["/work<br/>(Pipeline Orchestrator)"]
         Work --> Backend["/backend<br/>(Server Logic)"]
         Work --> Design["/design<br/>(UI/Frontend)"]
         Work --> Security["/security<br/>(Audit & Harden)"]
@@ -57,7 +58,8 @@ graph TD
     %% Mega-workflows
     Start -. "/build" .-> Specify
     Specify -. auto .-> Plan
-    Plan -. auto .-> Work
+    Plan -. auto .-> Analyze
+    Analyze -. auto .-> Work
     Work -. auto .-> Review
     Review -. auto .-> Final
     Commit -. "/finish" .-> Deploy
@@ -80,27 +82,29 @@ graph TD
 The **Happy Path** is the most robust way to ensure high-quality output. It follows a "Measure Twice, Cut Once" philosophy.
 
 1.  **`/new`**: Always start here. It creates your sandbox and a **Proposal**.
-2.  **`/specify`**: Define **what** the feature does and **why** (User Stories & Acceptance Criteria).
-3.  **`/plan`**: Design **how** it will be built (Architecture & Task List).
-4.  **Implementation**: Use specialized agents like **`/backend`** or **`/design`**.
-5.  **`/test` & `/serve`**: Verify the work functions correctly and looks great.
-6.  **`/commit`**: Stage, commit (conventional), and push your changes. Always pushes.
-7.  **`/archive`**: The final step. It snapshots your specs (frozen copy tagged with commit hash), merges them into the main documentation, and cleans up the change folder.
+2.  **`/specify`**: Define **what** the feature does and **why** (User Stories, Acceptance Criteria, Constraints).
+3.  **`/plan`**: Design **how** it will be built (Architecture, Research & Task List).
+4.  **`/analyze`**: Cross-artifact consistency check — verify spec → plan → tasks before any code is written.
+5.  **Implementation**: Use specialized agents like **`/backend`** or **`/design`**, or let `/work` auto-orchestrate.
+6.  **`/test` & `/serve`**: Verify the work functions correctly and looks great.
+7.  **`/commit`**: Stage, commit (conventional), and push your changes. Always pushes.
+8.  **`/archive`**: The final step. It snapshots your specs (frozen copy tagged with commit hash), merges them into the main documentation, and cleans up the change folder.
 
 ### ⚡ The Streamlined Flow
 
 For maximum efficiency, two mega-commands cover the entire lifecycle:
 
 1. **`/new`**: Initialize the change folder.
-2. **`/build`**: Chains `/specify` → `/plan` → `/work` → `/review` → `/final-polish`. User approves spec and plan; everything else auto-proceeds.
+2. **`/build`**: Chains `/specify` → `/plan` → `/analyze` → `/work` → `/review` → `/final-polish`. User approves spec and plan; everything else auto-proceeds.
 3. **User tests**: Verify in the browser, run through acceptance criteria.
 4. **`/finish`**: Chains `/commit` → `/deploy` → `/archive`. One command to ship and close.
 
 ## ⚡ Automation & Support
 
-- **`/build` (Full Pipeline)**: Mega-command that chains specify → plan → work → review → final-polish. The recommended path for new features.
+- **`/build` (Full Pipeline)**: Mega-command that chains specify → plan → analyze → work → review → final-polish. The recommended path for new features.
 - **`/finish` (Ship & Close)**: Chains commit → deploy → archive. Use after testing.
-- **`/work` (Pipeline)**: Auto-executes tasks by workflow tag: `/backend` → `/design` → `/security` → `/enhance` → `/test`. Use after planning is complete.
+- **`/analyze` (Consistency Gate)**: Pre-implementation audit — checks spec → plan → tasks alignment. Run after `/plan`, before `/work`.
+- **`/work` (Pipeline)**: Auto-executes tasks by workflow tag: `/backend` → `/design` → `/security` → `/enhance` → `/test`. Use after `/analyze` confirms readiness.
 - **`/review` (Quality Audit)**: Runs specialist agents over auto-proceeded work to catch issues.
 - **`/brainstorm` & `/investigate`**: Use these **before** you even run `/new`. They help you decide if a change is viable or what the best approach might be.
 - **`/second-opinion`**: Stress-test any plan or design decision with a rigorous expert review. Use ad-hoc at any stage.
