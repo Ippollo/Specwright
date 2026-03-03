@@ -1,6 +1,6 @@
-# My Skill Catalog
+# Skill Catalog
 
-The collection of skills I've taught **Antigravity** in my `c:\Projects\agentic-toolkit` library, organized by category.
+The collection of skills in **Specwright**, organized by category.
 
 > **Note**: All skills are located in the root `skills/` folder. Categories below are logical groupings for my reference.
 

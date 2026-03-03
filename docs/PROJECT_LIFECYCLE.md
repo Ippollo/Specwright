@@ -1,6 +1,6 @@
-# Agentic Toolkit Project Lifecycle
+# Specwright Project Lifecycle
 
-The Agentic Toolkit is designed around a structured lifecycle that moves from abstract ideas to concrete, verified code. Below is a visual map of the "Happy Path" and how various workflows support different stages of development.
+Specwright is designed around a structured lifecycle that moves from abstract ideas to concrete, verified code. Below is a visual map of the "Happy Path" and how various workflows support different stages of development.
 
 ## 🗺️ The Workflow Map
 

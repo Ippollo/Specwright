@@ -1,6 +1,6 @@
 # Scenario: Starting a Brand New Project
 
-This guide walks through setting up a greenfield project with the agentic toolkit from day one.
+This guide walks through setting up a greenfield project with Specwright from day one.
 
 ## The Goal
 

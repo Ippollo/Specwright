@@ -7,7 +7,7 @@ recommends_mcp: []
 
 # /coach - Learning Mode
 
-**Goal**: Help you learn the agentic-toolkit by teaching as we work together.
+**Goal**: Help you learn Specwright by teaching as we work together.
 
 ## When to Use
 

@@ -1,6 +1,6 @@
 # My Workflow Setup
 
-This is how I initialize new projects with **Antigravity** and my agentic toolkit.
+This is how I initialize new projects with **Antigravity** and **Specwright**.
 
 ## 1. Add the Toolkit to Your Workspace
 

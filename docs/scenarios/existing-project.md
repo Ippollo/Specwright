@@ -1,6 +1,6 @@
 # Scenario: Adopting the Toolkit on an Existing Project
 
-This guide shows how to retrofit the agentic toolkit onto a project that's already underway.
+This guide shows how to retrofit Specwright onto a project that's already underway.
 
 ## The Goal
 

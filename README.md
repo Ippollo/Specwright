@@ -1,4 +1,4 @@
-# Antigravity Agentic Toolkit
+# Specwright
 
 A spec-driven development framework for AI coding assistants. Define requirements, plan the architecture, build with specialist agents, and ship with confidence — all through simple slash commands.
 
