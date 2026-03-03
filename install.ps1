@@ -1,9 +1,9 @@
 # Agentic Toolkit Installer (PowerShell)
 # This script installs the Agentic Toolkit into your current project.
 # Usage:
-#   iwr -useb https://raw.githubusercontent.com/Ippollo/skills/main/install.ps1 | iex
+#   iwr -useb https://raw.githubusercontent.com/Ippollo/Specwright/main/install.ps1 | iex
 
-$repoUrl = "https://github.com/Ippollo/skills.git"
+$repoUrl = "https://github.com/Ippollo/Specwright.git"
 $tempDir = Join-Path $env:TEMP "agentic-toolkit-temp"
 
 # 1. Clean up
