@@ -1,6 +1,6 @@
 ---
 description: Full development pipeline from specification through review. Chains specify → plan → work → review → final-polish.
-quick_summary: "One command to go from idea to reviewed code. Pauses for user approval at spec and plan stages."
+quick_summary: "One command to go from idea to reviewed code. Tracks progress via .pipeline-state for reliable stage completion."
 requires_mcp: []
 recommends_mcp:
   [
@@ -38,6 +38,33 @@ recommends_mcp:
 
 - An active change folder must exist (run `/new` first).
 
+## Pipeline State Tracking
+
+`/build` tracks which stages have completed in `changes/{slug}/.pipeline-state`. This file is the source of truth for pipeline progress.
+
+**Format** (one stage per line, status prefix):
+
+```
+✅ specify
+✅ clarify
+✅ plan
+✅ analyze
+⏳ work
+⬜ review
+⬜ final-polish
+```
+
+**Rules**:
+
+- **On start**: If `.pipeline-state` exists, read it and **resume from the first non-✅ stage**. Do NOT re-run completed stages.
+- **On start**: If `.pipeline-state` does not exist, create it with all stages marked `⬜`.
+- **Before each stage**: Update the current stage to `⏳` and write the file.
+- **After each stage completes**: Update the current stage to `✅` and write the file.
+- **On cleanup**: `/archive` removes the state file along with the change folder.
+
+> [!IMPORTANT]
+> **Always check `.pipeline-state` first.** If a previous session completed `/work` but the agent lost context before `/review`, the state file ensures the next `/build` invocation picks up at `/review` — not from scratch.
+
 ## Steps
 
 // turbo-all
@@ -51,48 +78,66 @@ recommends_mcp:
    - If the user declines, proceed without it — but note the recommendation.
    - If **present**: Silently continue.
 
-1. **Specification Phase**: Invoke `/specify` workflow.
+1. **Check Pipeline State**: Read `changes/{slug}/.pipeline-state`.
+   - If it exists with completed stages: Report which stages are done and which stage will resume. Then skip to the first incomplete stage.
+   - If it does not exist: Create it with all stages `⬜`. Start from Step 2.
+
+2. **Specification Phase**: Update state to `⏳ specify`. Invoke `/specify` workflow.
    - Load the `project-planner` agent.
    - Generate `changes/{slug}/specs/spec.md`.
    - **Gate**: Notify user to review specs. Wait for approval.
    - If `[NEEDS CLARIFICATION]` markers exist, auto-invoke `/clarify` and loop.
+   - On completion: Update state to `✅ specify` (and `✅ clarify`).
 
-2. **Planning Phase**: Invoke `/plan` workflow.
+3. **Planning Phase**: Update state to `⏳ plan`. Invoke `/plan` workflow.
    - Load the `project-planner` agent.
    - Generate `research.md`, `design.md`, and `tasks.md`.
    - **Gate**: Notify user to review the plan. Wait for approval.
+   - On completion: Update state to `✅ plan`.
 
-3. **Analysis Phase**: Invoke `/analyze` workflow.
+4. **Analysis Phase**: Update state to `⏳ analyze`. Invoke `/analyze` workflow.
    - Read spec, plan, and tasks artifacts.
    - Run consistency checks: coverage, constraint compliance, verify completeness, scope creep.
    - If ❌ failures found: pause, report to user, wait for fixes before continuing.
    - If ✅ or ⚠️ only: auto-proceed.
+   - On completion: Update state to `✅ analyze`.
 
-4. **[MANDATORY] Execution Phase**: Invoke `/work` workflow.
+5. **[MANDATORY] Execution Phase**: Update state to `⏳ work`. Invoke `/work` workflow.
    - Auto-execute all tasks by pipeline tag: `/backend` → `/design` → `/security` → `/enhance` → `/test`.
    - No user gate — auto-proceeds through all stages.
    - Do NOT skip any `/work` sub-stages, even if the tasks.md appears to have no tasks for a given tag. Complete the full pipeline.
+   - On completion: Update state to `✅ work`.
 
-5. **[MANDATORY] Review Phase**: Invoke `/review` workflow.
+   > **Continuation checkpoint**: After `/work` completes, you MUST proceed to Step 6 (`/review`). Read `.pipeline-state` to confirm your current position. Do NOT stop here.
+
+6. **[MANDATORY] Review Phase**: Update state to `⏳ review`. Invoke `/review` workflow.
    - Run specialist review pipeline: backend → design → security → enhance.
    - Auto-fix any issues found.
    - No user gate — auto-proceeds.
    - Do NOT skip this phase even if the Execution Phase had no issues.
+   - On completion: Update state to `✅ review`.
 
-6. **[MANDATORY] Polish Phase**: Invoke `/final-polish` workflow.
+   > **Continuation checkpoint**: After `/review` completes, you MUST proceed to Step 7 (`/final-polish`). Read `.pipeline-state` to confirm your current position. Do NOT stop here.
+
+7. **[MANDATORY] Polish Phase**: Update state to `⏳ final-polish`. Invoke `/final-polish` workflow.
    - Remove debug artifacts, triage TODOs, prune dead code, sync docs, run lint/test.
    - Auto-fix any issues found.
    - No user gate — auto-proceeds.
    - Do NOT skip this phase regardless of prior phase outcomes.
+   - On completion: Update state to `✅ final-polish`.
 
-7. **Completion**: Notify user with consolidated summary.
+8. **Completion**: Notify user with consolidated summary.
    - Present verdict from `/review` and `/final-polish`.
+   - Confirm all stages show `✅` in `.pipeline-state`.
    - Suggest user testing, then `/finish` when satisfied.
 
 ## Usage
 
 ```bash
 # Full pipeline from spec to polished code
+/build
+
+# Resume a previously interrupted build
 /build
 
 # Provide initial context for the spec
@@ -105,9 +150,11 @@ recommends_mcp:
 - **Plan rejected**: User provides feedback → re-run `/plan` with guidance.
 - **Build error during `/work`**: Auto-triggers `/debug`, then resumes pipeline.
 - **Review finds critical issues**: `/review` fixes them in-place. If it flags ⚠️ Needs User Input, the pipeline pauses and notifies the user.
+- **Context lost mid-pipeline**: Re-run `/build` — state file ensures it resumes from the correct stage.
 
 ## Notes
 
 - All individual workflows remain available for standalone use.
 - `/build` is the recommended path for new features and significant changes.
 - For small fixes where you already know what to change, use `/work` directly.
+- The `.pipeline-state` file is automatically cleaned up by `/archive`.

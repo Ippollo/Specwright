@@ -10,7 +10,8 @@ graph TD
     Constitution["/constitution<br/>(Project Rules)"] -.-> Start
 
     %% Entry Points
-    Start([User Request]) --> Investigate["/investigate<br/>(Technical Research)"]
+    Start([User Request]) --> Status["/status<br/>(Change Awareness)"]
+    Start --> Investigate["/investigate<br/>(Technical Research)"]
     Start --> Brainstorm["/brainstorm<br/>(Ideation & Options)"]
     Start --> New["/new<br/>(Initialize Change)"]
 
@@ -67,6 +68,7 @@ graph TD
 
     %% Styling
     style Constitution fill:#ffe0b2,stroke:#333
+    style Status fill:#ffe0b2,stroke:#333
     style Work fill:#ffd,stroke:#333
     style New fill:#f9f,stroke:#333
     style Archive fill:#dfd,stroke:#333
@@ -101,8 +103,9 @@ For maximum efficiency, two mega-commands cover the entire lifecycle:
 
 ## ⚡ Automation & Support
 
-- **`/build` (Full Pipeline)**: Mega-command that chains specify → plan → analyze → work → review → final-polish. The recommended path for new features.
-- **`/finish` (Ship & Close)**: Chains commit → deploy → archive. Use after testing.
+- **`/build` (Full Pipeline)**: Mega-command that chains specify → plan → analyze → work → review → final-polish. Tracks stage progress via `.pipeline-state` file — re-running `/build` resumes from the last completed stage.
+- **`/finish` (Ship & Close)**: Chains commit → deploy → archive. Deploy auto-detects the project's deploy method.
+- **`/status` (Change Awareness)**: Shows artifact existence, task progress, and suggested next action for any active change. Use at the start of a session to re-orient.
 - **`/analyze` (Consistency Gate)**: Pre-implementation audit — checks spec → plan → tasks alignment. Run after `/plan`, before `/work`.
 - **`/work` (Pipeline)**: Auto-executes tasks by workflow tag: `/backend` → `/design` → `/security` → `/enhance` → `/test`. Use after `/analyze` confirms readiness.
 - **`/review` (Quality Audit)**: Runs specialist agents over auto-proceeded work to catch issues.

@@ -15,6 +15,24 @@ recommends_mcp: []
 - To prevent changes from leaking into other active work folders.
 - When you want a clean slate for planning.
 
+## Scope Check — Update or New?
+
+Before creating a new change, check if an active change already covers this work. Ask three questions:
+
+| #   | Question                                                     | Update existing                           | Start new                                |
+| --- | ------------------------------------------------------------ | ----------------------------------------- | ---------------------------------------- |
+| 1   | **Same intent?** Same problem being solved?                  | Yes — same goal, refined execution        | No — fundamentally different work        |
+| 2   | **>50% overlap?** Does new work overlap with existing scope? | Yes — it's a refinement                   | No — mostly new territory                |
+| 3   | **Can original be "done" without this?**                     | No — this is part of the same deliverable | Yes — original is completable on its own |
+
+**Rule of thumb:**
+
+- **2–3 "Update" answers** → update the existing change's proposal/spec/tasks
+- **2–3 "Start new" answers** → archive the old change (if complete) and `/new`
+- If a change has grown so much the proposal is unrecognizable, it's new work
+
+> This is guidance, not a gate. When ambiguous, ask the user.
+
 ## Steps
 
 1. **Invoke Agent**: Use `project-planner` or current context.

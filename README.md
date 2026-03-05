@@ -23,7 +23,7 @@ Every feature starts with a **specification**, gets a **plan**, is built by **sp
 
 - 🎯 **Spec-first workflow** — Define _what_ and _why_ before writing any code
 - 🧠 **7 specialist agents** — Backend Architect, Frontend Specialist, Debugger, QA Engineer, Security Engineer, Code Custodian, and Project Planner
-- ⚡ **26 slash commands** — From `/brainstorm` to `/archive`, every phase has a workflow
+- ⚡ **27 slash commands** — From `/brainstorm` to `/archive`, every phase has a workflow
 - 🔒 **Quality gates** — Human approval at spec and plan stages; automated review after
 - 📋 **Full traceability** — Requirements → tasks → code → tests → versioned spec snapshots
 - 📚 **17+ skills** — Deep knowledge in API design, testing, security, performance, and more
@@ -85,13 +85,13 @@ The fastest path from idea to shipped code:
 
 Or run each phase yourself:
 
-| Phase      | Commands                      | What Happens                                               |
-| ---------- | ----------------------------- | ---------------------------------------------------------- |
-| **Ideate** | `/brainstorm`, `/investigate` | Explore options, research the codebase                     |
-| **Plan**   | `/new` → `/specify` → `/plan` | Define requirements, generate tasks                        |
-| **Build**  | `/work`                       | Auto-execute: backend → design → security → enhance → test |
-| **Verify** | `/review`, `/final-polish`    | Specialist review, cleanup, acceptance verification        |
-| **Ship**   | `/commit` → `/archive`        | Conventional commit, spec snapshot, archive                |
+| Phase      | Commands                           | What Happens                                               |
+| ---------- | ---------------------------------- | ---------------------------------------------------------- |
+| **Ideate** | `/brainstorm`, `/investigate`      | Explore options, research the codebase                     |
+| **Plan**   | `/new` → `/specify` → `/plan`      | Define requirements, generate tasks                        |
+| **Build**  | `/work`                            | Auto-execute: backend → design → security → enhance → test |
+| **Verify** | `/review`, `/final-polish`         | Specialist review, cleanup, acceptance verification        |
+| **Ship**   | `/commit` → `/deploy` → `/archive` | Conventional commit, deploy, spec snapshot, archive        |
 
 ## 🎓 New to Agentic Development?
 
@@ -112,7 +112,7 @@ Turn it off anytime with `/coach off`.
 
 | Component                     | Count | Purpose                                                                               |
 | ----------------------------- | ----- | ------------------------------------------------------------------------------------- |
-| **[Workflows](./workflows/)** | 26    | Slash commands for every phase of development                                         |
+| **[Workflows](./workflows/)** | 27    | Slash commands for every phase of development                                         |
 | **[Agents](./agents/)**       | 7     | Specialist personas (planner, architect, designer, debugger, QA, security, custodian) |
 | **[Skills](./skills/)**       | 17+   | Deep knowledge bases (API patterns, testing, security, performance, Gemini API, etc.) |
 | **[Templates](./templates/)** | 4     | Spec, task, proposal, and delta-spec templates                                        |

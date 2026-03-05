@@ -12,33 +12,34 @@ One-page cheat sheet for common commands and agent flows.
 
 ## 🛠 Workflows
 
-| Command           | Objective         | Use Case                                                                       |
-| :---------------- | :---------------- | :----------------------------------------------------------------------------- |
-| `/brainstorm`     | Explore options   | Comparing different technical approaches.                                      |
-| `/investigate`    | Deep-dive code    | Understanding existing logic before changing it.                               |
-| `/new`            | Start change      | **Required** starting point for any feature/fix.                               |
-| `/specify`        | Create specs      | Defining user stories and requirements.                                        |
-| `/clarify`        | Fix gaps          | Identifying missing info in specifications.                                    |
-| `/plan`           | Create tasks      | Generating `design.md` and `tasks.md`.                                         |
-| `/analyze`        | Consistency gate  | Pre-implementation check: spec → plan → tasks alignment. Run before `/work`.   |
-| `/work`           | **Pipeline**      | Auto-executes tasks by tag: backend → design → security → enhance → test.      |
-| `/design`         | Frontend work     | Building UI components and styles.                                             |
-| `/backend`        | Server logic      | Designing APIs and backend architecture.                                       |
-| `/test`           | Verification      | Running unit, integration, and E2E tests.                                      |
-| `/debug`          | Fix bugs          | Investigating and resolving issues.                                            |
-| `/enhance`        | Refactor          | Improving existing code quality/speed.                                         |
-| `/security`       | Audit             | Hardening code against vulnerabilities.                                        |
-| `/final-polish`   | Cleanup           | Pre-submission checklist, verification, and acceptance traceability audit.     |
-| `/commit`         | Save & push       | Stage, conventional commit, and push. Always pushes.                           |
-| `/archive`        | Close change      | Snapshot specs, merge to `specs/`, and archive folder.                         |
-| `/serve`          | Dev server        | Manage local server for previewing changes.                                    |
-| `/review`         | Quality audit     | Specialist review pipeline for agent auto-proceeded work.                      |
-| `/second-opinion` | Review            | Stress-testing plans with an expert persona.                                   |
-| `/constitution`   | Rules             | Setting project-wide guardrails.                                               |
-| `/deploy`         | Release           | Deploying changes to production.                                               |
-| `/build`          | **Full pipeline** | Chains specify → plan → analyze → work → review → final-polish in one command. |
-| `/finish`         | **Ship & close**  | Chains commit → deploy → archive. The final step after testing.                |
-| `/coach`          | Learning mode     | Teaches the toolkit while you work. Toggle with `/coach on/off`.               |
+| Command           | Objective         | Use Case                                                                                                                |
+| :---------------- | :---------------- | :---------------------------------------------------------------------------------------------------------------------- |
+| `/brainstorm`     | Explore options   | Comparing different technical approaches.                                                                               |
+| `/investigate`    | Deep-dive code    | Understanding existing logic before changing it.                                                                        |
+| `/new`            | Start change      | **Required** starting point for any feature/fix.                                                                        |
+| `/specify`        | Create specs      | Defining user stories and requirements.                                                                                 |
+| `/clarify`        | Fix gaps          | Identifying missing info in specifications.                                                                             |
+| `/plan`           | Create tasks      | Generating `design.md` and `tasks.md`.                                                                                  |
+| `/analyze`        | Consistency gate  | Pre-implementation check: spec → plan → tasks alignment. Run before `/work`.                                            |
+| `/work`           | **Pipeline**      | Auto-executes tasks by tag: backend → design → security → enhance → test.                                               |
+| `/design`         | Frontend work     | Building UI components and styles.                                                                                      |
+| `/backend`        | Server logic      | Designing APIs and backend architecture.                                                                                |
+| `/test`           | Verification      | Running unit, integration, and E2E tests.                                                                               |
+| `/debug`          | Fix bugs          | Investigating and resolving issues.                                                                                     |
+| `/enhance`        | Refactor          | Improving existing code quality/speed.                                                                                  |
+| `/security`       | Audit             | Hardening code against vulnerabilities.                                                                                 |
+| `/final-polish`   | Cleanup           | Pre-submission checklist, verification, and acceptance traceability audit.                                              |
+| `/commit`         | Save & push       | Stage, conventional commit, and push. Always pushes.                                                                    |
+| `/archive`        | Close change      | Snapshot specs, merge to `specs/`, and archive folder.                                                                  |
+| `/serve`          | Dev server        | Manage local server for previewing changes.                                                                             |
+| `/review`         | Quality audit     | Specialist review pipeline for agent auto-proceeded work.                                                               |
+| `/second-opinion` | Review            | Stress-testing plans with an expert persona.                                                                            |
+| `/constitution`   | Rules             | Setting project-wide guardrails.                                                                                        |
+| `/deploy`         | Release           | Auto-detects deploy method (Firebase, Vercel, gcloud, etc.) with pre/post checks.                                       |
+| `/build`          | **Full pipeline** | Chains specify → plan → analyze → work → review → final-polish. Tracks state via `.pipeline-state` for reliable resume. |
+| `/finish`         | **Ship & close**  | Chains commit → deploy → archive. The final step after testing.                                                         |
+| `/status`         | Change awareness  | Shows artifact state, task progress, and suggested next action for active changes.                                      |
+| `/coach`          | Learning mode     | Teaches the toolkit while you work. Toggle with `/coach on/off`.                                                        |
 
 ---
 

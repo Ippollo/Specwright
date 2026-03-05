@@ -37,9 +37,11 @@ recommends_mcp: [github, gcloud, firebase, observability]
    - Commit and push.
 
 2. **Deploy Phase**: Invoke `/deploy` workflow.
-   - Load the `sec-devops-engineer` agent.
-   - Verify CI/CD status and pre-deployment checks.
-   - Trigger deployment pipeline.
+   - Auto-detect deploy method from project signals (firebase.json, vercel.json, package.json scripts, etc.).
+   - Run pre-deploy checks (clean working directory, build passes).
+   - Execute the detected deploy command.
+   - Verify deployment succeeded (health check or exit status).
+   - If no deploy method is detected, ask the user for the command.
 
 3. **Archive Phase**: Invoke `/archive` workflow.
    - Verify all tasks in `tasks.md` are complete.

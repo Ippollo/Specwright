@@ -39,6 +39,30 @@
 - [e.g., "State management: Preferred library"]
 - [e.g., "Error handling strategy"]
 
+## 6. Artifact Rules
+
+Per-phase instructions that agents apply when generating specific artifacts.
+
+### Proposals
+
+- [e.g., "Include a rollback plan"]
+- [e.g., "Identify affected systems or services"]
+
+### Specs
+
+- [e.g., "Use Given/When/Then for acceptance criteria"]
+- [e.g., "Every requirement must have a P1/P2/P3 priority"]
+
+### Design
+
+- [e.g., "Include sequence diagrams for multi-service flows"]
+- [e.g., "List file changes with expected modifications"]
+
+### Tasks
+
+- [e.g., "Every task must have a concrete Verify step"]
+- [e.g., "Group tasks by workflow tag: /backend, /design, /security, /enhance, /test"]
+
 ---
 
 ## Governance
