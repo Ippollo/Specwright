@@ -10,15 +10,17 @@ Quickly get back into context and continue work on a paused feature without star
 
 ## Step 1: Assess What Exists
 
-Check what artifacts are already in the change folder.
+Start by checking what artifacts are already in the change folder.
 
 ```bash
-# Navigate to the change folder
-cd changes/your-feature-name
+# Quick status report (recommended)
+/status your-feature-name
 
-# List what's there
-ls
+# Or check all active changes at once
+/status
 ```
+
+`/status` will show you which artifacts exist, how many tasks are complete, and suggest your next action.
 
 **Common states:**
 
@@ -225,6 +227,7 @@ git diff
 
 ## Pro Tips
 
+- **Start with `/status`**: The fastest way to rebuild context when returning to a project
 - **Always read `proposal.md` first**: It's the "why" behind everything
 - **Check git history**: See what you committed before pausing
 - **Use `/second-opinion`**: If you're unsure whether to continue or restart, get a review
