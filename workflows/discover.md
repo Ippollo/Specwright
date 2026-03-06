@@ -128,4 +128,4 @@ After discovery:
 
 - Use `/plan` or `/build` to start working — workflows will reference the profile
 - Use `/investigate` for deeper analysis of specific technologies
-- Use `skill-builder` to create skills for identified gaps
+- Use `/skill` to create or enhance skills for identified gaps

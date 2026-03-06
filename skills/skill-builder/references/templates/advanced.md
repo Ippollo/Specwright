@@ -1,49 +1,104 @@
+<!-- ADVANCED TEMPLATE
+     Best for: Capability-heavy skills with reference data, multiple scripts, and deep documentation.
+     Size target: ~3-5KB for SKILL.md; heavy content lives in docs/ and resources/
+     Examples in toolkit: frontend-design (aesthetic guidelines), gemini-api-dev (SDK reference),
+                          design-system (searchable database with scripts)
+     Key principle: SKILL.md is the routing layer. It tells the agent WHAT to do and WHERE to find details.
+-->
+
 ---
-name: "Skill Name"
-description: "Comprehensive description including functionality and trigger conditions (max 1024 chars)."
+
+name: "skill-name"
+description: "Comprehensive description including functionality and trigger conditions (max 1024 chars). Use when [scenario list]. For [adjacent domain], see `other-skill`."
+
 ---
 
 # Skill Name
 
-## Level 1: Overview
+<!-- Lead with role framing + core principle. Sets the agent's mindset before any instructions. -->
 
-[High-level summary of capabilities. Always read first.]
+You are a [role]. [Core principle or philosophy in one sentence].
+
+## When to Apply
+
+<!-- Explicit trigger list. Include both positive triggers and negative exclusions. -->
+
+- Designing [specific thing]
+- Building [specific thing]
+- Debugging [specific thing]
+- **Not for**: [thing that belongs to another skill] — see `other-skill`
 
 ## Prerequisites
 
-- [System requirement 1]
-- [Tool requirement 2]
+- [System requirement]
+- [Tool requirement]
 
-## Level 2: Quick Start
+## Quick Start
+
+<!-- Immediate value: a single command or 2-3 steps that demonstrate the skill working. -->
 
 ```bash
-# Command to verify readiness
+# Verify readiness
 ./scripts/doctor.sh
 
-# Command to run default flow
+# Run default flow
 ./scripts/start.sh
 ```
 
-## Level 3: Detailed Instructions
+## Core Instructions
 
-### Phase 1: Configuration
+<!-- The essential workflow. Keep this section lean and actionable.
+     If a phase needs more than ~10 lines of detail, move it to docs/. -->
 
-See [Configuration Guide](docs/CONFIGURATION.md) for details.
+### Phase 1: [Name]
 
-### Phase 2: Execution
+[Concise instructions. Link to deep-dive if needed.]
 
-[Detailed steps for execution]
+See [Configuration Guide](docs/CONFIGURATION.md) for detailed options.
 
-### Phase 3: Verification
+### Phase 2: [Name]
 
-[How to verify results]
+[Concise instructions with concrete actions.]
+
+### Phase 3: [Name]
+
+[Verification steps. How to confirm the work is correct.]
+
+## Anti-Patterns
+
+<!-- Critical "don't do this" guidance. These prevent the most common mistakes.
+     Great anti-patterns are specific and include the correct alternative. -->
+
+> [!CAUTION]
+> **[Anti-Pattern Name]**: [Specific bad behavior]. Instead, [specific correct behavior].
+
+- **[Pattern Name]**: [Why it's bad]. _Do this instead_: [alternative].
+- **[Pattern Name]**: [Why it's bad]. _Do this instead_: [alternative].
+
+## Output Format
+
+<!-- What the agent's deliverable should look like. -->
+
+```
+[Expected output structure]
+```
 
 ## Resources
 
-- **Templates**: See `resources/templates/`
-- **Examples**: See `resources/examples/`
-- **Schema**: See `resources/schemas/`
+<!-- Progressive disclosure: point to Level 3 content the agent reads on demand. -->
+
+- **Reference**: See [reference.md](docs/reference.md) for [catalogs, data tables, etc.]
+- **Templates**: See `resources/templates/` for [scaffolding files]
+- **Examples**: See `resources/examples/` for [sample implementations]
+
+## Related Skills
+
+<!-- Help the agent compose skills and avoid conflicts. -->
+
+- **Complements**: `skill-a` — [how they work together]
+- **Conflicts**: `skill-b` — [when NOT to use both; pick one based on context]
+- **Delegates to**: `skill-c` — [specific subtask this skill defers to another]
 
 ## Troubleshooting
 
-See [Troubleshooting Guide](docs/TROUBLESHOOTING.md).
+See [Troubleshooting Guide](docs/TROUBLESHOOTING.md) for common issues.

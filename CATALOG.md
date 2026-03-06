@@ -74,7 +74,8 @@ Skills and workflows related to agent processes, governance, and library managem
 - [documentation-standards](./skills/documentation-standards/SKILL.md): Comprehensive documentation protocols with templates for SPEC, CONSTITUTION, ADR, and quality checklists.
 - [prompt-engineering](./skills/prompt-engineering/SKILL.md): Foundational protocols for advanced reasoning, self-correction, and ensuring high-quality LLM outputs. Includes instruction architecture guidance for deciding when to use system prompts vs skills vs runtime context.
 - [second-opinion](./skills/second-opinion/SKILL.md): Expert review protocol for stress-testing plans and decisions.
-- [skill-builder](./skills/skill-builder/SKILL.md): Gap detection and interactive wizard for creating new skills.
+- [/skill](./workflows/skill.md): Create or enhance Agent Skills — wraps the skill-builder with CREATE and MODIFY paths.
+- [skill-builder](./skills/skill-builder/SKILL.md): Comprehensive tool for creating, modifying, and validating Agent Skills. Use when building new SKILL.md files, enhancing existing skills, or when a project needs custom skills. Includes design principles, templates, and exemplar references.
 - [skill-management](./skills/skill-management/SKILL.md): Governance rules for organizing and maintaining this skill library.
 
 ## Skill Relationships
