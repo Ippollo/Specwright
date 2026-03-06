@@ -56,6 +56,64 @@ This skill provides **meta-protocols** that other skills should import or emulat
 
 > **Instruction**: "If the output is invalid (e.g., malformed JSON), catch the error and retry with a simplified prompt or an explicit correction instruction citing the error."
 
+## 8. The "Instruction Architecture" Protocol
+
+<!-- 🔧 MAINTAINER NOTE: When a second architecture-level section is needed
+     (e.g., tool design, context window management, model selection strategy),
+     extract this section into its own standalone skill (e.g., `ai-app-architecture`). -->
+
+**Use when**: Designing how an AI-powered application structures its instructions across layers.
+
+AI applications have multiple places to put instructions. Choosing the wrong layer leads to bloated contexts, inconsistent behavior, or lost knowledge. Use this protocol to decide where each instruction belongs.
+
+### Layer Overview
+
+| Layer               | Loaded                   | Purpose                                   | Context Cost            |
+| ------------------- | ------------------------ | ----------------------------------------- | ----------------------- |
+| **System Prompt**   | Every conversation       | Identity, universal rules, persona        | Always consuming tokens |
+| **SKILL.md**        | On-demand, when relevant | Specialized procedures & domain expertise | Only when activated     |
+| **Runtime Context** | Per-request, dynamically | User data, session state, tool outputs    | Varies per request      |
+
+### Decision Framework
+
+**Put it in the System Prompt when:**
+
+- It defines the AI's core identity or persona
+- It's a universal rule that applies to _every_ interaction (e.g., "Never give medical advice")
+- It's a behavioral constraint (e.g., "Always respond in JSON")
+- It's minimal global context the AI always needs (e.g., a brief data model overview)
+
+**Put it in a SKILL.md when:**
+
+- It's a specialized procedure that only applies to certain tasks
+- It's a complex, multi-step workflow with detailed instructions
+- It's domain expertise that would bloat the system prompt if always loaded
+- It's a modular capability you want to add, remove, or update independently
+
+**Put it in Runtime Context when:**
+
+- It's user-specific data (profile, preferences, history)
+- It's session state (current step in a flow, selected options)
+- It's dynamic content from tools or APIs
+- It changes between requests
+
+### Analogy
+
+- **System Prompt** = Employee handbook (everyone reads it on day one)
+- **SKILL.md** = Procedure manual for a specific task (grabbed off the shelf when needed)
+- **Runtime Context** = The customer's file open on your desk right now
+
+### Anti-Pattern: The Monolith Prompt
+
+Stuffing everything into the system prompt is the most common mistake. Signs you've fallen into this trap:
+
+- System prompt exceeds ~2-3KB of actual instructions
+- Instructions reference tasks that only apply 10% of the time
+- Updating one capability risks breaking unrelated behavior
+- Context window is consumed before the conversation even starts
+
+**Fix**: Extract specialized instructions into skills. Keep the system prompt lean — identity, universal rules, and just enough context for routing.
+
 ---
 
 ## Anti-Patterns (What NOT To Do)
