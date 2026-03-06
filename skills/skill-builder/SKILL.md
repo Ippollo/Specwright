@@ -1,11 +1,71 @@
 ---
+schema_version: 1.0
 name: skill-builder
-description: Use when creating a new agent skill, auditing an existing skill, or scaffolding skill file structure. Includes wizard-based generation, validation checklists, and best practice templates. For skill library organization and lifecycle, see skill-management.
+description: "Comprehensive tool for creating, modifying, and validating Agent Skills. Includes wizard-based generation, audit checklists, and best practice templates. Use this skill when building new SKILL.md files, enhancing existing skills, or when a project needs custom skills for its domain patterns."
 ---
 
 # Skill Builder
 
-Master tool for managing the Agent Skills lifecycle. Use this to create new skills or enhance existing ones following the [Agent Skills Specification](https://agentskills.io/specification).
+Master tool for the Agent Skills lifecycle. Use this to create new skills, enhance existing ones, or audit skill quality.
+
+## Design Principles
+
+These principles are distilled from the best-performing skills in this toolkit. Apply them when creating or reviewing any skill.
+
+### 1. Lead with Why, Not What
+
+A skill that opens with "This skill does X" is weaker than one that opens with "You are a [role] that achieves [outcome]." Framing the **purpose** before the mechanics helps the agent adopt the right mindset.
+
+- _Weak_: "This skill generates commit messages."
+- _Strong_: "You are a version control specialist. You craft commit messages that communicate intent to future maintainers."
+
+### 2. Write Trigger-Rich Descriptions
+
+The `description` field is how the agent decides whether to load a skill. It must answer **what** it does and **when** to use it, using the user's natural vocabulary.
+
+- Include concrete trigger phrases: "Use this skill when...", "Use when the user asks to..."
+- List example scenarios: "building web components, pages, dashboards..."
+- Differentiate from similar skills: "For React patterns, see `react-best-practices`."
+- Max 1024 chars. Every word must earn its place.
+
+### 3. Encode Anti-Patterns
+
+Great skills don't just say what to do — they say what **NOT** to do. Anti-patterns prevent common mistakes and are often more valuable than the positive instructions.
+
+- _Example from `frontend-design`_: "NEVER use generic AI-generated aesthetics like overused font families (Inter, Roboto, Arial)..."
+- _Example from `prompt-engineering`_: "**Prompt Stuffing**: Adding irrelevant context 'just in case.' This dilutes attention and increases costs."
+
+### 4. Progressive Disclosure
+
+Keep `SKILL.md` lean (target 2-5KB). Move heavy content to supporting files:
+
+| Content Type             | Location                                      |
+| ------------------------ | --------------------------------------------- |
+| Core logic & workflow    | `SKILL.md` (Level 2)                          |
+| Reference data, catalogs | `docs/reference.md` or `resources/` (Level 3) |
+| Executable automation    | `scripts/` (Level 3)                          |
+| Code templates           | `resources/templates/` (Level 3)              |
+| Examples & samples       | `resources/examples/` (Level 3)               |
+
+The agent reads `SKILL.md` first. It only reads Level 3 files when `SKILL.md` tells it to.
+
+### 5. Be Immediately Actionable
+
+Every skill should get the agent **doing something useful** as fast as possible. Include:
+
+- A "Quick Start" or entry-point step
+- Concrete code snippets or commands (not just theory)
+- A clear output format so the agent knows what "done" looks like
+
+### 6. Define Relationships
+
+Skills don't exist in isolation. State how this skill relates to others:
+
+- _Complements_: "Use with `backend-performance` when optimizing API responses."
+- _Conflicts_: "Do not mix with `frontend-design` in the same component."
+- _Delegates_: "For ADR format, defer to `documentation-standards`."
+
+---
 
 ## Workflow Entry Point
 
@@ -29,7 +89,7 @@ Before starting, analyze the user request to determine the correct mode.
 
 Use when building a new skill from scratch.
 
-### Step 0.5: Scope Selection
+### Step 1: Scope Selection
 
 Ask the user:
 
@@ -40,30 +100,44 @@ Ask the user:
 
 If invoked from `/discover` gap-filling, default to **local**.
 
-### Step 1: Validation
+### Step 2: Validation
 
 - **Name**: 1-64 lowercase alphanumeric chars + hyphens (`a-z-`). No consecutive hyphens.
-- **Conflict Check**: Verify `c:\Projects\agentic-toolkit\<skill-name>` does not exist.
+- **Conflict Check**: Verify name doesn't collide with an existing skill in the target location.
 
-### Step 2: Description
+### Step 3: Description Crafting
 
-- **Content**: 1-1024 chars. Must state **WHAT** it does and **WHEN** to use it.
-- **Example**: "Generates React components. Use when scaffolding UI elements."
+Write the `description` field using the **Trigger-Rich Descriptions** principle:
 
-### Step 3: Select Template
+1. Start with the capability: "What does this skill enable?"
+2. Add trigger phrases: "Use this skill when [scenario 1], [scenario 2], or [scenario 3]."
+3. Add disambiguation (if overlapping with another skill): "For [adjacent domain], see `other-skill`."
+4. Verify: Would a user searching for this capability find it? Would adjacent searches correctly **not** find it?
 
-Ask user to choose a template based on complexity:
+### Step 4: Content Design
 
-- **Basic**: Single file, simple logic. ([View Template](references/templates/basic.md))
-- **Intermediate**: Includes `scripts/` for automation. ([View Template](references/templates/intermediate.md))
-- **Advanced**: Full structure with `docs/`, `resources/`, and progressive disclosure. ([View Template](references/templates/advanced.md))
+Before selecting a template, design the skill's substance using the Design Principles:
 
-### Step 4: Generation
+1. **Define the role**: What persona should the agent adopt? (Principle 1)
+2. **List 3-5 anti-patterns**: What are the most common mistakes in this domain? (Principle 3)
+3. **Identify output shape**: What does "done" look like? (Principle 5)
+4. **Map relationships**: What other skills does this one complement, conflict with, or delegate to? (Principle 6)
+5. **Assess content volume**: Will the skill need reference data, scripts, or templates? (Principle 4)
+
+### Step 5: Select Template
+
+Choose a template based on the content design assessment:
+
+- **Basic**: Single file, simple logic. Best for encoded preferences or checklists. ([View Template](references/templates/basic.md))
+- **Intermediate**: Includes `scripts/` for automation. Best for workflow-driven skills. ([View Template](references/templates/intermediate.md))
+- **Advanced**: Full structure with `docs/`, `resources/`, and progressive disclosure. Best for capability-heavy skills with reference data. ([View Template](references/templates/advanced.md))
+
+### Step 6: Generation
 
 **If Global:**
 
 1.  **Create Directory**: `c:\Projects\agentic-toolkit\skills\<skill-name>\`
-2.  **Write SKILL.md**: Use the selected template, populated with user's name/description and custom instructions.
+2.  **Write SKILL.md**: Use the selected template, populated with content from Steps 3-4.
 3.  **Create Subdirectories**: `scripts/`, `resources/`, `docs/` (if Intermediate/Advanced).
 
 **If Local:**
@@ -72,12 +146,12 @@ Ask user to choose a template based on complexity:
 2.  **Write SKILL.md**: Same format as global skills.
 3.  **Create Subdirectories**: Same as global (if Intermediate/Advanced).
 
-### Step 5: Registration
+### Step 7: Registration
 
 **If Global:**
 
-- Append the new skill to `c:\Projects\agentic-toolkit\CATALOG.md`.
-- Format: `- [skill-name]: <description>`
+- Append the new skill to `c:\Projects\agentic-toolkit\CATALOG.md` in the appropriate category section.
+- Format: `- [skill-name](./skills/skill-name/SKILL.md): <description>`
 
 **If Local:**
 
@@ -90,64 +164,77 @@ Ask user to choose a template based on complexity:
 
 Use when enhancing, fixing, or refactoring an existing skill.
 
-### Step 1: Audit
+### Step 1: Full Audit
 
-Read the target skill's `SKILL.md` and check against the **Validation Checklist** below.
+Read the target skill's `SKILL.md` and evaluate against **both** the Structural Checklist and the Design Quality Checklist below.
 
 ### Step 2: Gap Analysis
 
-Identify missing components:
+Compare audit results against the checklists. Categorize gaps:
 
-- [ ] Is the frontmatter valid?
-- [ ] Does it have clear "What" and "When"?
-- [ ] Are complex instructions broken into `scripts/` or `docs/`?
-- [ ] Are there examples in `resources/`?
+- **Critical**: Missing description triggers, no anti-patterns, vague instructions
+- **Improvement**: Could add examples, better progressive disclosure, relationship mapping
+- **Polish**: Formatting, ordering, frontmatter completeness
 
 ### Step 3: Enhancement
 
-- **Refactor**: Move inline code to `scripts/`.
-- **Expand**: Add `resources/templates` or `docs/TROUBLESHOOTING.md`.
-- **Clarify**: Rewrite ambiguous instructions.
+Apply fixes in priority order:
+
+1. **Description** — Rewrite to be trigger-rich if it isn't already.
+2. **Anti-Patterns** — Add a section if missing. Even 2-3 bullets add significant value.
+3. **Progressive Disclosure** — Extract heavy content to supporting files if `SKILL.md` exceeds ~5KB.
+4. **Examples** — Add concrete examples for key instructions.
+5. **Relationships** — Add cross-references to complementary or conflicting skills.
 
 ### Step 4: Update
 
 - Apply changes to `SKILL.md`.
-- Update `CATALOG.md` if the description warrants a change.
+- Update `CATALOG.md` if the description changed.
 
 ---
 
-## Reference & Best Practices
+## Validation Checklists
 
-### Validation Checklist
+### Structural Checklist
 
-Use this to certify a skill as "Production Ready":
+Certify the skill is well-formed:
 
-**YAML Frontmatter**:
-
-- [ ] Starts/ends with `---`
-- [ ] `name`: Max 64 chars, valid format
-- [ ] `description`: Max 1024 chars, includes "what" + "when"
-
-**Structure**:
-
-- [ ] Located at `c:\Projects\agentic-toolkit\<skill-name>\` (No nested skills)
+- [ ] Starts/ends with `---` frontmatter
+- [ ] `name`: Max 64 chars, kebab-case format
+- [ ] `description`: Max 1024 chars
+- [ ] Located at `skills/<skill-name>/` (no nesting)
 - [ ] `SKILL.md` is the main entry point
+- [ ] Large content moved to `docs/` or `resources/` (if applicable)
 
-**Progressive Disclosure**:
+### Design Quality Checklist
 
-- [ ] **Level 1 (Metadata)**: Accurate name/description for routing.
-- [ ] **Level 2 (SKILL.md)**: Lean (~2-5KB). Focus on logic and flow.
-- [ ] **Level 3 (Files)**: Large content moved to `docs/` or `resources/`.
+Certify the skill is **effective**:
 
-### Directory Structure
+- [ ] **Trigger-Rich Description**: Answers "what" + "when", includes example scenarios
+- [ ] **Clear Persona or Role**: Opens with purpose framing, not just mechanics
+- [ ] **Anti-Patterns Included**: At least 2-3 "don't do this" items
+- [ ] **Actionable Content**: Includes concrete steps, commands, or code — not just theory
+- [ ] **Output Shape Defined**: Agent knows what "done" looks like
+- [ ] **Relationships Mapped**: Cross-references to complementary skills (if applicable)
+- [ ] **Progressive Disclosure**: SKILL.md ≤ ~5KB, heavy content in supporting files
+
+---
+
+## Directory Structure
 
 ```
-c:\Projects\agentic-toolkit\<skill-name>\
-├── SKILL.md                 # CORE: Logic & Instructions
+skills/<skill-name>/
+├── SKILL.md                 # CORE: Logic & Instructions (~2-5KB)
 ├── README.md                # OPTIONAL: Human-readable docs
 ├── scripts/                 # OPTIONAL: Executable tools (setup.sh, run.py)
 ├── resources/               # OPTIONAL: Static assets
 │   ├── templates/           # Code templates
 │   └── examples/            # Usage examples
 └── docs/                    # OPTIONAL: Deep-dive documentation
+    ├── reference.md         # Reference catalogs, data tables
+    └── TROUBLESHOOTING.md   # Common issues and fixes
 ```
+
+## Exemplars
+
+Study these existing skills as models of excellence — see [references/examples/README.md](references/examples/README.md) for a curated guide to what makes each one effective.
