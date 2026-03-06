@@ -72,7 +72,7 @@ Skills and workflows related to agent processes, governance, and library managem
 - [/build](./workflows/build.md): Full pipeline (specify → plan → analyze → work → review → final-polish) with `.pipeline-state` tracking for reliable stage completion.
 - [/finish](./workflows/finish.md): Ship and close — chains commit → deploy → archive in one command.
 - [documentation-standards](./skills/documentation-standards/SKILL.md): Comprehensive documentation protocols with templates for SPEC, CONSTITUTION, ADR, and quality checklists.
-- [prompt-engineering](./skills/prompt-engineering/SKILL.md): Techniques and patterns for effective LLM prompting.
+- [prompt-engineering](./skills/prompt-engineering/SKILL.md): Foundational protocols for advanced reasoning, self-correction, and ensuring high-quality LLM outputs. Includes instruction architecture guidance for deciding when to use system prompts vs skills vs runtime context.
 - [second-opinion](./skills/second-opinion/SKILL.md): Expert review protocol for stress-testing plans and decisions.
 - [skill-builder](./skills/skill-builder/SKILL.md): Gap detection and interactive wizard for creating new skills.
 - [skill-management](./skills/skill-management/SKILL.md): Governance rules for organizing and maintaining this skill library.
