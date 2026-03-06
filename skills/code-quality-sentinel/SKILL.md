@@ -1,7 +1,6 @@
 ---
-schema_version: 1.0
 name: code-quality-sentinel
-description: Systematic refactoring methodology with language-agnostic process and framework-specific smell catalogs.
+description: Use when refactoring code, identifying code smells, or improving code quality while preserving behavior. Provides a 5-phase safe refactoring methodology with test verification. Language-agnostic process with framework-specific smell catalogs.
 ---
 
 # Code Quality Sentinel

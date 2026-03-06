@@ -1,7 +1,6 @@
 ---
-schema_version: 1.0
 name: system-design-architect
-description: "Generates architectural blueprints, design documents, and system diagrams for new features or projects."
+description: Use when planning new features, creating design documents, scaffolding project file structure, or generating system diagrams (Mermaid). Covers requirements analysis, component design, data modeling, error handling, and testing strategy.
 ---
 
 # System Design Architect

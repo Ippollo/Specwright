@@ -1,6 +1,6 @@
 ---
 name: deployment-pipeline
-description: Protocols for CI/CD, containerization (Docker/K8s), IaC, and deployment strategies. Ensures automated, reliable, and consistent software delivery.
+description: Use when setting up CI/CD workflows (GitHub Actions, GitLab CI), Dockerizing applications, deploying to Kubernetes, configuring Infrastructure as Code (Terraform), or planning deployment strategies (Blue/Green, Canary). Covers containerization, GitOps, and pipeline security.
 ---
 
 # Deployment Pipeline & DevOps

@@ -1,8 +1,6 @@
 ---
-schema_version: 1.0
 name: design-system
-description: "Comprehensive Design System intelligence. 50 styles, 21 palettes, 50 font pairings, 20 charts, 9 stacks."
-quick_summary: 'Design intelligence for UI/UX work. Run: python3 skills/design-system/scripts/search.py "<query>" --design-system'
+description: Use when choosing color palettes, typography, or UI styles for a new project, designing landing pages or dashboards, or implementing accessibility requirements. Generates full design systems with searchable styles, font pairings, and stack-specific guidelines. For implementation code patterns, see frontend-design.
 ---
 
 # Design System - Design Intelligence

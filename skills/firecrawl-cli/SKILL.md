@@ -1,7 +1,6 @@
 ---
 name: Firecrawl CLI
-description: Advanced web scraping, crawling, and content extraction via command-line interface.
-quick_summary: "Web scraping CLI. Commands: firecrawl <url>, firecrawl search, firecrawl map, firecrawl crawl"
+description: Use when you need to scrape a website, extract page content, search the web, or discover URLs via command-line. Commands include firecrawl <url>, firecrawl search, firecrawl map, and firecrawl crawl. For MCP-based scraping, use the firecrawl-mcp server instead.
 ---
 
 # Firecrawl CLI Skill

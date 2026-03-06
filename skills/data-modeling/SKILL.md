@@ -1,6 +1,6 @@
 ---
 name: data-modeling
-description: Protocols for designing database schemas, managing relationships, and evolving data models safely using SQL or NoSQL patterns.
+description: Use when designing database schemas, adding tables/collections, choosing SQL vs NoSQL, writing migration scripts, or optimizing query performance via indexing. Covers normalization, relationship patterns, ORM best practices, and zero-downtime migrations.
 ---
 
 # Data Modeling & Persistence

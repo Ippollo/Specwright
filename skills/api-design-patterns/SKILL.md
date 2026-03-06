@@ -1,6 +1,6 @@
 ---
 name: api-design-patterns
-description: Protocols for designing robust, scalable APIs. Modular hub covering REST, GraphQL, Security, Versioning, and Rate Limiting.
+description: Use when designing or reviewing REST/GraphQL APIs, choosing versioning strategies, implementing rate limiting, or defining API security. Covers naming conventions, error envelopes, status codes, and OpenAPI specs.
 ---
 
 # API Design Patterns

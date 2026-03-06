@@ -1,8 +1,6 @@
 ---
-schema_version: 1.0
 name: git-wizard
-description: "Expert-level Version Control protocols for conventional commits, recovery, conflict resolution, and history management."
-quick_summary: "Git expertise: smart commits, recovery, conflict resolution, history cleanup. Use protocols by name."
+description: Use when writing commit messages, recovering lost code, resolving merge conflicts, squashing or rewording commits, or managing branches. Follows conventional commit format with expert-level recovery and history cleanup protocols.
 ---
 
 # Git Wizard

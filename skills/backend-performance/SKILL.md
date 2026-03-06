@@ -1,6 +1,6 @@
 ---
 name: backend-performance
-description: Protocols for optimizing backend speed, scalability, and efficiency. Covers caching, database tuning, profiling, load testing, and architecture.
+description: Use when diagnosing slow endpoints, optimizing database queries, setting up caching (Redis), running load tests, or profiling Node.js/Python/Go services. Covers N+1 fixes, connection pooling, and horizontal scaling.
 ---
 
 # Backend Performance Optimization

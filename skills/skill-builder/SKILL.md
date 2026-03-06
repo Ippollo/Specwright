@@ -1,7 +1,6 @@
 ---
-schema_version: 1.0
 name: skill-builder
-description: "Comprehensive tool for creating, modifying, and validating Agent Skills. Includes wizard-based generation, audit checklists, and best practice templates."
+description: Use when creating a new agent skill, auditing an existing skill, or scaffolding skill file structure. Includes wizard-based generation, validation checklists, and best practice templates. For skill library organization and lifecycle, see skill-management.
 ---
 
 # Skill Builder

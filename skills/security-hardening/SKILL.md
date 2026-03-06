@@ -1,6 +1,6 @@
 ---
 name: security-hardening
-description: Protocols for securing web applications, including OWASP Top 10 prevention, audit workflows, and auth patterns.
+description: Use when performing security audits, implementing authentication/authorization, hardening an app for production, or reviewing code for OWASP Top 10 vulnerabilities. Covers CSP headers, auth strategy decision trees, and pre-deployment security checklists.
 ---
 
 # Security Hardening & Best Practices

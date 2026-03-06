@@ -1,7 +1,6 @@
 ---
-schema_version: 1.0
 name: second-opinion
-description: "Conducts a rigorous, multi-perspective review of a plan using expert personas."
+description: Use when you want a critical review of a plan, design doc, or implementation approach. Adopts expert personas (Security, Performance, Architecture, UX) to find weaknesses and blind spots.
 ---
 
 # Second Opinion (Expert Critique)
