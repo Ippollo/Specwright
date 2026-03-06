@@ -1,7 +1,6 @@
 ---
-schema_version: 1.0
 name: documentation-standards
-description: "Comprehensive protocols for maintaining pristine project documentation, including decision trees, templates, and quality checks."
+description: Use when writing or updating READMEs, changelogs, API docs, ADRs (Architecture Decision Records), or code comments. Provides decision trees, templates, and quality checklists for all technical documentation needs.
 ---
 
 # Documentation Standards

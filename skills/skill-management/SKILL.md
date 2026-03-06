@@ -1,7 +1,6 @@
 ---
-schema_version: 1.0
 name: skill-management
-description: Guidelines for managing, organizing, and expanding the Agent Skills library.
+description: Use when organizing the skills library, promoting local skills to global, handling skill overlaps, or deprecating outdated skills. Governs skill lifecycle, catalog maintenance, and quality assurance. For creating new skills, see skill-builder.
 ---
 
 # Skill Management & Organization

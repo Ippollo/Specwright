@@ -1,7 +1,6 @@
 ---
-schema_version: 1.0
 name: unit-testing-strategy
-description: "Comprehensive unit testing patterns: TDD, mocking, fixtures, parametrization, and anti-patterns. Covers Python (pytest) and TypeScript (Jest/Vitest)."
+description: Use when writing unit tests, setting up test infrastructure, debugging flaky tests, or implementing TDD. Covers mocking, fixtures, parametrization, and anti-patterns for Python (pytest) and TypeScript (Jest/Vitest). For E2E/browser testing, see webapp-testing.
 ---
 
 # Unit Testing Strategy

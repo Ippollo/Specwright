@@ -1,7 +1,6 @@
 ---
-schema_version: 1.0
 name: prompt-engineering
-description: "Foundational protocols for advanced reasoning, self-correction, and ensuring high-quality LLM outputs."
+description: Use when crafting prompts for LLMs, implementing chain-of-thought reasoning, structured output generation, or debugging unreliable AI outputs. Meta-protocols that other skills should reference for reasoning and self-correction patterns.
 ---
 
 # Prompt Engineering Standards
