@@ -1,5 +1,5 @@
 #!/bin/bash
-# Agentic Toolkit Installer (Bash)
+# Specwright Installer (Bash)
 # Usage:
 #   curl -fsSL https://raw.githubusercontent.com/Ippollo/Specwright/main/install.sh | bash
 
@@ -10,7 +10,7 @@ TEMP_DIR="/tmp/specwright-temp"
 # 1. Clean up
 rm -rf "$TEMP_DIR"
 
-echo -e "\033[0;36m🚀 Installing Agentic Toolkit from $REPO_URL...\033[0m"
+echo -e "\033[0;36m🚀 Installing Specwright from $REPO_URL...\033[0m"
 
 # 2. Clone the toolkit
 if ! git clone --depth 1 "$REPO_URL" "$TEMP_DIR" 2>/dev/null; then
@@ -40,7 +40,7 @@ done
 # 5. Clean up
 rm -rf "$TEMP_DIR"
 
-echo -e "\n\033[0;32m✨ Agentic Toolkit successfully installed!\033[0m"
+echo -e "\n\033[0;32m✨ Specwright successfully installed!\033[0m"
 echo -e "Try these commands in your AI assistant:"
 echo -e "  /constitution - Set project rules"
 echo -e "  /brainstorm    - Explore ideas"
