@@ -1,5 +1,5 @@
-# Agentic Toolkit Installer (PowerShell)
-# This script installs the Agentic Toolkit into your current project.
+# Specwright Installer (PowerShell)
+# This script installs Specwright into your current project.
 # Usage:
 #   iwr -useb https://raw.githubusercontent.com/Ippollo/Specwright/main/install.ps1 | iex
 
@@ -9,7 +9,7 @@ $tempDir = Join-Path $env:TEMP "specwright-temp"
 # 1. Clean up
 if (Test-Path $tempDir) { Remove-Item -Path $tempDir -Recurse -Force }
 
-Write-Host "🚀 Installing Agentic Toolkit from $repoUrl..." -ForegroundColor Cyan
+Write-Host "🚀 Installing Specwright from $repoUrl..." -ForegroundColor Cyan
 
 # 2. Clone the toolkit
 git clone --depth 1 $repoUrl $tempDir
@@ -49,7 +49,7 @@ foreach ($folder in $folders) {
 # 5. Clean up
 Remove-Item -Path $tempDir -Recurse -Force
 
-Write-Host "`n✨ Agentic Toolkit successfully installed!" -ForegroundColor Green
+Write-Host "`n✨ Specwright successfully installed!" -ForegroundColor Green
 Write-Host "Try these commands in your AI assistant:" -ForegroundColor White
 Write-Host "  /constitution - Set project rules"
 Write-Host "  /brainstorm    - Explore ideas"
