@@ -137,7 +137,7 @@
 > This is a greenfield project — no existing toolkit code. The vault already exists.
 
 - **Relevant files**: `C:\Projects\Notepad/` (existing Obsidian vault)
-- **Existing patterns to follow**: Specwright architecture (`c:\Projects\agentic-toolkit/` — workflows, agents, skills, templates pattern)
+- **Existing patterns to follow**: Specwright architecture (`c:\Projects\specwright/` — workflows, agents, skills, templates pattern)
 - **Related systems**: Obsidian (desktop + mobile), Syncthing (`.stfolder` and `.stignore` present in vault, suggesting Syncthing sync is configured)
 
 ---

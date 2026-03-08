@@ -4,7 +4,7 @@
 #   iwr -useb https://raw.githubusercontent.com/Ippollo/Specwright/main/install.ps1 | iex
 
 $repoUrl = "https://github.com/Ippollo/Specwright.git"
-$tempDir = Join-Path $env:TEMP "agentic-toolkit-temp"
+$tempDir = Join-Path $env:TEMP "specwright-temp"
 
 # 1. Clean up
 if (Test-Path $tempDir) { Remove-Item -Path $tempDir -Recurse -Force }
@@ -16,7 +16,7 @@ git clone --depth 1 $repoUrl $tempDir
 
 if ($LASTEXITCODE -ne 0) {
     # Try the alternate 'skills' name if the first one fails
-    $repoUrlAlt = "https://github.com/Ippollo/agentic-toolkit.git"
+    $repoUrlAlt = "https://github.com/Ippollo/specwright.git"
     Write-Host "Retrying with $repoUrlAlt..." -ForegroundColor Yellow
     git clone --depth 1 $repoUrlAlt $tempDir
     if ($LASTEXITCODE -ne 0) {

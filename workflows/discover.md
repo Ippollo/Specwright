@@ -41,7 +41,7 @@ Analyze the project to detect its technology stack. Check these sources:
 
 ### Step 2: Map to Global Skills
 
-Compare detected technologies against the global `CATALOG.md` (`c:\Projects\agentic-toolkit\CATALOG.md`).
+Compare detected technologies against the global `CATALOG.md` (`c:\Projects\specwright\CATALOG.md`).
 
 **Known mappings** (extend as the catalog grows):
 
@@ -72,7 +72,7 @@ Scan `.agents/skills/` in the project root (if it exists) and list any project-l
 
 ### Step 5: Generate Project Profile
 
-Create or update `.agents/project-profile.md` using the template at `c:\Projects\agentic-toolkit\templates\project-profile-template.md`.
+Create or update `.agents/project-profile.md` using the template at `c:\Projects\specwright\templates\project-profile-template.md`.
 
 - **If the file doesn't exist**: Generate it from the template.
 - **If the file exists**: Merge new findings. Do NOT overwrite manual edits in the `Conventions` section.

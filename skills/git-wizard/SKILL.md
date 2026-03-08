@@ -108,4 +108,4 @@ git stash pop                          # Restore
 
 For detailed documentation, see:
 
-- [REFERENCE.md](file:///c:/Projects/agentic-toolkit/skills/git-wizard/REFERENCE.md) - Full examples, edge cases, decision trees
+- [REFERENCE.md](file:///c:/Projects/specwright/skills/git-wizard/REFERENCE.md) - Full examples, edge cases, decision trees

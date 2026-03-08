@@ -60,7 +60,7 @@ firecrawl login
 **Status**: ✅ Active and tested
 **Current Credits**: 900 remaining
 
-**Skill Documentation**: `c:\Projects\agentic-toolkit\skills\firecrawl-cli\SKILL.md`
+**Skill Documentation**: `c:\Projects\specwright\skills\firecrawl-cli\SKILL.md`
 
 ## Documentation Updates
 
@@ -142,8 +142,8 @@ firecrawl search "AI tutorials" --limit 5 --pretty
 - **CLI Docs**: https://docs.firecrawl.dev/sdks/cli
 - **API Key Management**: https://www.firecrawl.dev/app/api-keys
 - **Pricing**: https://www.firecrawl.dev/pricing
-- **Skill Documentation**: `c:\Projects\agentic-toolkit\skills\firecrawl-cli\SKILL.md`
-- **MCP Recommendations**: `c:\Projects\agentic-toolkit\docs\MCP_RECOMMENDATIONS.md`
+- **Skill Documentation**: `c:\Projects\specwright\skills\firecrawl-cli\SKILL.md`
+- **MCP Recommendations**: `c:\Projects\specwright\docs\MCP_RECOMMENDATIONS.md`
 
 ## Verification
 

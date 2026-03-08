@@ -4,8 +4,8 @@
 #   curl -fsSL https://raw.githubusercontent.com/Ippollo/Specwright/main/install.sh | bash
 
 REPO_URL="https://github.com/Ippollo/Specwright.git"
-REPO_URL_ALT="https://github.com/Ippollo/agentic-toolkit.git"
-TEMP_DIR="/tmp/agentic-toolkit-temp"
+REPO_URL_ALT="https://github.com/Ippollo/specwright.git"
+TEMP_DIR="/tmp/specwright-temp"
 
 # 1. Clean up
 rm -rf "$TEMP_DIR"

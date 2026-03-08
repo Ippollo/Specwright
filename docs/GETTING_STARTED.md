@@ -7,7 +7,7 @@ This is how I initialize new projects with **Antigravity** and **Specwright**.
 The fastest way to get started is to add the toolkit as a workspace folder:
 
 1. **File → Add Folder to Workspace...**
-2. Select your local clone of this toolkit (e.g., `c:\Projects\agentic-toolkit`)
+2. Select your local clone of this toolkit (e.g., `c:\Projects\specwright`)
 3. Save the workspace when prompted
 
 This gives Antigravity full access to all workflows, agents, and skills — with **no permission prompts**.
