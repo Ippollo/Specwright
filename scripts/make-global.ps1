@@ -1,5 +1,5 @@
 # scripts/make-global.ps1
-# This script mirrors the agentic-toolkit into the Antigravity global directory.
+# This script mirrors the specwright into the Antigravity global directory.
 # This ensures workflows, agents, skills, docs, and templates are accessible
 # from any project without cross-workspace file access prompts.
 #
@@ -50,7 +50,7 @@ function Sync-ItemToGlobal {
 }
 
 Write-Host ""
-Write-Host "Syncing agentic-toolkit to global Antigravity directory..." -ForegroundColor Cyan
+Write-Host "Syncing specwright to global Antigravity directory..." -ForegroundColor Cyan
 Write-Host "  Source:  $toolkitRoot" -ForegroundColor Gray
 Write-Host "  Target:  $antigravityDir" -ForegroundColor Gray
 Write-Host ""

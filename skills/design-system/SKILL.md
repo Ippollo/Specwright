@@ -103,5 +103,5 @@ Creates `design-system/MASTER.md` as global source of truth.
 
 For detailed documentation, see:
 
-- [REFERENCE.md](file:///c:/Projects/agentic-toolkit/skills/design-system/REFERENCE.md) - Full examples, anti-patterns, checklists
+- [REFERENCE.md](file:///c:/Projects/specwright/skills/design-system/REFERENCE.md) - Full examples, anti-patterns, checklists
 - [Vercel Guidelines](https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md) - Web interface compliance

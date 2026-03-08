@@ -78,7 +78,7 @@ Before starting, analyze the user request to determine the correct mode.
     - Is the user asking to _improve_, _fix_, or _audit_ an existing skill?
 
 2.  **Check Catalog**:
-    - Read `c:\Projects\agentic-toolkit\CATALOG.md`.
+    - Read `c:\Projects\specwright\CATALOG.md`.
     - Also check `.agents/skills/` in the current project for local skills.
     - **No Match** → Go to **[CREATE Mode](#create-mode)**.
     - **Partial/Full Match** → Go to **[MODIFY Mode](#modify-mode)**.
@@ -95,7 +95,7 @@ Ask the user:
 
 > _"Should this be a **global** skill (useful across any project) or a **local** skill (specific to this project)?"_
 
-- **Global** → Creates in `c:\Projects\agentic-toolkit\skills\<skill-name>\`
+- **Global** → Creates in `c:\Projects\specwright\skills\<skill-name>\`
 - **Local** → Creates in `.agents/skills/<skill-name>\` within the current project
 
 If invoked from `/discover` gap-filling, default to **local**.
@@ -136,7 +136,7 @@ Choose a template based on the content design assessment:
 
 **If Global:**
 
-1.  **Create Directory**: `c:\Projects\agentic-toolkit\skills\<skill-name>\`
+1.  **Create Directory**: `c:\Projects\specwright\skills\<skill-name>\`
 2.  **Write SKILL.md**: Use the selected template, populated with content from Steps 3-4.
 3.  **Create Subdirectories**: `scripts/`, `resources/`, `docs/` (if Intermediate/Advanced).
 
@@ -150,7 +150,7 @@ Choose a template based on the content design assessment:
 
 **If Global:**
 
-- Append the new skill to `c:\Projects\agentic-toolkit\CATALOG.md` in the appropriate category section.
+- Append the new skill to `c:\Projects\specwright\CATALOG.md` in the appropriate category section.
 - Format: `- [skill-name](./skills/skill-name/SKILL.md): <description>`
 
 **If Local:**

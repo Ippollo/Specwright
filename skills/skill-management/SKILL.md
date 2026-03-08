@@ -5,7 +5,7 @@ description: Use when organizing the skills library, promoting local skills to g
 
 # Skill Management & Organization
 
-This skill defines the protocols for maintaining the `c:\Projects\agentic-toolkit` library.
+This skill defines the protocols for maintaining the `c:\Projects\specwright` library.
 
 ## Organization Structure
 
@@ -20,7 +20,7 @@ The library uses a **categorical structure** to organize skills. All skills must
 
 ### 2. The Master Catalog
 
-A `CATALOG.md` file MUST be maintained in the root (`c:\Projects\agentic-toolkit`).
+A `CATALOG.md` file MUST be maintained in the root (`c:\Projects\specwright`).
 
 - **Purpose**: Provides a single index for the Agent to discover available skills.
 - **Maintenance**:
@@ -52,7 +52,7 @@ Before marking a skill as **Active**, ensure it meets these criteria:
 - [ ] **Valid Frontmatter**: `SKILL.md` must have `schema_version`, `name` (kebab-case), and `description`.
 - [ ] **Clear Scope**: The description is concise (under 100 chars) and actionable.
 - [ ] **Categorization**: The skill is placed in the correct `design`, `development`, `meta`, or `testing` folder.
-- [ ] **Cataloged**: An entry exists in `c:\Projects\agentic-toolkit\CATALOG.md` in the correct alphabetical position.
+- [ ] **Cataloged**: An entry exists in `c:\Projects\specwright\CATALOG.md` in the correct alphabetical position.
 - [ ] **No Overlaps**: The skill does not duplicate functionality of an existing skill. If it does, follow the "Handling Overlaps" protocol.
 
 ## Project-Local Skills
@@ -70,7 +70,7 @@ Projects can define their own lightweight skills to capture project-specific pat
 When the agent looks for a skill:
 
 1. Check `.agents/skills/` in the current project **first**.
-2. Fall back to the global toolkit (`c:\Projects\agentic-toolkit\skills\`).
+2. Fall back to the global toolkit (`c:\Projects\specwright\skills\`).
 3. If names collide, the **local skill overrides** the global skill for that project.
 
 ### Scope Guidance
@@ -91,7 +91,7 @@ Local skills **should NOT** be used for:
 
 When a local skill proves valuable across multiple projects:
 
-1. Copy the skill folder to `c:\Projects\agentic-toolkit\skills\`.
+1. Copy the skill folder to `c:\Projects\specwright\skills\`.
 2. Run through the **Quality Assurance Checklist** (above).
 3. Add an entry to `CATALOG.md`.
 4. Remove or replace the local copy with a note pointing to the global version.

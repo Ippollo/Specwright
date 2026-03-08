@@ -95,6 +95,6 @@ done
 
 ## Documentation
 
-- **Full CLI Guide**: `c:\Projects\agentic-toolkit\skills\firecrawl-cli\SKILL.md`
-- **MCP Recommendations**: `c:\Projects\agentic-toolkit\docs\MCP_RECOMMENDATIONS.md`
-- **Installation Summary**: `c:\Projects\agentic-toolkit\docs\FIRECRAWL_INSTALLATION.md`
+- **Full CLI Guide**: `c:\Projects\specwright\skills\firecrawl-cli\SKILL.md`
+- **MCP Recommendations**: `c:\Projects\specwright\docs\MCP_RECOMMENDATIONS.md`
+- **Installation Summary**: `c:\Projects\specwright\docs\FIRECRAWL_INSTALLATION.md`

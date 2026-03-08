@@ -8,7 +8,7 @@ Study these existing skills to understand what makes a great SKILL.md. Each entr
 
 ### `frontend-design` — Opinionated Stance + Anti-Patterns
 
-**Path**: `c:\Projects\agentic-toolkit\skills\frontend-design\SKILL.md`
+**Path**: `c:\Projects\specwright\skills\frontend-design\SKILL.md`
 
 **What makes it great**:
 
@@ -23,7 +23,7 @@ Study these existing skills to understand what makes a great SKILL.md. Each entr
 
 ### `prompt-engineering` — Named Protocols with Triggers
 
-**Path**: `c:\Projects\agentic-toolkit\skills\prompt-engineering\SKILL.md`
+**Path**: `c:\Projects\specwright\skills\prompt-engineering\SKILL.md`
 
 **What makes it great**:
 
@@ -38,7 +38,7 @@ Study these existing skills to understand what makes a great SKILL.md. Each entr
 
 ### `design-system` — Script-Driven Progressive Disclosure
 
-**Path**: `c:\Projects\agentic-toolkit\skills\design-system\SKILL.md`
+**Path**: `c:\Projects\specwright\skills\design-system\SKILL.md`
 
 **What makes it great**:
 
@@ -53,7 +53,7 @@ Study these existing skills to understand what makes a great SKILL.md. Each entr
 
 ### `gemini-api-dev` — Immediately Actionable with SDK Examples
 
-**Path**: `c:\Projects\agentic-toolkit\skills\gemini-api-dev\SKILL.md`
+**Path**: `c:\Projects\specwright\skills\gemini-api-dev\SKILL.md`
 
 **What makes it great**:
 
@@ -68,7 +68,7 @@ Study these existing skills to understand what makes a great SKILL.md. Each entr
 
 ### `code-quality-sentinel` — Phased Safety Workflow
 
-**Path**: `c:\Projects\agentic-toolkit\skills\code-quality-sentinel\SKILL.md`
+**Path**: `c:\Projects\specwright\skills\code-quality-sentinel\SKILL.md`
 
 **What makes it great**:
 

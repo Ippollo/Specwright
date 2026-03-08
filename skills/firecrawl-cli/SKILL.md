@@ -89,5 +89,5 @@ firecrawl crawl https://example.com --exclude-paths /admin --wait
 
 For detailed documentation, see:
 
-- [REFERENCE.md](file:///c:/Projects/agentic-toolkit/skills/firecrawl-cli/REFERENCE.md) - Full examples, workflows, troubleshooting
+- [REFERENCE.md](file:///c:/Projects/specwright/skills/firecrawl-cli/REFERENCE.md) - Full examples, workflows, troubleshooting
 - [Official Docs](https://docs.firecrawl.dev/sdks/cli) - Complete API reference

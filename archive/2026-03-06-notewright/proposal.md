@@ -51,7 +51,7 @@ Build a standalone project at `C:\Projects\cortex` following the same architectu
 
 ```
 C:\Projects\
-├── agentic-toolkit/     # Specwright (dev workflows) — existing
+├── specwright/     # Specwright (dev workflows) — existing
 ├── cortex/              # Cortex (knowledge & productivity workflows) — NEW
 │   ├── workflows/       # /capture, /connect, /review, etc.
 │   ├── agents/          # Librarian, Synthesizer, Reviewer

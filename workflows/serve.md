@@ -45,7 +45,7 @@ Response:
 === Server Status ===
 
 🌐 URL: http://localhost:3000
-📁 Project: c:/Projects/agentic-toolkit
+📁 Project: c:/Projects/specwright
 🏷️ Type: Next.js
 💚 Status: Running
 ```

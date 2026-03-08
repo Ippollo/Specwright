@@ -102,4 +102,4 @@ For example, after running `/new`:
 
 For detailed examples and MCP guidance, see:
 
-- [coach-reference.md](file:///c:/Projects/agentic-toolkit/workflows/coach-reference.md) - Full session examples, MCP tips
+- [coach-reference.md](file:///c:/Projects/specwright/workflows/coach-reference.md) - Full session examples, MCP tips
