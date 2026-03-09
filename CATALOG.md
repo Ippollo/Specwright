@@ -69,6 +69,7 @@ Skills and workflows related to agent processes, governance, and library managem
 - [/deploy](./workflows/deploy.md): Project-aware deployment — auto-detects deploy method (Firebase, Vercel, gcloud, etc.) and runs pre/post-deploy checks.
 - [/archive](./workflows/archive.md): Workflow for archiving completed changes and merging living specs.
 - [/status](./workflows/status.md): Show the state of an active change — artifacts, task progress, and suggested next action.
+- [/stats](./workflows/stats.md): Analyze toolkit usage telemetry — workflow frequency, project distribution, dead workflow detection, and usage patterns.
 - [/build](./workflows/build.md): Full pipeline (specify → plan → analyze → work → review → final-polish) with `.pipeline-state` tracking for reliable stage completion.
 - [/finish](./workflows/finish.md): Ship and close — chains commit → deploy → archive in one command.
 - [documentation-standards](./skills/documentation-standards/SKILL.md): Comprehensive documentation protocols with templates for SPEC, CONSTITUTION, ADR, and quality checklists.
