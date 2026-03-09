@@ -18,6 +18,7 @@ recommends_mcp: [github, gcloud, firebase, observability, context7]
 
 ## Primary Skills
 
+- [security-audit](../skills/security-audit/SKILL.md): Vulnerability hunting methodology.
 - [security-hardening](../skills/security-hardening/SKILL.md): Security protocols.
 - [deployment-pipeline](../skills/deployment-pipeline/SKILL.md): CI/CD and Containers.
 - [git-wizard](../skills/git-wizard/SKILL.md): Version control workflows.
