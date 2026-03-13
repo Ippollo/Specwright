@@ -42,6 +42,7 @@ Skills related to infrastructure, deployment, and version control.
 - [deployment-pipeline](./skills/deployment-pipeline/SKILL.md): Protocols for CI/CD, containerization, and safe deployment strategies.
 - [git-wizard](./skills/git-wizard/SKILL.md): Advanced Git workflows, conflict resolution, and version control.
 - [firecrawl-cli](./skills/firecrawl-cli/SKILL.md): Advanced web scraping, crawling, and content extraction via command-line interface.
+- [gws-cli](./skills/gws-cli/SKILL.md): Use when interacting with Google Workspace services (Drive, Docs, Sheets, Gmail) via command line. Covers file listing, folder navigation, document export, and content search. For Google Cloud infrastructure, use gcloud MCP instead.
 
 ## Testing
 
