@@ -28,6 +28,9 @@ The `description` field is how the agent decides whether to load a skill. It mus
 - Differentiate from similar skills: "For React patterns, see `react-best-practices`."
 - Max 1024 chars. Every word must earn its place.
 
+> [!CAUTION]
+> **The Description Trap**: Never summarize the skill's workflow in the description. If the description contains step-by-step process instructions (e.g., "asks questions, then proposes approaches, then writes docs"), agents use the description as a shortcut and **skip reading the SKILL.md body entirely**. Descriptions should only contain **trigger conditions** — when to use the skill — never how it works.
+
 ### 3. Encode Anti-Patterns
 
 Great skills don't just say what to do — they say what **NOT** to do. Anti-patterns prevent common mistakes and are often more valuable than the positive instructions.
@@ -211,6 +214,7 @@ Certify the skill is well-formed:
 Certify the skill is **effective**:
 
 - [ ] **Trigger-Rich Description**: Answers "what" + "when", includes example scenarios
+- [ ] **No Workflow Summary in Description**: Description contains trigger conditions only, not step-by-step process instructions (see "The Description Trap" in Design Principles)
 - [ ] **Clear Persona or Role**: Opens with purpose framing, not just mechanics
 - [ ] **Anti-Patterns Included**: At least 2-3 "don't do this" items
 - [ ] **Actionable Content**: Includes concrete steps, commands, or code — not just theory

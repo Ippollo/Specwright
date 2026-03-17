@@ -1,6 +1,6 @@
 ---
-description: Investigate and fix bugs using the Debugger agent.
-quick_summary: "Reproduce, analyze root cause, propose fix. Uses debugger agent."
+description: Investigate and fix bugs using the four-phase Debugger agent (Root Cause → Pattern → Hypothesis → Implement).
+quick_summary: "Systematic four-phase debugging: root cause investigation first, fix second. Uses debugger agent with Iron Law guard."
 requires_mcp: []
 recommends_mcp: [observability, context7, firebase, gcloud]
 ---
@@ -17,11 +17,12 @@ recommends_mcp: [observability, context7, firebase, gcloud]
     - Path: `../agents/debugger.md`
 2.  **Context**: Provide the bug report or error message.
 3.  **Execution**:
-    - The agent will attempt to reproduce the issue.
-    - The agent will analyze the root cause.
-    - The agent will propose/apply a fix.
+    - **Phase 1**: Agent investigates root cause (reads errors, reproduces, traces data flow).
+    - **Phase 2**: Agent analyzes patterns (working examples, differences).
+    - **Phase 3**: Agent forms and tests a single hypothesis.
+    - **Phase 4**: Agent implements fix at root cause, then applies `verification-gate`.
 4.  **Completion**:
-    - Agent confirms fix with verification test.
+    - Agent confirms fix with evidence (test output, not just assertion).
 
 ## Usage
 

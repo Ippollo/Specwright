@@ -50,6 +50,7 @@ Skills related to quality assurance and verification.
 
 - [unit-testing-strategy](./skills/unit-testing-strategy/SKILL.md): Principles and patterns for Python (pytest) and TypeScript (Jest/Vitest) unit testing.
 - [webapp-testing](./skills/webapp-testing/SKILL.md): Strategies for unit, integration, and end-to-end testing of web apps.
+- [verification-gate](./skills/verification-gate/SKILL.md): Evidence gate that prevents completion claims without fresh proof. Use before marking tasks done, committing, creating PRs, or expressing satisfaction with results.
 
 ## Meta
 
@@ -104,3 +105,8 @@ Understanding how skills interact is key to effective usage:
   - Use `gemini-api-dev` with `backend-architect` when building AI-powered services.
   - Use `gemini-api-dev` with `project-planner` when researching or scoping Gemini features.
   - Use `gemini-api-dev` with `debugger` when tracing Gemini API errors.
+
+- **Verification Layer**:
+  - `unit-testing-strategy` and `webapp-testing` define **what to test** and **how to write tests**.
+  - `verification-gate` enforces **that you actually ran them** before claiming success.
+  - `debugger` invokes `verification-gate` in Phase 4 to confirm fixes with evidence.
