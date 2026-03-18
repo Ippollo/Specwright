@@ -2,6 +2,8 @@
 schema_version: 1.0
 name: skill-builder
 description: "Comprehensive tool for creating, modifying, and validating Agent Skills. Includes wizard-based generation, audit checklists, and best practice templates. Use this skill when building new SKILL.md files, enhancing existing skills, or when a project needs custom skills for its domain patterns."
+metadata:
+  pattern: inversion
 ---
 
 # Skill Builder
@@ -68,6 +70,36 @@ Skills don't exist in isolation. State how this skill relates to others:
 - _Conflicts_: "Do not mix with `frontend-design` in the same component."
 - _Delegates_: "For ADR format, defer to `documentation-standards`."
 
+### 7. Classify the Pattern
+
+Every skill follows one of five structural patterns. Identifying the pattern early shapes the content design, template selection, and directory structure.
+
+| Pattern | Core Question | Key Trait |
+|---|---|---|
+| `tool-wrapper` | "How should I use this library/convention?" | Loads references on demand, no templates or scripts required |
+| `generator` | "What should the output look like?" | Uses templates (`assets/`) and style guides (`references/`) to produce structured output |
+| `reviewer` | "Is this good enough?" | Scores input against a checklist (`references/review-checklist.md`), produces findings |
+| `inversion` | "What do I need to know before I start?" | Interviews the user through phased questions before generating |
+| `pipeline` | "What's the correct sequence?" | Enforces ordered steps with gate conditions between phases |
+
+**Decision Tree** — Use this to pick the right pattern:
+
+```
+Does the skill produce output?
+├── YES → From a template?
+│   ├── YES → generator
+│   └── NO → Does it evaluate existing input?
+│       ├── YES → reviewer
+│       └── NO → Does it need user input first?
+│           ├── YES → inversion
+│           └── NO → Has ordered steps?
+│               ├── YES → pipeline
+│               └── NO → tool-wrapper
+└── NO → tool-wrapper
+```
+
+**Patterns compose.** A Pipeline can include a Reviewer step. A Generator can use Inversion at the beginning to gather variables. Tag the _dominant_ pattern in `metadata.pattern`.
+
 ---
 
 ## Workflow Entry Point
@@ -126,14 +158,18 @@ Before selecting a template, design the skill's substance using the Design Princ
 3. **Identify output shape**: What does "done" look like? (Principle 5)
 4. **Map relationships**: What other skills does this one complement, conflict with, or delegate to? (Principle 6)
 5. **Assess content volume**: Will the skill need reference data, scripts, or templates? (Principle 4)
+6. **Classify the pattern**: Use the decision tree in Principle 7 to determine the dominant pattern (`tool-wrapper`, `generator`, `reviewer`, `inversion`, `pipeline`). This directly informs template selection in the next step.
 
 ### Step 5: Select Template
 
-Choose a template based on the content design assessment:
+Choose a template based on the content design assessment and the classified pattern:
 
 - **Basic**: Single file, simple logic. Best for encoded preferences or checklists. ([View Template](references/templates/basic.md))
+  - _Common patterns_: `tool-wrapper`, `reviewer` (simple checklist)
 - **Intermediate**: Includes `scripts/` for automation. Best for workflow-driven skills. ([View Template](references/templates/intermediate.md))
+  - _Common patterns_: `pipeline`, `inversion`, `reviewer` (multi-phase)
 - **Advanced**: Full structure with `docs/`, `resources/`, and progressive disclosure. Best for capability-heavy skills with reference data. ([View Template](references/templates/advanced.md))
+  - _Common patterns_: `generator` (needs `assets/` + `references/`), `pipeline` (complex multi-step with reference data)
 
 ### Step 6: Generation
 
@@ -169,7 +205,7 @@ Use when enhancing, fixing, or refactoring an existing skill.
 
 ### Step 1: Full Audit
 
-Read the target skill's `SKILL.md` and evaluate against **both** the Structural Checklist and the Design Quality Checklist below.
+Read the target skill's `SKILL.md` and evaluate against **both** the Structural Checklist and the Design Quality Checklist below. Verify that `metadata.pattern` is set and accurately reflects the skill's dominant pattern (see Principle 7).
 
 ### Step 2: Gap Analysis
 
@@ -205,6 +241,7 @@ Certify the skill is well-formed:
 - [ ] Starts/ends with `---` frontmatter
 - [ ] `name`: Max 64 chars, kebab-case format
 - [ ] `description`: Max 1024 chars
+- [ ] `metadata.pattern`: One of `tool-wrapper`, `generator`, `reviewer`, `inversion`, `pipeline`
 - [ ] Located at `skills/<skill-name>/` (no nesting)
 - [ ] `SKILL.md` is the main entry point
 - [ ] Large content moved to `docs/` or `resources/` (if applicable)

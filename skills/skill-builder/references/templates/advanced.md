@@ -4,12 +4,15 @@
      Examples in toolkit: frontend-design (aesthetic guidelines), gemini-api-dev (SDK reference),
                           design-system (searchable database with scripts)
      Key principle: SKILL.md is the routing layer. It tells the agent WHAT to do and WHERE to find details.
+     Common patterns: generator (needs assets/ + references/), pipeline (complex multi-step)
 -->
 
 ---
 
 name: "skill-name"
 description: "Comprehensive description including functionality and trigger conditions (max 1024 chars). Use when [scenario list]. For [adjacent domain], see `other-skill`."
+metadata:
+  pattern: generator  # One of: tool-wrapper, generator, reviewer, inversion, pipeline
 
 ---
 
