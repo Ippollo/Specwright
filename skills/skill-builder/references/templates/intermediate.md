@@ -3,12 +3,15 @@
      Size target: ~2-4KB for SKILL.md
      Examples in toolkit: design-system (script-driven), git-wizard
      When to upgrade to Advanced: when you need docs/, resources/templates/, or reference data.
+     Common patterns: pipeline, inversion, reviewer (multi-phase)
 -->
 
 ---
 
 name: "skill-name"
 description: "What this skill does + when to use it. Include trigger phrases and example scenarios (max 1024 chars)."
+metadata:
+  pattern: pipeline  # One of: tool-wrapper, generator, reviewer, inversion, pipeline
 
 ---
 

@@ -2,12 +2,15 @@
      Best for: Encoded preferences, checklists, simple conventions.
      Size target: ~1-2KB for SKILL.md
      Examples in toolkit: prompt-engineering, code-quality-sentinel
+     Common patterns: tool-wrapper, reviewer (simple checklist)
 -->
 
 ---
 
 name: "skill-name"
 description: "What this skill does + when to use it. Include trigger phrases and example scenarios (max 1024 chars)."
+metadata:
+  pattern: tool-wrapper  # One of: tool-wrapper, generator, reviewer, inversion, pipeline
 
 ---
 
