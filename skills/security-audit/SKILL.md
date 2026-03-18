@@ -1,6 +1,8 @@
 ---
 name: security-audit
 description: Systematic vulnerability hunting using multi-pass methodology with per-class reasoning chains and data flow tracing. Use when performing offensive security reviews, hunting for specific vulnerability classes, or auditing code for exploitable flaws. Covers web, API, mobile, and native application attack surfaces.
+metadata:
+  pattern: pipeline
 ---
 
 # Security Audit — Vulnerability Hunting Methodology

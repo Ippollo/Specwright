@@ -1,6 +1,8 @@
 ---
 name: documentation-standards
 description: Use when writing or updating READMEs, changelogs, API docs, ADRs (Architecture Decision Records), or code comments. Provides decision trees, templates, and quality checklists for all technical documentation needs.
+metadata:
+  pattern: generator
 ---
 
 # Documentation Standards

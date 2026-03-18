@@ -1,6 +1,8 @@
 ---
 name: skill-management
 description: Use when organizing the skills library, promoting local skills to global, handling skill overlaps, or deprecating outdated skills. Governs skill lifecycle, catalog maintenance, and quality assurance. For creating new skills, see skill-builder.
+metadata:
+  pattern: tool-wrapper
 ---
 
 # Skill Management & Organization

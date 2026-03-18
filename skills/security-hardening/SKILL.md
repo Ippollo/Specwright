@@ -1,6 +1,8 @@
 ---
 name: security-hardening
 description: Use when performing security audits, implementing authentication/authorization, hardening an app for production, or reviewing code for OWASP Top 10 vulnerabilities. Covers CSP headers, auth strategy decision trees, and pre-deployment security checklists.
+metadata:
+  pattern: reviewer
 ---
 
 # Security Hardening & Best Practices

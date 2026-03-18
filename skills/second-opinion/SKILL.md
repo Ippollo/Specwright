@@ -1,6 +1,8 @@
 ---
 name: second-opinion
 description: Use when you want a critical review of a plan, design doc, or implementation approach. Adopts expert personas (Security, Performance, Architecture, UX) to find weaknesses and blind spots.
+metadata:
+  pattern: reviewer
 ---
 
 # Second Opinion (Expert Critique)

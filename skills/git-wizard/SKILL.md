@@ -1,6 +1,8 @@
 ---
 name: git-wizard
 description: Use when writing commit messages, recovering lost code, resolving merge conflicts, squashing or rewording commits, or managing branches. Follows conventional commit format with expert-level recovery and history cleanup protocols.
+metadata:
+  pattern: tool-wrapper
 ---
 
 # Git Wizard
