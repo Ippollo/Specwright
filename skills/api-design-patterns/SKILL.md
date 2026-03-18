@@ -1,6 +1,8 @@
 ---
 name: api-design-patterns
 description: Use when designing or reviewing REST/GraphQL APIs, choosing versioning strategies, implementing rate limiting, or defining API security. Covers naming conventions, error envelopes, status codes, and OpenAPI specs.
+metadata:
+  pattern: tool-wrapper
 ---
 
 # API Design Patterns

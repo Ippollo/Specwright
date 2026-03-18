@@ -1,6 +1,8 @@
 ---
 name: prompt-engineering
 description: Use when crafting prompts for LLMs, implementing chain-of-thought reasoning, structured output generation, or debugging unreliable AI outputs. Meta-protocols that other skills should reference for reasoning and self-correction patterns.
+metadata:
+  pattern: tool-wrapper
 ---
 
 # Prompt Engineering Standards

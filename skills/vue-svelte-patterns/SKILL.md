@@ -1,6 +1,8 @@
 ---
 name: vue-svelte-patterns
 description: Master Vue and Svelte component patterns including composables, provide/inject, slots, runes, and reusable component architecture. Use when building UI component libraries or design systems with Vue or Svelte. For React patterns, see react-best-practices.
+metadata:
+  pattern: tool-wrapper
 ---
 
 # Vue & Svelte Component Patterns

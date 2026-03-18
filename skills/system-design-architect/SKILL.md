@@ -1,6 +1,8 @@
 ---
 name: system-design-architect
 description: Use when planning new features, creating design documents, scaffolding project file structure, or generating system diagrams (Mermaid). Covers requirements analysis, component design, data modeling, error handling, and testing strategy.
+metadata:
+  pattern: generator
 ---
 
 # System Design Architect

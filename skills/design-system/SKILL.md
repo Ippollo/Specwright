@@ -1,6 +1,8 @@
 ---
 name: design-system
 description: Use when choosing color palettes, typography, or UI styles for a new project, designing landing pages or dashboards, or implementing accessibility requirements. Generates full design systems with searchable styles, font pairings, and stack-specific guidelines. For implementation code patterns, see frontend-design.
+metadata:
+  pattern: generator
 ---
 
 # Design System - Design Intelligence

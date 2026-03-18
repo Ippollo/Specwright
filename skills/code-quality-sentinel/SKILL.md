@@ -1,6 +1,8 @@
 ---
 name: code-quality-sentinel
 description: Use when refactoring code, identifying code smells, or improving code quality while preserving behavior. Provides a 5-phase safe refactoring methodology with test verification. Language-agnostic process with framework-specific smell catalogs.
+metadata:
+  pattern: reviewer
 ---
 
 # Code Quality Sentinel

@@ -1,6 +1,8 @@
 ---
 name: unit-testing-strategy
 description: Use when writing unit tests, setting up test infrastructure, debugging flaky tests, or implementing TDD. Covers mocking, fixtures, parametrization, and anti-patterns for Python (pytest) and TypeScript (Jest/Vitest). For E2E/browser testing, see webapp-testing.
+metadata:
+  pattern: tool-wrapper
 ---
 
 # Unit Testing Strategy

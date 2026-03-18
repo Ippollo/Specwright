@@ -1,6 +1,8 @@
 ---
 name: deployment-pipeline
 description: Use when setting up CI/CD workflows (GitHub Actions, GitLab CI), Dockerizing applications, deploying to Kubernetes, configuring Infrastructure as Code (Terraform), or planning deployment strategies (Blue/Green, Canary). Covers containerization, GitOps, and pipeline security.
+metadata:
+  pattern: pipeline
 ---
 
 # Deployment Pipeline & DevOps

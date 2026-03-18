@@ -1,6 +1,8 @@
 ---
 name: backend-performance
 description: Use when diagnosing slow endpoints, optimizing database queries, setting up caching (Redis), running load tests, or profiling Node.js/Python/Go services. Covers N+1 fixes, connection pooling, and horizontal scaling.
+metadata:
+  pattern: tool-wrapper
 ---
 
 # Backend Performance Optimization
