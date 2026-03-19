@@ -15,6 +15,8 @@ recommends_mcp: [sequential-thinking, firecrawl-mcp, context7]
 - You want to explore trade-offs before planning
 - You need to compare multiple solutions
 
+> **See also**: For non-technical decisions — career moves, consulting strategy, income prioritization — use `/consult` (Board of Advisors) instead.
+
 ## Behavior
 
 When `/brainstorm` is triggered, I will:

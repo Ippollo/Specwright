@@ -12,6 +12,9 @@ recommends_mcp: [context7, firebase, gcloud]
 > - [code-quality-sentinel](../skills/code-quality-sentinel/SKILL.md)
 > - [backend-performance](../skills/backend-performance/SKILL.md)
 
+> [!TIP]
+> **Skip if `/review` was just run.** The `/review` pipeline already includes an enhance pass by the code-custodian agent. Running `/enhance` again immediately after `/review` is redundant.
+
 ## Steps
 
 // turbo-all
