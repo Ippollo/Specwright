@@ -2,8 +2,9 @@
      Best for: Capability-heavy skills with reference data, multiple scripts, and deep documentation.
      Size target: ~3-5KB for SKILL.md; heavy content lives in docs/ and resources/
      Examples in toolkit: frontend-design (aesthetic guidelines), gemini-api-dev (SDK reference),
-                          design-system (searchable database with scripts)
+                           design-system (searchable database with scripts)
      Key principle: SKILL.md is the routing layer. It tells the agent WHAT to do and WHERE to find details.
+                    Each workflow phase should specify exactly which files to read at that step.
      Common patterns: generator (needs assets/ + references/), pipeline (complex multi-step)
 -->
 
@@ -51,9 +52,13 @@ You are a [role]. [Core principle or philosophy in one sentence].
 ## Core Instructions
 
 <!-- The essential workflow. Keep this section lean and actionable.
-     If a phase needs more than ~10 lines of detail, move it to docs/. -->
+     If a phase needs more than ~10 lines of detail, move it to docs/.
+     LOAD ORDER: Each phase should specify which files to read at that step.
+     This prevents context competition — the agent only loads what it needs, when it needs it. -->
 
 ### Phase 1: [Name]
+
+<!-- Read at this step: docs/CONFIGURATION.md -->
 
 [Concise instructions. Link to deep-dive if needed.]
 
@@ -61,9 +66,13 @@ See [Configuration Guide](docs/CONFIGURATION.md) for detailed options.
 
 ### Phase 2: [Name]
 
+<!-- Read at this step: resources/examples/good/[relevant-example].md -->
+
 [Concise instructions with concrete actions.]
 
 ### Phase 3: [Name]
+
+<!-- Read at this step: eval/checklist.md (if eval layer is used) -->
 
 [Verification steps. How to confirm the work is correct.]
 
@@ -86,13 +95,24 @@ See [Configuration Guide](docs/CONFIGURATION.md) for detailed options.
 [Expected output structure]
 ```
 
+## Eval Layer (Optional)
+
+<!-- For skills that produce user-facing output, define a quality gate that runs after generation.
+     The checklist catches mechanical / rule-based failures.
+     Review personas provide perspective-based evaluation from different reader viewpoints.
+     Both are read on demand at the verification step — not loaded upfront. -->
+
+- **Checklist**: See [checklist.md](eval/checklist.md) for pass/fail criteria
+- **Review Personas**: See [review-personas.md](eval/review-personas.md) for perspective-based evaluation
+
 ## Resources
 
 <!-- Progressive disclosure: point to Level 3 content the agent reads on demand. -->
 
 - **Reference**: See [reference.md](docs/reference.md) for [catalogs, data tables, etc.]
 - **Templates**: See `resources/templates/` for [scaffolding files]
-- **Examples**: See `resources/examples/` for [sample implementations]
+- **Good Examples**: See `resources/examples/good/` for [annotated examples of excellent output]
+- **Bad Examples**: See `resources/examples/bad/` for [annotated anti-pattern samples to avoid]
 
 ## Related Skills
 
