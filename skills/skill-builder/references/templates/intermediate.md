@@ -47,19 +47,26 @@ metadata:
 ## Workflow
 
 <!-- The core logic of the skill, broken into clear phases.
-     Each step should be actionable — tell the agent what to DO, not just what to consider. -->
+     Each step should be actionable — tell the agent what to DO, not just what to consider.
+     LOAD ORDER: Specify which files to read at each phase to avoid context competition. -->
 
 ### Phase 1: [Name]
+
+<!-- Read at this step: [specific file needed for this phase] -->
 
 1. [Concrete action]
 2. [Concrete action]
 
 ### Phase 2: [Name]
 
+<!-- Read at this step: [specific file needed for this phase] -->
+
 1. [Concrete action]
 2. [Concrete action]
 
 ### Phase 3: [Name]
+
+<!-- Read at this step: [specific file needed for this phase] -->
 
 1. [Concrete action]
 2. [Concrete action]
@@ -85,6 +92,14 @@ metadata:
 
 - `setup.sh`: [What it initializes]
 - `run.py`: [What it executes and what output to expect]
+
+## Resources
+
+<!-- If this skill has examples, split them into good (annotated high-quality output)
+     and bad (annotated anti-pattern samples). -->
+
+- **Good Examples**: See `resources/examples/good/` for annotated examples of excellent output
+- **Bad Examples**: See `resources/examples/bad/` for annotated anti-pattern samples to avoid
 
 ## Related Skills
 

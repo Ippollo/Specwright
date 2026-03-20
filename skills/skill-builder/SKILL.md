@@ -50,7 +50,10 @@ Keep `SKILL.md` lean (target 2-5KB). Move heavy content to supporting files:
 | Reference data, catalogs | `docs/reference.md` or `resources/` (Level 3) |
 | Executable automation    | `scripts/` (Level 3)                          |
 | Code templates           | `resources/templates/` (Level 3)              |
-| Examples & samples       | `resources/examples/` (Level 3)               |
+| Good examples            | `resources/examples/good/` (Level 3)          |
+| Bad examples             | `resources/examples/bad/` (Level 3)           |
+| Eval checklist           | `eval/checklist.md` (Level 3)                 |
+| Review personas          | `eval/review-personas.md` (Level 3)           |
 
 The agent reads `SKILL.md` first. It only reads Level 3 files when `SKILL.md` tells it to.
 
@@ -99,6 +102,18 @@ Does the skill produce output?
 ```
 
 **Patterns compose.** A Pipeline can include a Reviewer step. A Generator can use Inversion at the beginning to gather variables. Tag the _dominant_ pattern in `metadata.pattern`.
+
+### 8. Script the Load Order
+
+Don't just list prerequisites at the top and hope the agent reads them at the right time. Each workflow step should specify **which file to read at that step**.
+
+- _Weak_: "Prerequisites: Read voice-guide.md, strategy.md, and algorithm.md before starting."
+- _Strong_: "Step 1: Read `voice-guide.md` for tone and patterns. Step 3: Read `examples/good/` for structural reference. Step 5: Read `eval/checklist.md` for pass/fail criteria."
+
+This prevents context competition — the agent only loads what it needs, when it needs it. Each step gets fresh, focused context instead of a front-loaded pile of documents.
+
+> [!IMPORTANT]
+> **Only applies to Intermediate and Advanced skills.** Basic skills (tool-wrapper, simple reviewer) are short enough that front-loading is fine.
 
 ---
 
@@ -258,6 +273,8 @@ Certify the skill is **effective**:
 - [ ] **Output Shape Defined**: Agent knows what "done" looks like
 - [ ] **Relationships Mapped**: Cross-references to complementary skills (if applicable)
 - [ ] **Progressive Disclosure**: SKILL.md ≤ ~5KB, heavy content in supporting files
+- [ ] **Load Order Scripted** (if intermediate/advanced): Each workflow step specifies which files to read
+- [ ] **Eval Layer Defined** (if produces user-facing output): `eval/checklist.md` with pass/fail criteria exists
 
 ---
 
@@ -270,7 +287,12 @@ skills/<skill-name>/
 ├── scripts/                 # OPTIONAL: Executable tools (setup.sh, run.py)
 ├── resources/               # OPTIONAL: Static assets
 │   ├── templates/           # Code templates
-│   └── examples/            # Usage examples
+│   └── examples/
+│       ├── good/            # Annotated examples of excellent output
+│       └── bad/             # Annotated anti-pattern samples
+├── eval/                    # OPTIONAL: Self-evaluation layer
+│   ├── checklist.md         # Pass/fail criteria for skill output
+│   └── review-personas.md   # Perspective-based reviewer personas
 └── docs/                    # OPTIONAL: Deep-dive documentation
     ├── reference.md         # Reference catalogs, data tables
     └── TROUBLESHOOTING.md   # Common issues and fixes
