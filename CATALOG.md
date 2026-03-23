@@ -11,7 +11,6 @@ Skills related to UI/UX, visual design, and framework patterns.
 - [frontend-design](./skills/frontend-design/SKILL.md): Patterns for bespoke, creative frontend interfaces with bold aesthetics.
 - [design-system](./skills/design-system/SKILL.md): Comprehensive Design System intelligence with style database and Vercel guidelines.
 - [react-best-practices](./skills/react-best-practices/SKILL.md): Modern patterns and performance tips for React applications.
-- [vue-svelte-patterns](./skills/vue-svelte-patterns/SKILL.md): Vue and Svelte component patterns (composables, provide/inject, slots, runes).
 
 ## Backend
 
@@ -41,7 +40,6 @@ Skills related to infrastructure, deployment, and version control.
 
 - [deployment-pipeline](./skills/deployment-pipeline/SKILL.md): Protocols for CI/CD, containerization, and safe deployment strategies.
 - [git-wizard](./skills/git-wizard/SKILL.md): Advanced Git workflows, conflict resolution, and version control.
-- [firecrawl-cli](./skills/firecrawl-cli/SKILL.md): Advanced web scraping, crawling, and content extraction via command-line interface.
 - [gws-cli](./skills/gws-cli/SKILL.md): Use when interacting with Google Workspace services (Drive, Docs, Sheets, Gmail) via command line. Covers file listing, folder navigation, document export, and content search. For Google Cloud infrastructure, use gcloud MCP instead.
 
 ## Testing
@@ -72,14 +70,12 @@ Skills and workflows related to agent processes, governance, and library managem
 - [/archive](./workflows/archive.md): Workflow for archiving completed changes and merging living specs.
 - [/status](./workflows/status.md): Show the state of an active change — artifacts, task progress, and suggested next action.
 - [/stats](./workflows/stats.md): Analyze toolkit usage telemetry — workflow frequency, project distribution, dead workflow detection, and usage patterns.
-- [/build](./workflows/build.md): Full pipeline (specify → plan → analyze → work → review → final-polish) with `.pipeline-state` tracking for reliable stage completion.
 - [/finish](./workflows/finish.md): Ship and close — chains commit → deploy → archive in one command.
 - [documentation-standards](./skills/documentation-standards/SKILL.md): Comprehensive documentation protocols with templates for SPEC, CONSTITUTION, ADR, and quality checklists.
 - [prompt-engineering](./skills/prompt-engineering/SKILL.md): Foundational protocols for advanced reasoning, self-correction, and ensuring high-quality LLM outputs. Includes instruction architecture guidance for deciding when to use system prompts vs skills vs runtime context.
 - [second-opinion](./skills/second-opinion/SKILL.md): Expert review protocol for stress-testing plans and decisions.
 - [/skill](./workflows/skill.md): Create or enhance Agent Skills — wraps the skill-builder with CREATE and MODIFY paths.
-- [skill-builder](./skills/skill-builder/SKILL.md): Comprehensive tool for creating, modifying, and validating Agent Skills. Use when building new SKILL.md files, enhancing existing skills, or when a project needs custom skills. Includes design principles, templates, and exemplar references.
-- [skill-management](./skills/skill-management/SKILL.md): Governance rules for organizing and maintaining this skill library.
+- [skill-builder](./skills/skill-builder/SKILL.md): Comprehensive tool for creating, modifying, and validating Agent Skills. Includes design principles, templates, governance rules, and exemplar references.
 
 ## Skill Relationships
 
@@ -90,9 +86,6 @@ Understanding how skills interact is key to effective usage:
   - Use `design-system` for **systematic, scalable, safe** designs that strictly follow established UI patterns (shadcn, tailwind).
   - _Do not mix these in the same component._
 
-- **Component Patterns by Framework**:
-  - Use `react-best-practices` for **React/Next.js** components (hooks, performance, patterns).
-  - Use `vue-svelte-patterns` for **Vue/Svelte** components (composables, runes, slots).
 
 - **Testing Layers**:
   - `unit-testing-strategy` covers the _code logic_ layer (TDD, functions).

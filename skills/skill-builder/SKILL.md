@@ -128,7 +128,7 @@ Before starting, analyze the user request to determine the correct mode.
     - Is the user asking to _improve_, _fix_, or _audit_ an existing skill?
 
 2.  **Check Catalog**:
-    - Read `c:\Projects\specwright\CATALOG.md`.
+    - Read `c:\HQ\specwright\CATALOG.md`.
     - Also check `.agents/skills/` in the current project for local skills.
     - **No Match** → Go to **[CREATE Mode](#create-mode)**.
     - **Partial/Full Match** → Go to **[MODIFY Mode](#modify-mode)**.
@@ -145,7 +145,7 @@ Ask the user:
 
 > _"Should this be a **global** skill (useful across any project) or a **local** skill (specific to this project)?"_
 
-- **Global** → Creates in `c:\Projects\specwright\skills\<skill-name>\`
+- **Global** → Creates in `c:\HQ\specwright\skills\<skill-name>\`
 - **Local** → Creates in `.agents/skills/<skill-name>\` within the current project
 
 If invoked from `/discover` gap-filling, default to **local**.
@@ -190,7 +190,7 @@ Choose a template based on the content design assessment and the classified patt
 
 **If Global:**
 
-1.  **Create Directory**: `c:\Projects\specwright\skills\<skill-name>\`
+1.  **Create Directory**: `c:\HQ\specwright\skills\<skill-name>\`
 2.  **Write SKILL.md**: Use the selected template, populated with content from Steps 3-4.
 3.  **Create Subdirectories**: `scripts/`, `resources/`, `docs/` (if Intermediate/Advanced).
 
@@ -204,7 +204,7 @@ Choose a template based on the content design assessment and the classified patt
 
 **If Global:**
 
-- Append the new skill to `c:\Projects\specwright\CATALOG.md` in the appropriate category section.
+- Append the new skill to `c:\HQ\specwright\CATALOG.md` in the appropriate category section.
 - Format: `- [skill-name](./skills/skill-name/SKILL.md): <description>`
 
 **If Local:**
@@ -275,6 +275,43 @@ Certify the skill is **effective**:
 - [ ] **Progressive Disclosure**: SKILL.md ≤ ~5KB, heavy content in supporting files
 - [ ] **Load Order Scripted** (if intermediate/advanced): Each workflow step specifies which files to read
 - [ ] **Eval Layer Defined** (if produces user-facing output): `eval/checklist.md` with pass/fail criteria exists
+
+---
+
+## Skill Governance
+
+Rules for maintaining the skill library. These apply to both global (`c:\HQ\specwright\skills\`) and local (`.agents/skills/`) skills.
+
+### Lifecycle Stages
+
+1. **Draft**: Being researched or built. Not yet in `CATALOG.md`.
+2. **Active**: Fully documented, passes both checklists above, and listed in `CATALOG.md`.
+3. **Deprecated**: Marked for removal or replacement.
+
+### Deprecation Protocol
+
+When a skill is no longer needed or has been superseded:
+
+1. **Update Frontmatter**: Add `status: deprecated` to the YAML frontmatter.
+2. **Add Warning**: Add a `> [!WARNING]` alert at the top of `SKILL.md` explaining why and what replaces it.
+3. **Update Catalog**: Move the entry in `CATALOG.md` to a "Deprecated" section at the bottom.
+
+### Handling Overlaps
+
+If a new skill overlaps with an existing one:
+
+1. **Merge**: If the new skill enhances an existing one, merge into the existing skill.
+2. **Split**: If the existing skill is too broad, split into two focused skills.
+3. **Replace**: If the new skill is a complete superior replacement, deprecate the old one.
+
+### Local → Global Promotion
+
+When a local skill proves valuable across multiple projects:
+
+1. Copy the skill folder to `c:\HQ\specwright\skills\`.
+2. Run through both Validation Checklists above.
+3. Add an entry to `CATALOG.md`.
+4. Remove or replace the local copy with a note pointing to the global version.
 
 ---
 
