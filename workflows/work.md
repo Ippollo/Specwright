@@ -31,16 +31,17 @@ recommends_mcp: [context7, firebase, gcloud, playwright, sequential-thinking]
 // turbo-all
 
 1. **Locate tasks.md**: Find `tasks.md` in the active change folder (`changes/{slug}/tasks.md`).
-2. **Scan for incomplete tasks**: Parse all lines matching `- [ ] /tag — description`.
-3. **Group by tag**: Organize tasks into pipeline stages.
-4. **Skip empty stages**: If a tag has no tasks, skip to the next.
-5. **For each stage** (in pipeline order):
+2. **Load context**: Read `now.md` and `decisions.md` from project root (if they exist) for ambient context.
+3. **Scan for incomplete tasks**: Parse all lines matching `- [ ] /tag — description`.
+4. **Group by tag**: Organize tasks into pipeline stages.
+5. **Skip empty stages**: If a tag has no tasks, skip to the next.
+6. **For each stage** (in pipeline order):
    a. **Load the agent** for this stage (see table above).
    b. **Execute each task** tagged for this stage, in order.
    c. **Mark complete**: Update `tasks.md` with `[x]` as each task finishes.
    d. **Run CHECKPOINTs**: If a checkpoint follows the completed tasks, run it.
    e. **Auto-advance**: Move to the next stage immediately.
-6. **Completion**: When all stages are done, summarize what was accomplished.
+7. **Completion**: When all stages are done, summarize what was accomplished.
 
 ## Usage
 

@@ -44,6 +44,8 @@ recommends_mcp:
 
 1.  **Context Check**:
     - Load `docs/CONSTITUTION.md` (if exists) for governing principles.
+    - Load `decisions.md` (if exists) for prior architectural decisions.
+    - Load `now.md` (if exists) for current project focus.
     - Load `changes/{slug}/specs/` for requirements.
 2.  **Analyze**: Detailed breakdown of the request vs. principles.
 3.  **Research**: Identify technical unknowns. Search for current versions/docs.
@@ -56,6 +58,7 @@ recommends_mcp:
     - **Verification**: Checkpoints for each user story.
 5.  **Audit**: Cross-check plan against Constitution and Spec.
 6.  **Handover**: Instruct user to review and then execute.
+7.  **Update Focus**: Update `now.md` with the current change as active work (create if missing, using `templates/now-template.md`).
 
 ## Output Format
 

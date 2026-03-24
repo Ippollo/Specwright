@@ -6,6 +6,8 @@
 
 ## Architecture Decisions
 
+<!-- Decisions recorded here are extracted to the project-level decisions.md at archive time. -->
+
 ### Decision: [Name]
 
 **Choice**: [What you chose]

@@ -29,10 +29,14 @@ recommends_mcp: []
      - Copy spec files → `specs/{slug}.md` (living version, merged/overwritten).
      - Copy spec files → `specs/snapshots/{slug}--{short-hash}.md` (frozen snapshot).
    - The snapshot preserves the exact spec state at ship time for future reference.
-4. **Execution**:
+4. **Extract Decisions**:
+   - If `changes/{slug}/design.md` contains an `## Architecture Decisions` section:
+     - Append each decision to `decisions.md` in the project root (create if missing, using `templates/decisions-template.md`).
+     - Prefix each entry with the archive date and change slug.
+5. **Execution**:
    - Move `changes/{slug}/` → `archive/YYYY-MM-DD-{slug}/`.
-5. **Completion**:
-   - Notify user that the change is archived, living specs updated, and snapshot preserved.
+6. **Completion**:
+   - Notify user that the change is archived, living specs updated, decisions extracted, and snapshot preserved.
 
 ## Usage
 
