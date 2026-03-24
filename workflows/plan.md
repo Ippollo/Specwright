@@ -25,6 +25,7 @@ recommends_mcp:
     - Agent generates `changes/{slug}/design.md`.
     - Agent generates `changes/{slug}/tasks.md` with dependency-aware, **workflow-routed** tasks.
     - Each task is tagged with its executing workflow (`/backend`, `/design`, `/enhance`, `/test`, `/debug`, `/security`).
+    - Agent records significant architectural decisions in `design.md`'s Architecture Decisions section.
 4.  **Completion**:
     - Agent notifies user of generated files.
     - Agent suggests review, then `/analyze` to verify spec → plan → tasks consistency before `/work`.
