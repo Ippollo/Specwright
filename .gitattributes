@@ -1,0 +1,13 @@
+# Normalize all text files to LF in the repo
+# Obsidian writes LF; this prevents false-positive git changes when opening files
+* text=auto eol=lf
+
+# Binary files — never touch
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.xlsx binary
