@@ -22,7 +22,7 @@ recommends_mcp:
     - Agent analyzes against principles and requirements.
     - Agent performs technical research.
     - Agent generates `changes/{slug}/research.md`.
-    - Agent generates `changes/{slug}/design.md`.
+    - Agent generates `changes/{slug}/design.md` — includes **Alternatives Considered** section (at least one rejected approach with reasoning and trade-offs).
     - Agent generates `changes/{slug}/tasks.md` with dependency-aware, **workflow-routed** tasks.
     - Each task is tagged with its executing workflow (`/backend`, `/design`, `/enhance`, `/test`, `/debug`, `/security`).
     - Agent records significant architectural decisions in `design.md`'s Architecture Decisions section.

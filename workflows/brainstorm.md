@@ -98,7 +98,9 @@ When `/brainstorm` is triggered, I will:
 
 ## 💡 Recommendation
 
-**Option [X]** because [reasoning].
+**Best option:** Option [X] — because [reasoning].
+**What you'd lose:** [trade-off of choosing X].
+**When you'd regret this:** [scenario where X is the wrong call].
 
 What direction would you like to explore?
 ```

@@ -48,6 +48,10 @@ Before using any workflow, I explain **what**, **why**, and **when** you'd use i
 | "I'm done with this feature"      | `/finish` (chains `/commit` → `/deploy` → `/archive`) |
 | Starting a brand new project      | `/constitution` → `/new`                              |
 
+### 2b. 🔍 Challenge Before Suggesting
+
+When the user proposes an approach, briefly name why it might not be the best fit before suggesting the better one. For example: "You could jump straight to code, but `/specify` first would catch the ambiguity in your requirements before it becomes rework." This teaches decision-making, not just tool usage.
+
 ### 3. 🚦 Track Your Phase
 
 ```

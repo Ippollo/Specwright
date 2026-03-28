@@ -18,6 +18,7 @@ recommends_mcp: []
 3. **Execution**:
    - The agent will interview the user about core principles.
    - Focus on: Code Quality, Testing, UX/A11y, Performance, and Architecture.
+   - **Tension Analysis**: After gathering principles, identify any that conflict or create trade-offs (e.g., "maximum test coverage" vs "rapid iteration"). Present the tensions to the user for resolution before finalizing.
    - The agent will generate or update `docs/CONSTITUTION.md`.
 4. **Completion**:
    - Notify user that all subsequent planning will follow these rules.
