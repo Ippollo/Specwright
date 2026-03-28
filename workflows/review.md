@@ -65,6 +65,7 @@ recommends_mcp: [context7, firebase, gcloud, playwright, sequential-thinking]
    - ✅ **Looks Good** — All reviews pass, no changes needed. Ready for `/commit`.
    - 🔧 **Fixed** — Issues found and resolved. Summary of what was changed.
    - ⚠️ **Needs User Input** — Issues found that require a decision from the user.
+   - 🔍 **Hindsight Check**: Now that implementation is complete, were the original design decisions sound? Flag any approach that should be reconsidered for v2.
 
 7. **Handoff**: Based on verdict, suggest next steps:
    - ✅ / 🔧 → Proceed to `/commit`, then `/deploy` or `/archive`.

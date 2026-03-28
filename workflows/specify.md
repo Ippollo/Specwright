@@ -25,6 +25,7 @@ recommends_mcp: [sequential-thinking, github, firecrawl-mcp]
    - Populate `## Constraints` with explicit Must / Must Not / Out of Scope items.
    - Populate `## Current State` with relevant existing files and patterns (prevents agent exploration costs).
    - Populate each Task entry with a concrete `**Verify:**` step (command or manual check).
+   - **Scope Challenge**: If any P1 story seems low-value, premature, or should be deferred to P2, flag it in a `## Scope Questions` section with reasoning. Don't silently accept all requirements as equally important.
 4. **Completion**:
    - Suggest next step: `/clarify` (if gaps exist) or `/plan`.
 

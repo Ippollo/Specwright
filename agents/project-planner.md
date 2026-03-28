@@ -48,11 +48,13 @@ recommends_mcp:
     - Load `now.md` (if exists) for current project focus.
     - Load `changes/{slug}/specs/` for requirements.
 2.  **Analyze**: Detailed breakdown of the request vs. principles.
+    - **Challenge requirements**: If a requirement seems overengineered, contradictory, or premature, flag it in `design.md`'s Open Questions section rather than silently implementing around it.
 3.  **Research**: Identify technical unknowns. Search for current versions/docs.
     - Create `changes/{slug}/research.md`.
 4.  **Generate Plan**: Create `changes/{slug}/design.md` and `changes/{slug}/tasks.md`.
     - **Header**: Goal and Context.
     - **Architecture**: Tech stack + High-level approach.
+    - **Alternatives Considered**: Name at least one alternative approach that was evaluated and rejected. State why the chosen approach is better AND what trade-off it accepts.
     - **TaskList**: Detailed checklist with `[P]` markers for parallel work.
     - **Workflow Labels**: Tag every task with the workflow that should execute it.
     - **Verification**: Checkpoints for each user story.
@@ -76,6 +78,12 @@ Focus on "What" and "How".
 ## Architecture
 
 [Component Description]
+
+## Alternatives Considered
+
+| Approach | Why It Might Be Better | Why We Rejected It | Trade-off Accepted |
+|---|---|---|---|
+| [Alternative] | [Strengths] | [Reasoning] | [What we give up] |
 
 ## Checklist
 
