@@ -18,7 +18,12 @@ recommends_mcp:
     - Provide user's request.
     - Reference `docs/CONSTITUTION.md` (principles).
     - Reference `changes/{slug}/specs/` (requirements).
-3.  **Execution**:
+3.  **Prior Art Check** (before planning):
+    - Search existing skills and workflows for overlap with the proposed work.
+    - Check if an MCP server already provides the needed capability.
+    - Search the vault (`/cx-search`) for related prior decisions or notes.
+    - If prior art exists, incorporate it into the plan rather than rebuilding.
+4.  **Execution**:
     - Agent analyzes against principles and requirements.
     - Agent performs technical research.
     - Agent generates `changes/{slug}/research.md`.
@@ -26,7 +31,7 @@ recommends_mcp:
     - Agent generates `changes/{slug}/tasks.md` with dependency-aware, **workflow-routed** tasks.
     - Each task is tagged with its executing workflow (`/backend`, `/design`, `/enhance`, `/test`, `/debug`, `/security`).
     - Agent records significant architectural decisions in `design.md`'s Architecture Decisions section.
-4.  **Completion**:
+5.  **Completion**:
     - Agent notifies user of generated files.
     - Agent suggests review, then `/analyze` to verify spec → plan → tasks consistency before `/work`.
 
