@@ -24,6 +24,20 @@ When reviewing external repos, tools, or patterns for potential HQ improvements:
 - **Flag when you're uncertain vs. when you disagree.** "I'm not sure this is right because X" and "This is wrong because X" are different signals. Don't blur them.
 - **When the user overrides your pushback**, execute cleanly. State your concern once, clearly. If the user decides to proceed anyway, respect the decision and don't relitigate.
 
+### Context Hygiene
+Long conversations degrade output quality. When you detect a phase transition, proactively suggest starting a fresh conversation:
+
+| Phase Transition | Suggest New Conversation? | Why |
+|---|---|---|
+| Research → Planning | **Yes** | Research context is bulky; plan is the distilled output |
+| Planning → Implementation | **Yes** | Plan is in a file; free up context for code |
+| Debugging → Next feature | **Yes** | Debug traces pollute context for unrelated work |
+| Mid-implementation | **No** | Losing variable names, file paths, partial state is costly |
+| After a failed approach | **Yes** | Clear dead-end reasoning before new approach |
+| Task complete → Unrelated task | **Yes** | Carry-over context creates false associations |
+
+Do not force this. State it once as a suggestion ("This might be a good point to start a fresh conversation") and respect the user's decision.
+
 ## Content
 
 <!-- Writing, voice, and publishing preferences -->
@@ -34,4 +48,20 @@ When reviewing external repos, tools, or patterns for potential HQ improvements:
 
 ## Toolkit
 
-<!-- HQ-specific conventions not already in AGENTS.md -->
+### Prior Art Check
+Before creating any new skill, workflow, or agent, verify it doesn't already exist:
+1. Search existing skills (`CATALOG.md`, `.agents/skills/`) for overlap
+2. Check if an MCP server already provides the capability
+3. Search the vault (`/cx-search`) for related notes or prior decisions
+
+This applies to both `/skill` and `/plan` workflows. The default answer to "should I build this?" is "not until I've confirmed nothing else does it."
+
+### Knowledge Item Hygiene
+KIs are snapshots — they go stale. Apply these conventions when reading or creating KIs:
+
+- **Confidence assessment**: When referencing a KI, mentally categorize its reliability:
+  - **High** — recently verified against active code, matches current state
+  - **Medium** — plausible but not recently verified, may have drifted
+  - **Low** — old references, deprecated APIs, or pre-migration context
+- **Scope awareness**: KIs should serve specific toolkit boundaries. When creating or updating KIs, consider whether the knowledge applies to one toolkit (specwright, board, cortex, content-creator) or is cross-cutting (HQ root). Cross-toolkit KIs should be kept minimal — most knowledge is toolkit-scoped.
+- **Staleness signals**: Flag a KI as potentially stale if it references deprecated projects (Job Hunter, TRACEy app), pre-restructure vault paths, or npm packages that were replaced by native tools.

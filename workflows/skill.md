@@ -33,8 +33,12 @@ Follow the skill-builder's **Step 0: Gap Detection & Routing**:
 
 1. Analyze the user's request — are they creating or modifying?
 2. Check `CATALOG.md` and `.agents/skills/` for existing matches.
-3. **No Match** → proceed to **Step 3** (CREATE).
-4. **Match Found** → proceed to **Step 5** (MODIFY).
+3. **Prior Art Check** — before creating anything new:
+   - Does an MCP server already provide this capability?
+   - Does the vault have related notes or prior decisions (`/cx-search`)?
+   - Is there an existing workflow that already covers this use case?
+4. **No Match** → proceed to **Step 3** (CREATE).
+5. **Match Found** → proceed to **Step 5** (MODIFY).
 
 ### Step 3: CREATE — Scope & Content Design
 
