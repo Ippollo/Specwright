@@ -40,7 +40,8 @@ Do not force this. State it once as a suggestion ("This might be a good point to
 
 ## Content
 
-<!-- Writing, voice, and publishing preferences -->
+### FAQ Placement
+FAQ sections go **last** in every article — after the closing/conclusion section, before sources. FAQs are optional reading that serve SEO more than the reader. Never place them mid-article or before the closing.
 
 ## Career
 
