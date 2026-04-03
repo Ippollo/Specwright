@@ -8,6 +8,16 @@ Agent-facing conventions and preferences. Apply these silently — do not announ
 
 ## General
 
+### Token Efficiency — Read Less
+Before reading a file to answer a question or provide context, check whether you already have sufficient information from:
+1. **System prompt content** (user rules, AGENTS.md, KI summaries, workflow/skill lists)
+2. **Directory listings** you already performed
+3. **File contents you already viewed** this conversation
+
+If you can answer accurately from existing context, do not read the file. Only read files when you need specific content you don't already have. When you do read, prefer targeted line ranges over full files.
+
+When multiple files would illustrate the same point, read one representative example — not all of them.
+
 ### External Pattern Adoption
 When reviewing external repos, tools, or patterns for potential HQ improvements:
 
