@@ -1,5 +1,5 @@
 ---
-description: Learning mode that teaches the toolkit while working. Explains decisions, suggests workflows, and builds your skills.
+description: Interactive learning mode.
 quick_summary: "Teaching mode. Commands: /coach on|off|status. Explains WHY before suggesting workflows."
 requires_mcp: []
 recommends_mcp: []

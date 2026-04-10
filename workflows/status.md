@@ -1,5 +1,5 @@
 ---
-description: Show the state of an active change — artifacts, task progress, and next action.
+description: Show active change status.
 quick_summary: "Scan changes/{slug}/ and report what exists, task progress, and what to do next."
 requires_mcp: []
 recommends_mcp: []

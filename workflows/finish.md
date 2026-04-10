@@ -64,3 +64,14 @@ recommends_mcp: [github, gcloud, firebase, observability]
 - `/commit` remains available standalone for intermediate saves and WIP commits.
 - `/finish` is the final step — use it only when you're confident the change is ready to ship.
 - For changes that don't need deployment (e.g., docs-only), you can still use `/commit` + `/archive` individually.
+
+## Reflection
+
+After completion, briefly evaluate:
+1. **What worked?** — Patterns, tools, or approaches that were effective.
+2. **What was friction?** — Slowdowns, dead ends, or repeated mistakes.
+3. **Update needed?** — If a reusable lesson emerged, append it to `mistakes.md` or suggest an update to the relevant skill/workflow. If nothing noteworthy, skip silently.
+
+> This step is internal — do not present the reflection to the user unless it surfaces an actionable update.
+
+

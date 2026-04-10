@@ -1,5 +1,5 @@
 ---
-description: Pre-submission cleanup and verification checklist
+description: Pre-submission cleanup checklist.
 quick_summary: "Remove debug artifacts, triage TODOs, prune dead code, sync docs, run final lint/test. Gatekeeper mode."
 requires_mcp: []
 recommends_mcp: [context7, github, sequential-thinking]

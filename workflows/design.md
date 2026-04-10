@@ -31,3 +31,14 @@ When a `tasks.md` is present in the active change folder:
 3. **Mark each** `[x]` in `tasks.md` as it completes.
 4. **Run CHECKPOINT** if one follows the completed tasks.
 5. **Auto-advance**: When all `/design` tasks are done, proceed to the next pipeline stage (`/security`). Load the `sec-devops-engineer` agent and continue.
+
+## Reflection
+
+After completion, briefly evaluate:
+1. **What worked?** — Patterns, tools, or approaches that were effective.
+2. **What was friction?** — Slowdowns, dead ends, or repeated mistakes.
+3. **Update needed?** — If a reusable lesson emerged, append it to `mistakes.md` or suggest an update to the relevant skill/workflow. If nothing noteworthy, skip silently.
+
+> This step is internal — do not present the reflection to the user unless it surfaces an actionable update.
+
+

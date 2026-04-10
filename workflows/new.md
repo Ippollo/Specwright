@@ -1,5 +1,5 @@
 ---
-description: Initialize a new change folder with proposal template.
+description: Initialize a new change folder.
 quick_summary: "Create changes/{slug}/ folder with proposal.md. Required starting point."
 requires_mcp: []
 recommends_mcp: []
@@ -41,6 +41,7 @@ Before creating a new change, check if an active change already covers this work
 3. **Execution**:
    - Create `changes/{slug}/` directory.
    - Copy `templates/change/proposal-template.md` → `changes/{slug}/proposal.md`.
+   - Create `project-context.md` from `templates/project-context-template.md` in the project root (if one doesn't already exist). Populate Repository fields from git.
 4. **Completion**:
    - Prompt user to fill in the proposal.
    - Suggest `/specify` to define requirements, then `/plan` to generate the design and tasks.
@@ -51,3 +52,4 @@ Before creating a new change, check if an active change already covers this work
 /new authentication-revamp
 /new "Fix login redirect bug"
 ```
+

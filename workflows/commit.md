@@ -1,5 +1,5 @@
 ---
-description: Stage, commit, and push changes using conventional commits.
+description: Stage, commit, and push changes.
 quick_summary: "git status → stage → conventional commit → push. Always pushes."
 requires_mcp: []
 recommends_mcp: [github]

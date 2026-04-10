@@ -1,5 +1,5 @@
 ---
-description: Execute tasks from tasks.md by workflow tag, auto-advancing through the pipeline.
+description: Execute tasks from tasks.md.
 quick_summary: "Orchestrate task execution by tag: backend → design → security → enhance → test."
 requires_mcp: []
 recommends_mcp: [context7, firebase, gcloud, playwright, sequential-thinking]
@@ -42,7 +42,11 @@ recommends_mcp: [context7, firebase, gcloud, playwright, sequential-thinking]
    d. **Mark complete**: Update `tasks.md` with `[x]` as each task finishes.
    e. **Run CHECKPOINTs**: If a checkpoint follows the completed tasks, run it.
    f. **Auto-advance**: Move to the next stage immediately.
-7. **Completion**: When all stages are done, summarize what was accomplished.
+7. **Pre-completion verification**: Re-read `tasks.md` from disk. Scan for any items still marked `[ ]` or `[/]`. If incomplete items exist:
+   - List them explicitly.
+   - Do NOT proceed to completion — resume work on the remaining items.
+   - If the remaining items are genuinely out of scope or blocked, flag them to the user before completing.
+8. **Completion**: When all stages are done, summarize what was accomplished.
 
 ## Usage
 
@@ -75,3 +79,13 @@ When advancing to a new stage, load the agent from its canonical path:
 - `/security` → `../agents/sec-devops-engineer.md`
 - `/enhance` → `../agents/code-custodian.md`
 - `/test` → Follow the `/test` workflow (`../workflows/test.md`)
+
+## Reflection
+
+After completion, briefly evaluate:
+1. **What worked?** — Patterns, tools, or approaches that were effective.
+2. **What was friction?** — Slowdowns, dead ends, or repeated mistakes.
+3. **Update needed?** — If a reusable lesson emerged, append it to `mistakes.md` or suggest an update to the relevant skill/workflow. If nothing noteworthy, skip silently.
+
+> This step is internal — do not present the reflection to the user unless it surfaces an actionable update.
+

@@ -1,5 +1,5 @@
 ---
-description: Create feature specifications with prioritized user stories and acceptance criteria.
+description: Create feature specifications.
 quick_summary: "Create specs with P1/P2/P3 priorities and acceptance criteria. Define What/Why before How."
 requires_mcp: []
 recommends_mcp: [sequential-thinking, github, firecrawl-mcp]
