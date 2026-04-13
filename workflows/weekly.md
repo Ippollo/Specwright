@@ -43,26 +43,35 @@ This workflow assumes the following exist in your workspace:
    - Ask: "What blocked you? One adjustment for next week?"
    - Document the retro briefly for the user.
 
-2. **Pull Candidates**:
+2. **Housekeeping Sweep**:
+   - Review what changed this week — commits, new workflows/skills, conversation walkthroughs, structural changes.
+   - Surface anything that warrants capture in one of three living documents:
+     - **Decision log** (`decisions.md`): Any cross-toolkit architectural choices, tool selections, process changes, or reversals of prior decisions made this week.
+     - **Working preferences** (`working-preferences.md`): Any new interaction patterns, conventions, or process preferences that emerged during the week.
+     - **Mistakes log** (`mistakes.md`): Any agent errors caught this week that should be documented to prevent recurrence. Also check if existing entries are now resolved and can be pruned.
+   - Present findings to the user as a short list: "Here's what I think should be captured." The user approves, edits, or skips.
+   - Write approved entries to the appropriate files before proceeding.
+
+3. **Pull Candidates**:
    - Scan the project folder for action notes with `status: todo` or `status: in-progress`.
    - If the focus file has a "Strategic Priorities" section, filter to tasks whose `project:` field maps to one of those priorities.
    - Non-strategic tasks are deprioritized unless they are specifically requested or extremely urgent (`p1` + `due`).
 
-3. **Rank & Cap**:
+4. **Rank & Cap**:
    - Sort the remaining candidates by:
      1. In-progress from last week (rollovers)
      2. Priority (`p1` > `p2` > `p3`)
      3. Due date (soonest first)
    - Take the top items, capped at **5 commitments**.
 
-4. **Present the Draft Plan**:
+5. **Present the Draft Plan**:
    - Show the 5 proposed commitments to the user with their `project`, `priority`, `energy`, and `due` date.
    - Warn the user if they try to exceed 5 commitments.
 
-5. **User Confirmation**:
+6. **User Confirmation**:
    - The user approves, swaps, or adds items to the list. Ensure the final list does not exceed 5.
 
-6. **Write Back to Focus File**:
+7. **Write Back to Focus File**:
    - Clear the old "This Week" table and replace it with the new accepted commitments in the following format:
 
    ```markdown
