@@ -101,4 +101,4 @@ You are about to violate this skill if you catch yourself:
 
 - **Complements**: `unit-testing-strategy`, `webapp-testing` — these define what to test; this skill enforces that you actually run the tests
 - **Complements**: `code-quality-sentinel` — quality checks are meaningless without verification
-- **Works with**: All workflows that mark tasks complete (`/work`, `/build`, `/finish`)
+- **Works with**: All workflows that mark tasks complete (`/work`, `/finish`)

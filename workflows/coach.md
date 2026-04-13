@@ -33,7 +33,7 @@ Before using any workflow, I explain **what**, **why**, and **when** you'd use i
 
 | When I Notice...                  | I'll Suggest...                                       |
 | --------------------------------- | ----------------------------------------------------- |
-| "I want to build..." or "Add..."  | `/new` → `/build` (or `/specify` → `/plan` → `/work`) |
+| "I want to build..." or "Add..."  | `/new` → `/specify` → `/plan` → `/work`                 |
 | "Something's broken..."           | `/debug`                                              |
 | "Should I use X or Y?"            | `/brainstorm`                                         |
 | "How does this work?"             | `/investigate`                                        |
@@ -87,7 +87,7 @@ For example, after running `/new`:
 
 ## Graduation Path
 
-- **Week 1-2**: Use `/new` → `/build` → test → `/finish` for the streamlined flow
+- **Week 1-2**: Use `/new` → `/specify` → `/plan` → `/work` → test → `/finish` for the standard flow
 - **Week 3-4**: Know when to `/brainstorm` vs just start building; use individual workflows when needed
 - **Week 5+**: Run workflows yourself and use `/coach off`
 
@@ -106,4 +106,4 @@ For example, after running `/new`:
 
 For detailed examples and MCP guidance, see:
 
-- [coach-reference.md](file:///c:/Projects/specwright/workflows/coach-reference.md) - Full session examples, MCP tips
+- [coach-reference.md](./coach-reference.md) - Full session examples, MCP tips

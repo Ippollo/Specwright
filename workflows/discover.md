@@ -126,6 +126,6 @@ After completing all steps, present a summary:
 
 After discovery:
 
-- Use `/plan` or `/build` to start working — workflows will reference the profile
+- Use `/specify` → `/plan` → `/work` to start building — workflows will reference the profile
 - Use `/investigate` for deeper analysis of specific technologies
 - Use `/skill` to create or enhance skills for identified gaps

@@ -342,3 +342,13 @@ jest --coverage --coverageThreshold='{"global":{"lines":80}}'
 | Watch mode      | `pytest-watch`           | `jest --watch`         |
 | Coverage        | `pytest --cov`           | `jest --coverage`      |
 | Verbose         | `pytest -v`              | `jest --verbose`       |
+
+## Common Rationalizations
+
+| Rationalization | Reality |
+|---|---|
+| "I'll add tests after the code works" | That's not TDD — that's post-hoc rationalization. Write the test first; it clarifies what "works" means. |
+| "This function is too simple to test" | Simple functions break when requirements change. The test costs 30 seconds; the regression costs 30 minutes. |
+| "Mocking everything makes tests thorough" | Over-mocking tests your mocks, not your code. Mock at boundaries only. |
+| "The test is flaky, I'll skip it for now" | Flaky tests mask real bugs. Fix the flakiness or understand why it's intermittent. |
+| "100% coverage means no bugs" | Coverage measures execution, not correctness. A test that runs a branch without asserting the right outcome is worthless. |

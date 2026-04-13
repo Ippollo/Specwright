@@ -45,9 +45,9 @@
 - [Explicit prohibitions — frameworks to avoid, code not to modify, patterns to skip]
 - Don't modify unrelated code
 
-### Out of Scope
+### Not Doing (and Why)
 
-- [Adjacent features explicitly not being built in this change]
+- [Adjacent feature explicitly not being built] — [why it's excluded from this change]
 
 ---
 

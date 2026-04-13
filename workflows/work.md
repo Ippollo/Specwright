@@ -38,10 +38,25 @@ recommends_mcp: [context7, firebase, gcloud, playwright, sequential-thinking]
 6. **For each stage** (in pipeline order):
    a. **Load the agent** for this stage (see table above).
    b. **Sanity check**: Before executing, briefly verify: "Do these tasks still make sense given what was built in earlier stages? Has anything changed upstream that invalidates or duplicates work?" If a task is now irrelevant, flag it and skip rather than blindly executing.
-   c. **Execute each task** tagged for this stage, in order.
-   d. **Mark complete**: Update `tasks.md` with `[x]` as each task finishes.
-   e. **Run CHECKPOINTs**: If a checkpoint follows the completed tasks, run it.
-   f. **Auto-advance**: Move to the next stage immediately.
+   c. **Scope discipline**: Touch only what the task requires. If you notice something worth improving outside the task scope, note it — don't fix it:
+      ```
+      NOTICED BUT NOT TOUCHING:
+      - [thing] — [why it's out of scope for this task]
+      → Want me to create a task for this?
+      ```
+   d. **Confusion management**: When encountering conflicting context or incomplete requirements mid-task, stop and surface it:
+      ```
+      CONFLICT: [what conflicts with what]
+      Options:
+      A) [approach] — [consequence]
+      B) [approach] — [consequence]
+      → Which approach?
+      ```
+      Do not guess. Wait for user direction.
+   e. **Execute each task** tagged for this stage, in order.
+   f. **Mark complete**: Update `tasks.md` with `[x]` as each task finishes.
+   g. **Run CHECKPOINTs**: If a checkpoint follows the completed tasks, run it.
+   h. **Auto-advance**: Move to the next stage immediately.
 7. **Pre-completion verification**: Re-read `tasks.md` from disk. Scan for any items still marked `[ ]` or `[/]`. If incomplete items exist:
    - List them explicitly.
    - Do NOT proceed to completion — resume work on the remaining items.

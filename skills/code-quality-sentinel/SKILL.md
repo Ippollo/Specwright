@@ -86,3 +86,13 @@ Technique: [Refactoring Pattern]
 Status: [Applying / Testing / Complete / Reverted]
 Tests: [Passing / Failing]
 ```
+
+## Common Rationalizations
+
+| Rationalization | Reality |
+|---|---|
+| "The tests are fine, I don't need to run them before refactoring" | Baseline is the safety net. Without it, you can't tell if the refactor broke something or the code was already broken. |
+| "I'll batch these refactors together — they're all small" | Batching hides which change broke the tests. One at a time, test after each. |
+| "This refactor is safe enough to skip reverting on failure" | If the tests fail, revert. Debugging a failed refactor is slower than starting fresh. |
+| "I'll refactor while adding this feature" | Mixed changes are harder to review, revert, and git-blame. Separate them. |
+| "The code is obviously bad, I don't need to understand why it's this way" | Chesterton's Fence: understand why it exists before changing it. Check git blame. |

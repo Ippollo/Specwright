@@ -56,13 +56,7 @@ graph TD
     Commit --> Archive["/archive<br/>(Merge & Cleanup)"]
     Archive --> End([Complete])
 
-    %% Mega-workflows
-    Start -. "/build" .-> Specify
-    Specify -. auto .-> Plan
-    Plan -. auto .-> Analyze
-    Analyze -. auto .-> Work
-    Work -. auto .-> Review
-    Review -. auto .-> Final
+    %% Mega-workflow
     Commit -. "/finish" .-> Deploy
     Deploy -. auto .-> Archive
 
@@ -92,18 +86,8 @@ The **Happy Path** is the most robust way to ensure high-quality output. It foll
 7.  **`/commit`**: Stage, commit (conventional), and push your changes. Always pushes.
 8.  **`/archive`**: The final step. It snapshots your specs (frozen copy tagged with commit hash), merges them into the main documentation, and cleans up the change folder.
 
-### ⚡ The Streamlined Flow
-
-For maximum efficiency, two mega-commands cover the entire lifecycle:
-
-1. **`/new`**: Initialize the change folder.
-2. **`/build`**: Chains `/specify` → `/plan` → `/analyze` → `/work` → `/review` → `/final-polish`. User approves spec and plan; everything else auto-proceeds.
-3. **User tests**: Verify in the browser, run through acceptance criteria.
-4. **`/finish`**: Chains `/commit` → `/deploy` → `/archive`. One command to ship and close.
-
 ## ⚡ Automation & Support
 
-- **`/build` (Full Pipeline)**: Mega-command that chains specify → plan → analyze → work → review → final-polish. Tracks stage progress via `.pipeline-state` file — re-running `/build` resumes from the last completed stage.
 - **`/finish` (Ship & Close)**: Chains commit → deploy → archive. Deploy auto-detects the project's deploy method.
 - **`/status` (Change Awareness)**: Shows artifact existence, task progress, and suggested next action for any active change. Use at the start of a session to re-orient.
 - **`/analyze` (Consistency Gate)**: Pre-implementation audit — checks spec → plan → tasks alignment. Run after `/plan`, before `/work`.

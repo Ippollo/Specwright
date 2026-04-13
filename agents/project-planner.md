@@ -56,8 +56,14 @@ recommends_mcp:
     - **Architecture**: Tech stack + High-level approach.
     - **Alternatives Considered**: Name at least one alternative approach that was evaluated and rejected. State why the chosen approach is better AND what trade-off it accepts.
     - **TaskList**: Detailed checklist with `[P]` markers for parallel work.
+    - **Slice vertically, not horizontally.** Each phase should deliver one complete feature path through the stack, not one layer across all features:
+      ```
+      Bad (horizontal): Phase 1: All database tables → Phase 2: All API endpoints → Phase 3: All UI
+      Good (vertical): Phase 1: User auth (schema + API + UI) → Phase 2: Task CRUD (schema + API + UI)
+      ```
     - **Workflow Labels**: Tag every task with the workflow that should execute it.
     - **Verification**: Checkpoints for each user story.
+    - **Surface ambiguity**: If context conflicts with existing code, or requirements are incomplete, stop and present options — do not silently resolve.
 5.  **Audit**: Cross-check plan against Constitution and Spec.
 6.  **Handover**: Instruct user to review and then execute.
 7.  **Update Focus**: Update `now.md` with the current change as active work (create if missing, using `templates/now-template.md`).

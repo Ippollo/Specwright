@@ -78,12 +78,15 @@ The fastest path from idea to shipped code:
 
 ```
 /new my-feature          # Initialize a change folder
-/build                   # Chains: specify → plan → work → review → final-polish
-                         # You approve the spec and plan; everything else auto-proceeds
+/specify                 # Define requirements and acceptance criteria
+/plan                    # Generate architecture, research, and tasks
+/work                    # Auto-execute: backend → design → security → enhance → test
+/review                  # Specialist quality audit
+/final-polish            # Cleanup and acceptance verification
 /finish                  # Chains: commit → deploy → archive
 ```
 
-Or run each phase yourself:
+Or run each phase individually:
 
 | Phase      | Commands                           | What Happens                                               |
 | ---------- | ---------------------------------- | ---------------------------------------------------------- |
@@ -126,7 +129,7 @@ See [CATALOG.md](./CATALOG.md) for the full index.
 | [Getting Started](./docs/GETTING_STARTED.md)         | Detailed setup walkthrough            |
 | [Quick Reference](./docs/QUICK_REFERENCE.md)         | One-page cheat sheet for all commands |
 | [Project Lifecycle](./docs/PROJECT_LIFECYCLE.md)     | Visual map of the complete workflow   |
-| [MCP Recommendations](./docs/MCP_RECOMMENDATIONS.md) | Recommended MCP server configuration  |
+| [MCP Guide](./docs/MCP_GUIDE.md)                     | MCP server configuration and tool lists |
 
 ### Scenario Guides
 

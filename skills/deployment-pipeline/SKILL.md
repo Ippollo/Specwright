@@ -155,4 +155,14 @@ Use Terraform for reproducible infrastructure.
 - [ ] **Logs** show no critical startup errors?
 - [ ] **Alerts** configured for high error rates?
 
+## Common Rationalizations
+
+| Rationalization | Reality |
+|---|---|
+| "I'll add the health check later" | If the deploy succeeds but the app is broken, you won't know until users complain. Add it before deploy. |
+| "Staging is overkill for this change" | The changes that skip staging are the ones that break production. |
+| "I'll set up rollback if we need it" | You need rollback when you're panicking. Set it up when you're calm. |
+| "The secrets are fine in the env file for now" | `.env` files get committed. Use secrets management from the start. |
+| "I don't need resource limits for a small app" | Without limits, a memory leak takes down the node. Limits are cheap insurance. |
+
 > See [Troubleshooting Guide](troubleshooting.md) for common issues.

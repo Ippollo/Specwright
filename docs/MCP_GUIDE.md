@@ -1,36 +1,89 @@
-# Recommended MCP Settings
+# MCP Guide
 
-This document defines the **always-on** MCP tool configuration for Specwright.
-Keep exactly these 50 tools enabled to cover all workflows without manual toggling.
+MCP (Model Context Protocol) servers extend the AI assistant's capabilities by connecting to external services and tools. This is the single reference for which servers to enable, which tools to keep on, and how they map to workflows and agents.
 
-> **Last reviewed**: 2026-02-23 — based on analysis of all 23 workflows and 7 agents.
+> **Last reviewed**: 2026-04-13
 
 ---
 
-## Summary
+## Quick Reference
 
-| Server                | Tools Enabled | Notes                                 |
-| --------------------- | :-----------: | ------------------------------------- |
-| `context7`            |     2 / 2     | All tools on                          |
-| `firebase`            |    18 / 31    | 13 admin/setup tools disabled         |
-| `gcloud`              |     1 / 1     | Single tool; always on                |
-| `github`              |    8 / 26     | 18 tools disabled                     |
-| `playwright`          |    10 / 22    | 12 tools disabled                     |
-| `sequential-thinking` |     1 / 1     | All tools on                          |
-| `firecrawl-mcp`       |    4 / 12     | 8 tools disabled                      |
-| `observability`       |    6 / 13     | 7 admin/infrastructure tools disabled |
-| **Total**             |    **50**     |                                       |
+| Server              | Enabled | Primary Use Case                      |
+| ------------------- | :-----: | ------------------------------------- |
+| context7            |   2/2   | Library API research, framework docs  |
+| firebase            |  18/31  | Firebase service integration          |
+| gcloud              |   1/1   | Google Cloud infrastructure           |
+| github              |  8/26   | Repository context, issues, PRs       |
+| playwright          |  10/22  | Browser automation & testing          |
+| sequential-thinking |   1/1   | Complex reasoning                     |
+| firecrawl-mcp       |  4/12   | Web scraping & extraction             |
+| observability       |  6/13   | Cloud monitoring & logging            |
+| **Total**           | **50**  |                                       |
 
 ### Servers — Off by Default
 
 | Server           | Policy                           |
 | ---------------- | -------------------------------- |
 | `storage`        | Enable only for file upload work |
-| `notebooklm-mcp` | Not referenced by any workflow   |
+| `notebooklm-mcp` | Enable for deep research tasks   |
 
 ---
 
-## Tool Lists
+## By Workflow
+
+### Planning Phase
+
+- `/new` → (none)
+- `/brainstorm` → `sequential-thinking`, `firecrawl-mcp`
+- `/specify` → (none)
+- `/clarify` → (none)
+- `/plan` → `sequential-thinking`
+- `/investigate` → `github`, `context7`, `firecrawl-mcp`
+
+### Building Phase
+
+- `/work` → (none — orchestrates other workflows)
+- `/design` → (none)
+- `/backend` → `context7`
+- `/enhance` → (none)
+- `/review` → (none — orchestrates specialist agents)
+
+### Verification Phase
+
+- `/test` → `playwright`
+- `/debug` → `observability`
+- `/serve` → (none)
+- `/final-polish` → (none)
+
+### Deployment & Completion
+
+- `/deploy` → `gcloud`, `firebase-mcp-server`, `observability`
+- `/security` → (none)
+- `/archive` → (none)
+
+### Meta Workflows
+
+- `/coach` → (none — references other workflows' needs)
+- `/second-opinion` → `sequential-thinking`
+- `/constitution` → (none)
+
+---
+
+## By Agent
+
+| Agent                 | Recommended Servers                                           |
+| --------------------- | ------------------------------------------------------------- |
+| `project-planner`     | `github`, `sequential-thinking`, `context7`, `firecrawl-mcp`  |
+| `backend-architect`   | `firebase-mcp-server`, `context7`                             |
+| `frontend-specialist` | `context7`, `playwright`                                      |
+| `debugger`            | `github`                                                      |
+| `code-custodian`      | `github`, `context7`                                          |
+| `qa-engineer`         | `playwright`                                                  |
+| `sec-devops-engineer` | `github`, `gcloud`                                            |
+
+---
+
+## Tool Enable/Disable Lists
 
 ### context7 — All On (2)
 
@@ -96,7 +149,7 @@ Keep exactly these 50 tools enabled to cover all workflows without manual toggli
 - `get_issue`
 - `get_pull_request`
 
-**❌ Disable** (all other 18 tools — create/fork/branch/merge operations and PR social layer)
+**❌ Disable** (all other 18 tools)
 
 - `create_repository`, `fork_repository`, `create_branch`
 - `search_repositories`, `list_commits`, `list_issues`
@@ -188,3 +241,65 @@ Keep exactly these 50 tools enabled to cover all workflows without manual toggli
 | `browser_network_requests`                         | Debugging API call sequences             |
 | `list_group_stats`                                 | Investigating recurring error patterns   |
 | `merge_pull_request`                               | Never — always merge in the browser      |
+
+---
+
+## Installation
+
+### Core Servers
+
+- **Firebase**: `npx -y firebase-tools@latest mcp`
+- **Context7**: `npx -y @upstash/context7-mcp --api-key YOUR_KEY`
+- **GitHub**: `npx -y @modelcontextprotocol/server-github`
+
+### Google Cloud Servers
+
+- **GCloud**: `npx -y @google-cloud/gcloud-mcp`
+- **Observability**: `npx -y @google-cloud/observability-mcp`
+- **Storage**: `npx -y @google-cloud/storage-mcp`
+
+### Other Servers
+
+- **Firecrawl**: `npx -y firecrawl-mcp` (requires API key)
+- **Playwright**: `npx -y @playwright/mcp@latest`
+- **Sequential Thinking**: `npx -y @modelcontextprotocol/server-sequential-thinking`
+
+## Configuration Tips
+
+### Minimal Setup (70% of use cases)
+
+```json
+{
+  "mcpServers": {
+    "context7": { ... },
+    "sequential-thinking": { ... },
+    "github": { ... }
+  }
+}
+```
+
+### Full-Stack Setup
+
+```json
+{
+  "mcpServers": {
+    "context7": { ... },
+    "sequential-thinking": { ... },
+    "github": { ... },
+    "playwright": { ... },
+    "firecrawl-mcp": { ... }
+  }
+}
+```
+
+### Frontmatter Format
+
+Every workflow and agent includes:
+
+```yaml
+---
+description: ...
+requires_mcp: [] # Hard requirements (currently none)
+recommends_mcp: [...] # Recommended for best experience
+---
+```

@@ -28,6 +28,12 @@ Skills related to AI model integration and ML workflows.
 
 - [gemini-api-dev](./skills/gemini-api-dev/SKILL.md): Gemini API development — current models, SDK quickstarts (Python/JS/Go/Java), function calling, structured output, multimodal, and official doc links.
 
+## Research
+
+Skills related to content analysis, research, and knowledge extraction.
+
+- [youtube-review](./skills/youtube-review/SKILL.md): Extract and analyze YouTube video content from transcripts. Use when the user shares a YouTube URL for review, idea extraction, or comparison to existing systems.
+
 ## Architecture
 
 Skills related to high-level system design.
@@ -69,7 +75,6 @@ Skills and workflows related to agent processes, governance, and library managem
 - [/deploy](./workflows/deploy.md): Project-aware deployment — auto-detects deploy method (Firebase, Vercel, gcloud, etc.) and runs pre/post-deploy checks.
 - [/archive](./workflows/archive.md): Workflow for archiving completed changes and merging living specs.
 - [/status](./workflows/status.md): Show the state of an active change — artifacts, task progress, and suggested next action.
-- [/stats](./workflows/stats.md): Analyze toolkit usage telemetry — workflow frequency, project distribution, dead workflow detection, and usage patterns.
 - [/finish](./workflows/finish.md): Ship and close — chains commit → deploy → archive in one command.
 - [/weekly](./workflows/weekly.md): Weekly planning — retro last week, pull and rank tasks, cap at 5 commitments, write to focus file.
 - [/daily](./workflows/daily.md): Daily briefing — surface today's tasks from weekly plan, grouped by energy level. Read-only, no note creation.

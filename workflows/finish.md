@@ -24,7 +24,7 @@ recommends_mcp: [github, gcloud, firebase, observability]
 ## Prerequisites
 
 - Code is tested and ready to ship.
-- Typically follows `/build` and user testing.
+- Typically follows `/specify` → `/plan` → `/work` → `/review` → `/final-polish` and user testing.
 
 ## Steps
 

@@ -36,7 +36,6 @@ One-page cheat sheet for common commands and agent flows.
 | `/second-opinion` | Review            | Stress-testing plans with an expert persona.                                                                            |
 | `/constitution`   | Rules             | Setting project-wide guardrails.                                                                                        |
 | `/deploy`         | Release           | Auto-detects deploy method (Firebase, Vercel, gcloud, etc.) with pre/post checks.                                       |
-| `/build`          | **Full pipeline** | Chains specify → plan → analyze → work → review → final-polish. Tracks state via `.pipeline-state` for reliable resume. |
 | `/finish`         | **Ship & close**  | Chains commit → deploy → archive. The final step after testing.                                                         |
 | `/status`         | Change awareness  | Shows artifact state, task progress, and suggested next action for active changes.                                      |
 | `/coach`          | Learning mode     | Teaches the toolkit while you work. Toggle with `/coach on/off`.                                                        |
@@ -60,7 +59,7 @@ One-page cheat sheet for common commands and agent flows.
 ## ⚙️ MCP Settings
 
 Keep exactly **50 tools enabled** across 8 servers to cover all workflows without manual toggling.
-See [MCP_SETTINGS.md](./MCP_SETTINGS.md) for the full enable/disable list per server.
+See [MCP_GUIDE.md](./MCP_GUIDE.md) for the full enable/disable list per server.
 
 | Server              | Enabled |
 | ------------------- | :-----: |
@@ -83,7 +82,6 @@ See [MCP_SETTINGS.md](./MCP_SETTINGS.md) for the full enable/disable list per se
 - **Spec First**: Use `/specify` before `/plan`. Clear requirements = better code.
 - **Analyze Before Building**: Run `/analyze` after `/plan` to catch spec → plan → tasks misalignment before any code is written.
 - **Measure Twice**: Use `Project Planner` for complex changes.
-- **Use `/build`**: The fastest path from idea to reviewed code. One command does it all.
 - **Use `/finish`**: After testing, one command to commit, deploy, and archive.
 - **Use `/work`**: After planning and `/analyze`, let `/work` drive execution through the pipeline automatically.
 - **Global linking**: Run `./scripts/make-global.ps1` to use these commands in any project.

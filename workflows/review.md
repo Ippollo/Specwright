@@ -62,6 +62,16 @@ recommends_mcp: [context7, firebase, gcloud, playwright, sequential-thinking]
    - **Fix** any issues found. Report what was changed.
 
 6. **Consolidated Verdict**: Combine findings from all four reviews into a single summary.
+
+   **Label every finding with severity:**
+   | Prefix | Meaning | Author Action |
+   |---|---|---|
+   | **Critical:** | Blocks merge — security vulnerability, data loss, broken functionality | Must fix |
+   | _(no prefix)_ | Required change — bugs, incorrect behavior | Must address |
+   | **Nit:** | Minor, optional — formatting, style preference | May ignore |
+   | **FYI:** | Informational — context for future work | No action needed |
+
+   **Verdict:**
    - ✅ **Looks Good** — All reviews pass, no changes needed. Ready for `/commit`.
    - 🔧 **Fixed** — Issues found and resolved. Summary of what was changed.
    - ⚠️ **Needs User Input** — Issues found that require a decision from the user.
