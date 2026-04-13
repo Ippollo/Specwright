@@ -23,7 +23,7 @@ Every feature starts with a **specification**, gets a **plan**, is built by **sp
 
 - 🎯 **Spec-first workflow** — Define _what_ and _why_ before writing any code
 - 🧠 **7 specialist agents** — Backend Architect, Frontend Specialist, Debugger, QA Engineer, Security Engineer, Code Custodian, and Project Planner
-- ⚡ **27 slash commands** — From `/brainstorm` to `/archive`, every phase has a workflow
+- ⚡ **29 slash commands** — From `/brainstorm` to `/weekly`, every phase has a workflow
 - 🔒 **Quality gates** — Human approval at spec and plan stages; automated review after
 - 📋 **Full traceability** — Requirements → tasks → code → tests → versioned spec snapshots
 - 📚 **17+ skills** — Deep knowledge in API design, testing, security, performance, and more

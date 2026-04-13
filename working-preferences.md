@@ -76,3 +76,11 @@ KIs are snapshots — they go stale. Apply these conventions when reading or cre
   - **Low** — old references, deprecated APIs, or pre-migration context
 - **Scope awareness**: KIs should serve specific toolkit boundaries. When creating or updating KIs, consider whether the knowledge applies to one toolkit (specwright, board, cortex, content-creator) or is cross-cutting (HQ root). Cross-toolkit KIs should be kept minimal — most knowledge is toolkit-scoped.
 - **Staleness signals**: Flag a KI as potentially stale if it references deprecated projects (Job Hunter, TRACEy app), pre-restructure vault paths, or npm packages that were replaced by native tools.
+
+### Public Repo Hygiene
+When creating or modifying files in public repos (specwright, cortex, content-creator, board), apply these rules:
+
+- **No hardcoded personal paths.** Never reference `c:\HQ\...`, `vault=KB`, or Chris-specific file paths in workflow steps. Use generic terms ("focus file," "project folder," "your vault") and add a **Prerequisites** section explaining what the user needs to set up.
+- **No personal content.** Editorial calendars, job search data, specific project names — none of this belongs in public repos. Reference by pattern ("a content calendar file") not by name.
+- **Update all references.** When adding or removing a workflow, check: README, CATALOG.md, template "Used By" fields, architecture trees, and workflow/skill counts. Stale references in public docs erode trust.
+- **Review before commit.** After writing to a public repo, re-read the changed files from the perspective of someone who just cloned it. Would they understand what to do?

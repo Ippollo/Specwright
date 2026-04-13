@@ -71,6 +71,8 @@ Skills and workflows related to agent processes, governance, and library managem
 - [/status](./workflows/status.md): Show the state of an active change — artifacts, task progress, and suggested next action.
 - [/stats](./workflows/stats.md): Analyze toolkit usage telemetry — workflow frequency, project distribution, dead workflow detection, and usage patterns.
 - [/finish](./workflows/finish.md): Ship and close — chains commit → deploy → archive in one command.
+- [/weekly](./workflows/weekly.md): Weekly planning — retro last week, pull and rank tasks, cap at 5 commitments, write to focus file.
+- [/daily](./workflows/daily.md): Daily briefing — surface today's tasks from weekly plan, grouped by energy level. Read-only, no note creation.
 - [documentation-standards](./skills/documentation-standards/SKILL.md): Comprehensive documentation protocols with templates for SPEC, CONSTITUTION, ADR, and quality checklists.
 - [prompt-engineering](./skills/prompt-engineering/SKILL.md): Foundational protocols for advanced reasoning, self-correction, and ensuring high-quality LLM outputs. Includes instruction architecture guidance for deciding when to use system prompts vs skills vs runtime context.
 - [second-opinion](./skills/second-opinion/SKILL.md): Expert review protocol for stress-testing plans and decisions.
