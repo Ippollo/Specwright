@@ -1,23 +1,24 @@
 ---
-description: Run daily work session briefing and surface tasks.
-quick_summary: "Read weekly commitments from your focus file, surface energy-appropriate tasks, present a daily briefing."
+description: Run daily work session briefing and refresh Next Actions in now.md.
+quick_summary: "Scan pipeline, projects, and weekly commitments. Refresh the Next Actions section in now.md. Present an energy-grouped briefing."
 requires_mcp: []
 recommends_mcp: []
 ---
 
 # /daily - Daily Briefing Workflow
 
-**Goal**: Prepare for the daily work session by surfacing the right tasks at the right energy level, bridging the weekly plan to today's execution.
+**Goal**: Refresh the **Next Actions** section in `now.md` and present a daily briefing, bridging the weekly plan to today's execution.
 
 > **Inspiration**: Cal Newport's [Multiscale Planning](https://calnewport.com/deep-work/) — the daily scale is where strategy becomes action.
 
 ## Prerequisites
 
-This workflow reads from artifacts created by `/weekly`:
+This workflow reads from multiple sources to build a unified action list:
 
-- **A focus file** (e.g., `now.md`) with a **This Week** table containing up to 5 weekly commitments
-- **A project/tasks folder** (e.g., `10_Projects/`) with action notes containing frontmatter (`status`, `priority`, `energy`, `due`)
-- **(Optional)** A content calendar or recurring task file for routine items
+- **Focus file**: `c:\HQ\now.md` — weekly commitments and the Next Actions section to refresh
+- **Projects folder**: `c:\HQ\KB\10_Projects\` — action notes with frontmatter (`status`, `priority`, `energy`, `due`)
+- **Income pipeline**: `c:\HQ\board\pipeline.md` — active job opportunities and their next actions
+- **(Optional)** Content calendar or recurring task files for routine items
 
 ## When to Use
 
@@ -28,39 +29,63 @@ This workflow reads from artifacts created by `/weekly`:
 
 // turbo-all
 
-1. **Read Weekly Plan**:
-   - Parse the focus file (`now.md` or equivalent) for the "This Week" table.
-   - Note the current commitments and their status.
+1. **Read Current State**:
+   - Parse `now.md` for the existing **Next Actions** section and the **This Week** table.
+   - Note which items are already checked off (`[x]`) — these move to **Done Today** or get cleared if from a previous day.
 
-2. **Scan Tasks for Today**:
-   - Cross-reference "This Week" items with action notes in the project folder.
-   - Also look for any notes with `due: {today}` or overdue dates, and notes with `status: in-progress`.
+2. **Scan All Sources**:
+   - **Pipeline** (`pipeline.md`): Extract concrete next actions from active opportunities (interviews, submissions, follow-ups with dates).
+   - **Projects** (`10_Projects/`): Read frontmatter from all action notes. Surface items where `status: in-progress` or `status: waiting` with a `due` date approaching.
+   - **Weekly commitments** (`now.md` This Week table): Surface any in-progress items not yet captured in Next Actions.
+   - **(Optional)** Content calendar: Check for today's scheduled content actions.
 
-3. **Check Recurring Items** (optional):
-   - If a content calendar or recurring task file exists, scan for today's scheduled items.
+3. **Refresh Next Actions in `now.md`**:
+   - **Clear yesterday's Done section** — remove `[x]` items from previous days.
+   - **Keep today's `[x]` items** in a `✅ Done Today` subsection.
+   - **Add new items** discovered from pipeline, projects, or weekly commitments that aren't already listed.
+   - **Remove stale items** — if a pipeline opportunity was closed or a project completed, remove it.
+   - **Preserve manually-added items** — if the user added something by hand, don't remove it unless it's clearly done.
+   - **Group by energy**:
+     - 🔴 **Deep Work** (`energy: high`): Interviews, writing, coding, system design, networking outreach.
+     - 🟢 **Light Work** (`energy: medium` or `energy: low`): Admin, scheduling, reviews, follow-ups.
+   - **Include dates** — every item should have a date or frequency (today, daily, by [date], [specific date]).
 
-4. **Filter and Group by Energy**:
-   - Extract the `energy` frontmatter from the identified tasks.
-   - Group the items into:
-     - 🔴 **Deep Work** (`energy: high`): Writing, coding, system design, intense focus.
-     - 🟢 **Light Work** (`energy: medium` or `energy: low`): Admin, emails, follow-ups, reviews.
-
-5. **Present the Briefing**:
-   - Output a concise daily plan to the terminal. Do NOT create or modify any notes.
+4. **Present the Briefing**:
+   - After updating `now.md`, output a concise summary to the conversation:
 
    ```markdown
    📋 Daily Briefing — [Date]
 
    🔴 Deep Work
-   - [ ] [Task Title] (priority, due)
-   - [ ] [Task Title] (priority)
+   - [ ] [Task] (by [date])
+   - [ ] [Task] (daily)
 
    🟢 Light Work
-   - [ ] [Routine/Recurring item]
-   - [ ] [Task Title] (overdue)
+   - [ ] [Task] (today)
+   - [ ] [Task] (by [date])
 
-   📌 This Week's Commitments: X/5 in progress, Y completed
+   📌 This Week: X/Y commitments complete
+   📊 Pipeline: X interviewing, Y applied, Z awaiting response
    ```
+
+## Next Actions Format
+
+The Next Actions section in `now.md` follows this structure:
+
+```markdown
+## Next Actions
+
+<!-- Concrete, do-able tasks. Maintained by /daily. Add items anytime; /daily refreshes from pipeline, projects, and weekly commitments. -->
+
+### 🔴 Deep Work
+- [ ] Verb-first task description (by [date] or [frequency])
+
+### 🟢 Light Work
+- [ ] Verb-first task description (by [date] or [frequency])
+
+### ✅ Done Today
+- [x] Completed item
+```
 
 ## Usage
 
@@ -70,6 +95,8 @@ This workflow reads from artifacts created by `/weekly`:
 
 ## Key Principles
 
-- **No New Notes**: This workflow does not create a daily journal note. It is a read-only briefing tool designed to reduce friction and get you straight into execution.
-- **Energy Mapping**: Do high-energy work when you have the capacity. Save light work for the slumps.
-- **Connection to Cascade**: Today's work should directly reflect the weekly commitments from your focus file.
+- **Persistent, not ephemeral**: The Next Actions section in `now.md` is the lasting artifact. The briefing output is just a summary of what changed.
+- **Single source of truth**: If it's not in Next Actions, it's not on today's radar. All sources funnel into one list.
+- **Energy mapping**: Tag items so the user can scan for what fits their current energy level.
+- **Low maintenance**: The user can add items to Next Actions anytime (just ask). `/daily` handles the refresh, cleanup, and discovery of new items from pipeline/projects.
+- **Connection to cascade**: Today's work should directly reflect the weekly commitments from the focus file.
