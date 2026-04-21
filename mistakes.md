@@ -23,3 +23,7 @@ Agent errors to avoid repeating. Each entry describes what went wrong and what t
 **Why it was wrong**: Assumed model IDs were used consistently throughout the stack. This led to repeated re-investigation of the same architecture across conversations.
 **Do instead**: When modifying `MODEL_CATALOG` entries in `ModelCatalog.ts`, always add old display names to the `legacyMap` in `getModelDisplayName()`. Check `token_history.jsonl` for persisted names that need migration. Refer to the Altimeter KI for the full resolution pipeline.
 
+### 2026-04-20 — Correct date in context, wrong date written to files
+**What happened**: Metadata clearly showed `2026-04-20T07:07:36-06:00` (Monday, April 20). User also stated it explicitly. Despite having the correct date, wrote "Week of 2026-04-21" and "Apr 21" in the planning artifact and now.md — an off-by-one transcription error.
+**Why it was wrong**: Different from the 2026-04-13 entry (guessing day of week). The date was known but not used faithfully when writing. The error went undetected until the user called it out.
+**Do instead**: After reading the correct date from metadata, treat it as a fixed reference. Before committing any file writes involving dates, do a final check: "Does every date in these outputs match the source timestamp?" Do not round, shift, or approximate dates under any circumstances.

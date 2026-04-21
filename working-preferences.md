@@ -57,6 +57,16 @@ FAQ sections go **last** in every article — after the closing/conclusion secti
 
 <!-- Job search patterns and vocabulary conventions -->
 
+### Weekly Time-Blocking Rhythm
+The three consistent weekly commitments are job prospecting, MSP outreach, and content creation. Default rhythm:
+- **Job prospecting + MSP outreach**: daily habits (not batched)
+- **Content creation**: one dedicated day per week
+
+When /weekly or /daily schedules these, respect this rhythm — don't mix content creation into the same day as heavy outreach if avoidable.
+
+### Planning Artifacts
+When running /weekly, /daily, or any planning workflow, **always create a planning artifact**. This makes it easier to review and iterate on the plan before writing back to now.md.
+
 ## Toolkit
 
 ### Prior Art Check
