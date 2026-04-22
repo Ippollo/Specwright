@@ -64,6 +64,17 @@ The three consistent weekly commitments are job prospecting, MSP outreach, and c
 
 When /weekly or /daily schedules these, respect this rhythm — don't mix content creation into the same day as heavy outreach if avoidable.
 
+### Resume ATS Calibration (Jobscan findings, April 2026)
+Jobscan testing showed a **28-point gap** between our internal conceptual scoring (85) and ATS keyword match (57%) for Tailscale. Root causes:
+- We optimize for conceptual fit; ATS optimizes for keyword frequency.
+- We over-index on our strengths ("automation" 9×, JD uses it 3×).
+- We under-index on their terms ("Customer Success" 1× in resume, 6× in JD).
+- We paraphrase instead of mirroring exact JD phrasing.
+
+**Banned words** (flagged as clichés by ATS): `results-oriented`, `proactive/proactively`, `dynamic`, `passionate`, `detail-oriented`, `self-starter`. Replace with concrete action verbs + outcomes.
+
+Full rules live in the Career Strategist agent (`career-strategist.md`) under "ATS Keyword Mirroring" and "Banned Words."
+
 ### Planning Artifacts
 When running /weekly, /daily, or any planning workflow, **always create a planning artifact**. This makes it easier to review and iterate on the plan before writing back to now.md.
 

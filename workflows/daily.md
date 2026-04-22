@@ -68,6 +68,12 @@ This workflow reads from multiple sources to build a unified action list:
    📊 Pipeline: X interviewing, Y applied, Z awaiting response
    ```
 
+5. **Run `/comment`**:
+   - After the briefing, automatically execute the `/comment` workflow.
+   - This surfaces today's LinkedIn first-comment (if a post is scheduled for today) so it's ready to paste immediately when the post goes live.
+   - If no post is scheduled today, display: "No post scheduled for today — no first-comment needed."
+   - Append the `/comment` output to the briefing, separated by a divider.
+
 ## Next Actions Format
 
 The Next Actions section in `now.md` follows this structure:
