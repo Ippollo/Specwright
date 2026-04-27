@@ -69,7 +69,7 @@ Jobscan testing showed a **28-point gap** between conceptual scoring and ATS key
 
 All actionable rules (keyword extraction, character sanitization, audit scorecard) live in the `ats-optimization` skill in the board toolkit (`.agents/skills/ats-optimization/`). Banned words and positioning rules live in `resume-positioning` and `career-strategist.md`.
 
-**Key principle**: ATS matching is LITERAL. Use the JD's exact terms, including plural/singular forms. The `md-to-docx.js` script sanitizes characters automatically, but markdown source should be clean.
+**Key principle**: ATS matching is LITERAL. Use the JD's exact terms, including plural/singular forms. Character sanitization is handled by the `ats-optimization` skill (Phase 2), but markdown source should be clean.
 
 ### Planning Artifacts
 When running /weekly, /daily, or any planning workflow, **always create a planning artifact**. This makes it easier to review and iterate on the plan before writing back to now.md.
