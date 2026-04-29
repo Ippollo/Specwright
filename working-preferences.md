@@ -64,6 +64,23 @@ The three consistent weekly commitments are job prospecting, MSP outreach, and c
 
 When /weekly or /daily schedules these, respect this rhythm — don't mix content creation into the same day as heavy outreach if avoidable.
 
+### Job Triage vs. Application (Decision Gate Distinction)
+Triage (`/analyze-job` in batch) and application are **separate phases**. Do not conflate them.
+
+**Triage phase** (what `/analyze-job` does in batch mode):
+1. Analyze the JD against the profile → produce `analysis.md` + `jd.md`
+2. Frontmatter status is always `analyzed` at this point
+3. Ask "Will you apply?" → this is a **triage decision**, not a submission
+4. If **yes**: status stays `analyzed`, add to **Resume Ready** in pipeline. Next action = "Resume creation — new conversation"
+5. If **no**: set status to `not_pursued`, add to **Recently Closed** in pipeline
+
+**Application phase** (happens later, in a separate conversation):
+1. Generate resume via `/generate-resume`
+2. User submits the application externally
+3. **Only then**: set status to `applied`, move to **Applied** in pipeline
+
+Key rule: during triage, **nothing goes directly to Applied**. The furthest a "yes" can go is Resume Ready with status `analyzed`.
+
 ### ATS Optimization (Jobscan calibration, April 2026)
 Jobscan testing showed a **28-point gap** between conceptual scoring and ATS keyword match. Root causes: keyword frequency mismatch, paraphrasing instead of mirroring, over-indexing on our vocabulary, and missing soft skill terms.
 
