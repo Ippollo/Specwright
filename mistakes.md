@@ -13,6 +13,11 @@ Agent errors to avoid repeating. Each entry describes what went wrong and what t
 **Do instead**: [correct approach]
 -->
 
+### 2026-05-12 — Day-of-week error repeated for the third time
+**What happened**: `/daily` was run on Tuesday May 12, 2026. The metadata timestamp was `2026-05-12T06:02:08-06:00`. `now.md` said "Week of 2026-05-11" — which anchors Monday = May 11, making today = Tuesday May 12. Despite both signals being present, the briefing header read "Monday, May 12" and the wrong first-comment (Monday's post) was surfaced first. User had to correct it.
+**Why it was wrong**: Third occurrence of the same error. The rule exists in this file. Reading the rule was not enough — it was overridden by pattern-matching the date to the "Week of" line without computing offset.
+**Do instead**: MANDATORY PRE-FLIGHT before any /daily or date-sensitive workflow — compute day explicitly: (1) Read date from metadata timestamp. (2) Read "Week of YYYY-MM-DD" from now.md — that date is always a Monday. (3) Subtract: if today's date = Monday+1, it's Tuesday. Write this out before proceeding. Do not skip this step. Do not assume.
+
 ### 2026-04-13 — Guessing day of week instead of computing it
 **What happened**: In a `/consult` board response, repeatedly referred to Monday as "Sunday." The exact timestamp was available in metadata (`2026-04-13T10:31:59-06:00`) but the day of the week was inferred by gut feel rather than calculated. This is a recurring error — not the first time.
 **Why it was wrong**: Built an entire daily scheduling recommendation on the wrong day. "Light work today, deep work Monday" was backwards because today WAS Monday. Undermines trust in time-sensitive advice.

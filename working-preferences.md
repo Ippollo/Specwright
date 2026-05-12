@@ -88,6 +88,13 @@ All actionable rules (keyword extraction, character sanitization, audit scorecar
 
 **Key principle**: ATS matching is LITERAL. Use the JD's exact terms, including plural/singular forms. Character sanitization is handled by the `ats-optimization` skill (Phase 2), but markdown source should be clean.
 
+### Application Follow-Up Policy
+Active follow-ups on ATS applications have near-zero ROI. Instead:
+
+1. **4-week auto-close.** After applying, set a "auto-close [date]" next action in pipeline (application date + 28 days). If no response by that date, move to Recently Closed as "silent rejection." No active chasing.
+2. **LinkedIn connection request (optional).** If the job posting lists a hiring manager by name, send a connection request. Nothing beyond that — no messages, no content engagement campaigns.
+3. **Exceptions.** Direct recruiter relationships (e.g., Robert Half) or warm intros (e.g., F12/Aaron Glowski) get active follow-up because there's a real person in the loop. ATS-only applications do not.
+
 ### Planning Artifacts
 When running /weekly, /daily, or any planning workflow, **always create a planning artifact**. This makes it easier to review and iterate on the plan before writing back to now.md.
 
