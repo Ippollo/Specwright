@@ -5,8 +5,20 @@
 #
 # Run this script after making changes to the toolkit to sync updates.
 
-$antigravityDir = Join-Path $env:USERPROFILE ".gemini\antigravity"
 $toolkitRoot = Resolve-Path "$PSScriptRoot\.."
+
+# Identify active Antigravity global directories
+$targetDirs = @()
+$antigravityDir = Join-Path $env:USERPROFILE ".gemini\antigravity"
+$antigravityIdeDir = Join-Path $env:USERPROFILE ".gemini\antigravity-ide"
+
+if (Test-Path $antigravityDir) { $targetDirs += $antigravityDir }
+if (Test-Path $antigravityIdeDir) { $targetDirs += $antigravityIdeDir }
+
+if ($targetDirs.Count -eq 0) {
+    Write-Error "No active Antigravity global directory found at $antigravityDir or $antigravityIdeDir"
+    exit 1
+}
 
 # Mapping: local source directory → global target directory name
 # global_workflows keeps its existing name for Antigravity compatibility.
@@ -19,6 +31,32 @@ $dirMappings = @(
     @{ Source = "templates";  Target = "templates" }
 )
 
+function Safe-RemoveItem {
+    param (
+        [string]$Path
+    )
+    if (Test-Path $Path) {
+        $item = Get-Item $Path -Force
+        # Check if it's a symbolic link or junction (ReparsePoint)
+        if ($item.Attributes.HasFlag([System.IO.FileAttributes]::ReparsePoint)) {
+            if ($item.PSIsContainer) {
+                # It's a directory symlink or junction
+                [System.IO.Directory]::Delete($Path)
+            } else {
+                # It's a file symlink
+                [System.IO.File]::Delete($Path)
+            }
+        } else {
+            # It's a normal file or directory
+            if ($item.PSIsContainer) {
+                Remove-Item $Path -Force -Recurse
+            } else {
+                Remove-Item $Path -Force
+            }
+        }
+    }
+}
+
 function Sync-ItemToGlobal {
     param (
         [string]$SourcePath,
@@ -26,17 +64,11 @@ function Sync-ItemToGlobal {
         [bool]$IsDirectory = $false
     )
 
-    # Remove existing to update
-    if (Test-Path $TargetPath) {
-        Remove-Item $TargetPath -Force -Recurse
-    }
+    # Remove existing to update using safe .NET-based deletion
+    Safe-RemoveItem $TargetPath
 
     try {
-        if ($IsDirectory) {
-            New-Item -ItemType SymbolicLink -Path $TargetPath -Target $SourcePath -Force -ErrorAction Stop | Out-Null
-        } else {
-            New-Item -ItemType SymbolicLink -Path $TargetPath -Target $SourcePath -Force -ErrorAction Stop | Out-Null
-        }
+        New-Item -ItemType SymbolicLink -Path $TargetPath -Target $SourcePath -Force -ErrorAction Stop | Out-Null
         return "linked"
     }
     catch {
@@ -50,59 +82,71 @@ function Sync-ItemToGlobal {
 }
 
 Write-Host ""
-Write-Host "Syncing specwright to global Antigravity directory..." -ForegroundColor Cyan
+Write-Host "Syncing specwright to global Antigravity directories..." -ForegroundColor Cyan
 Write-Host "  Source:  $toolkitRoot" -ForegroundColor Gray
-Write-Host "  Target:  $antigravityDir" -ForegroundColor Gray
+foreach ($targetDir in $targetDirs) {
+    Write-Host "  Target:  $targetDir" -ForegroundColor Gray
+}
 Write-Host ""
 
-foreach ($mapping in $dirMappings) {
-    $sourceDir = Join-Path $toolkitRoot $mapping.Source
-    $targetDir = Join-Path $antigravityDir $mapping.Target
+foreach ($targetDir in $targetDirs) {
+    Write-Host "Syncing to target: $targetDir..." -ForegroundColor Cyan
+    
+    foreach ($mapping in $dirMappings) {
+        $sourceDir = Join-Path $toolkitRoot $mapping.Source
+        $targetSubDir = Join-Path $targetDir $mapping.Target
 
-    if (-not (Test-Path $sourceDir)) {
-        Write-Host "  [SKIP] $($mapping.Source)/ not found" -ForegroundColor Yellow
-        continue
-    }
-
-    # Ensure target directory exists
-    if (-not (Test-Path $targetDir)) {
-        New-Item -ItemType Directory -Path $targetDir -Force | Out-Null
-    }
-
-    $sourceName = $mapping.Source
-    $targetName = $mapping.Target
-
-    if ($sourceName -eq "skills") {
-        # Skills are directories — link/copy each skill folder
-        $skillDirs = Get-ChildItem -Path $sourceDir -Directory
-        $count = 0
-        foreach ($skill in $skillDirs) {
-            $target = Join-Path $targetDir $skill.Name
-            $result = Sync-ItemToGlobal -SourcePath $skill.FullName -TargetPath $target -IsDirectory $true
-            $count++
+        if (-not (Test-Path $sourceDir)) {
+            Write-Host "  [SKIP] $($mapping.Source)/ not found" -ForegroundColor Yellow
+            continue
         }
-        Write-Host "  [OK] $targetName/  ($count skill folders $result)" -ForegroundColor Green
 
-    } elseif ($sourceName -eq "templates") {
-        # Templates have subdirectories — link/copy the whole tree
-        # Remove and re-sync the entire directory
-        if (Test-Path $targetDir) {
-            Remove-Item $targetDir -Force -Recurse
+        # Ensure target directory exists and is a real directory (not a symlink/junction)
+        if (Test-Path $targetSubDir) {
+            $item = Get-Item $targetSubDir -Force
+            if ($item.Attributes.HasFlag([System.IO.FileAttributes]::ReparsePoint)) {
+                Safe-RemoveItem $targetSubDir
+                New-Item -ItemType Directory -Path $targetSubDir -Force | Out-Null
+            }
+        } else {
+            New-Item -ItemType Directory -Path $targetSubDir -Force | Out-Null
         }
-        $result = Sync-ItemToGlobal -SourcePath $sourceDir -TargetPath $targetDir -IsDirectory $true
-        $templateCount = (Get-ChildItem -Path $sourceDir -Recurse -File).Count
-        Write-Host "  [OK] $targetName/  ($templateCount files $result)" -ForegroundColor Green
 
-    } else {
-        # Flat directories (workflows, agents, docs) — link/copy individual .md files
-        $files = Get-ChildItem -Path $sourceDir -Filter "*.md"
-        $count = 0
-        foreach ($file in $files) {
-            $target = Join-Path $targetDir $file.Name
-            $result = Sync-ItemToGlobal -SourcePath $file.FullName -TargetPath $target
-            $count++
+        $sourceName = $mapping.Source
+        $targetName = $mapping.Target
+
+        if ($sourceName -eq "skills") {
+            # Skills are directories — link/copy each skill folder
+            $skillDirs = Get-ChildItem -Path $sourceDir -Directory
+            $count = 0
+            $result = "none"
+            foreach ($skill in $skillDirs) {
+                $target = Join-Path $targetSubDir $skill.Name
+                $result = Sync-ItemToGlobal -SourcePath $skill.FullName -TargetPath $target -IsDirectory $true
+                $count++
+            }
+            Write-Host "  [OK] $targetName/  ($count skill folders $result)" -ForegroundColor Green
+
+        } elseif ($sourceName -eq "templates") {
+            # Templates have subdirectories — link/copy the whole tree
+            # Remove and re-sync the entire directory using Safe-RemoveItem
+            Safe-RemoveItem $targetSubDir
+            $result = Sync-ItemToGlobal -SourcePath $sourceDir -TargetPath $targetSubDir -IsDirectory $true
+            $templateCount = (Get-ChildItem -Path $sourceDir -Recurse -File).Count
+            Write-Host "  [OK] $targetName/  ($templateCount files $result)" -ForegroundColor Green
+
+        } else {
+            # Flat directories (workflows, agents, docs) — link/copy individual .md files
+            $files = Get-ChildItem -Path $sourceDir -Filter "*.md"
+            $count = 0
+            $result = "none"
+            foreach ($file in $files) {
+                $target = Join-Path $targetSubDir $file.Name
+                $result = Sync-ItemToGlobal -SourcePath $file.FullName -TargetPath $target
+                $count++
+            }
+            Write-Host "  [OK] $targetName/  ($count files $result)" -ForegroundColor Green
         }
-        Write-Host "  [OK] $targetName/  ($count files $result)" -ForegroundColor Green
     }
 }
 

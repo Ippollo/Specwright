@@ -28,6 +28,16 @@ Agent errors to avoid repeating. Each entry describes what went wrong and what t
 **Why it was wrong**: Assumed model IDs were used consistently throughout the stack. This led to repeated re-investigation of the same architecture across conversations.
 **Do instead**: When modifying `MODEL_CATALOG` entries in `ModelCatalog.ts`, always add old display names to the `legacyMap` in `getModelDisplayName()`. Check `token_history.jsonl` for persisted names that need migration. Refer to the Altimeter KI for the full resolution pipeline.
 
+### 2026-05-15 — Scheduled multiple atoms from the same long-form piece in one week
+**What happened**: Scheduled both `cancellation-notice` and `14-hires-avoided` in the same week (May 18). Both are atoms from the same Support Ops case study.
+**Why it was wrong**: The rule is 1 atom per long-form piece per week. Stacking two atoms from the same source in the same week dilutes distribution value and can feel repetitive to the audience.
+**Do instead**: When assigning atoms to a week, check that no two posts share the same `source` field. Space atoms from the same case study or article at least one week apart. If a second atom is needed to fill a pillar gap, use a post from a different source instead.
+
+### 2026-05-15 — Self-assigned "approved" status to content
+**What happened**: After scheduling posts in the editorial calendar, the agent wrote `approved — ready to schedule` and `approved — needs Codie screenshot` in the status column. The user had not reviewed or approved any of these posts.
+**Why it was wrong**: Approval is the user's decision, not the agent's. Writing "approved" without user confirmation misrepresents the state of the content and erodes trust in the calendar as a source of truth.
+**Do instead**: Status values for unreviewed content are always `draft`. Only the user may change a status to `approved` or `scheduled`. Never assume approval or write it on the user's behalf.
+
 ### 2026-04-20 — Correct date in context, wrong date written to files
 **What happened**: Metadata clearly showed `2026-04-20T07:07:36-06:00` (Monday, April 20). User also stated it explicitly. Despite having the correct date, wrote "Week of 2026-04-21" and "Apr 21" in the planning artifact and now.md — an off-by-one transcription error.
 **Why it was wrong**: Different from the 2026-04-13 entry (guessing day of week). The date was known but not used faithfully when writing. The error went undetected until the user called it out.
