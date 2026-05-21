@@ -13,6 +13,11 @@ Agent errors to avoid repeating. Each entry describes what went wrong and what t
 **Do instead**: [correct approach]
 -->
 
+### 2026-05-21 — Duplicated resume content in chat response
+**What happened**: After writing `resume.md` to the board output folder, the full resume content was also pasted into the chat response. The file and the chat message contained identical content.
+**Why it was wrong**: Wastes output tokens and context window. The file IS the output — the chat message is for status, decisions, and questions only.
+**Do instead**: When the deliverable is a file (resume, plan, spec, etc.), write the file and report in chat with: (1) a link to the file, (2) the verification table or key decisions made, (3) any open questions. Never paste the full file content into chat.
+
 ### 2026-05-12 — Day-of-week error repeated for the third time
 **What happened**: `/daily` was run on Tuesday May 12, 2026. The metadata timestamp was `2026-05-12T06:02:08-06:00`. `now.md` said "Week of 2026-05-11" — which anchors Monday = May 11, making today = Tuesday May 12. Despite both signals being present, the briefing header read "Monday, May 12" and the wrong first-comment (Monday's post) was surfaced first. User had to correct it.
 **Why it was wrong**: Third occurrence of the same error. The rule exists in this file. Reading the rule was not enough — it was overridden by pattern-matching the date to the "Week of" line without computing offset.
