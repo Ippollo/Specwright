@@ -13,7 +13,13 @@ Agent errors to avoid repeating. Each entry describes what went wrong and what t
 **Do instead**: [correct approach]
 -->
 
+### 2026-05-26 — Telemetry scanner silently scanned wrong directory (twice)
+**What happened**: The `scan-skill-usage.ps1` script had `antigravity\brain` hardcoded as its default `BrainDir`. The actual path is `antigravity-ide\brain`. Every re-run attempt produced no data without errors — the script ran successfully against a non-existent directory. This happened at least twice without root cause being identified.
+**Why it was wrong**: A silent success (script exits 0, writes empty output) with a wrong path is nearly invisible. The brain dir has since moved from `antigravity` to `antigravity-ide` and the script was never updated.
+**Do instead**: When a script produces empty results unexpectedly, verify the input paths exist before assuming the data is genuinely empty. Run `Test-Path` on all directory params first. The corrected defaults are now in the script.
+
 ### 2026-05-21 — Duplicated resume content in chat response
+
 **What happened**: After writing `resume.md` to the board output folder, the full resume content was also pasted into the chat response. The file and the chat message contained identical content.
 **Why it was wrong**: Wastes output tokens and context window. The file IS the output — the chat message is for status, decisions, and questions only.
 **Do instead**: When the deliverable is a file (resume, plan, spec, etc.), write the file and report in chat with: (1) a link to the file, (2) the verification table or key decisions made, (3) any open questions. Never paste the full file content into chat.

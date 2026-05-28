@@ -27,7 +27,7 @@
 #>
 
 param(
-    [string]$BrainDir = (Join-Path $env:USERPROFILE ".gemini\antigravity\brain"),
+    [string]$BrainDir = (Join-Path $env:USERPROFILE ".gemini\antigravity-ide\brain"),
     [string]$OutputDir = $PSScriptRoot,
     [string[]]$SkillDirs = @()
 )
@@ -127,7 +127,7 @@ $jsonLines | Set-Content $usageJsonl -Encoding UTF8
 $knownSkills = @{}
 
 # Auto-discover: global skills directory
-$globalDir = Join-Path $env:USERPROFILE ".gemini\antigravity\skills"
+$globalDir = Join-Path $env:USERPROFILE ".gemini\antigravity-ide\skills"
 if (Test-Path $globalDir) {
     Get-ChildItem $globalDir -Directory | ForEach-Object {
         $knownSkills[$_.Name] = "global"
