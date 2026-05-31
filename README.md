@@ -23,10 +23,10 @@ Every feature starts with a **specification**, gets a **plan**, is built by **sp
 
 - 🎯 **Spec-first workflow** — Define _what_ and _why_ before writing any code
 - 🧠 **7 specialist agents** — Backend Architect, Frontend Specialist, Debugger, QA Engineer, Security Engineer, Code Custodian, and Project Planner
-- ⚡ **29 slash commands** — From `/brainstorm` to `/weekly`, every phase has a workflow
+- ⚡ **32 slash commands** — From `/brainstorm` to `/weekly`, every phase has a workflow
 - 🔒 **Quality gates** — Human approval at spec and plan stages; automated review after
 - 📋 **Full traceability** — Requirements → tasks → code → tests → versioned spec snapshots
-- 📚 **17+ skills** — Deep knowledge in API design, testing, security, performance, and more
+- 📚 **22 skills** — Deep knowledge in API design, testing, security, performance, and more
 
 ## Quick Start
 
@@ -115,9 +115,9 @@ Turn it off anytime with `/coach off`.
 
 | Component                     | Count | Purpose                                                                               |
 | ----------------------------- | ----- | ------------------------------------------------------------------------------------- |
-| **[Workflows](./workflows/)** | 27    | Slash commands for every phase of development                                         |
+| **[Workflows](./workflows/)** | 32    | Slash commands for every phase of development                                         |
 | **[Agents](./agents/)**       | 7     | Specialist personas (planner, architect, designer, debugger, QA, security, custodian) |
-| **[Skills](./skills/)**       | 17+   | Deep knowledge bases (API patterns, testing, security, performance, Gemini API, etc.) |
+| **[Skills](./skills/)**       | 22    | Deep knowledge bases (API patterns, testing, security, performance, Gemini API, etc.) |
 | **[Templates](./templates/)** | 4     | Spec, task, proposal, and delta-spec templates                                        |
 
 See [CATALOG.md](./CATALOG.md) for the full index.
