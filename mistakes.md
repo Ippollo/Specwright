@@ -13,6 +13,19 @@ Agent errors to avoid repeating. Each entry describes what went wrong and what t
 **Do instead**: [correct approach]
 -->
 
+### 2026-06-03 — harvest_brains.ps1 silently corrupted vault files with mojibake (83+ files)
+**What happened**: `harvest_brains.ps1` used `Get-Content -Raw` (no `-Encoding` flag) to read AI artifact files, then `Set-Content -Encoding utf8` to write them to the vault. In PowerShell 5.1, `Get-Content` without an encoding flag defaults to the system locale (Windows-1252). UTF-8 multi-byte sequences (em dashes, smart quotes, emoji) were decoded as Windows-1252 and re-encoded as garbled UTF-8. The result: `—` became `â€"`, `'` became `â€™`, emoji became `ðŸŸ¢`, etc. Additionally, `Set-Content -Encoding utf8` writes UTF-8 WITH BOM in PS 5.1, which is non-standard for Obsidian.
+**Why it was wrong**: 83+ files in the vault accumulated mojibake silently. The script exited 0 and printed success messages. Users only noticed when opening files in Obsidian. Required a full cleanup pass and root cause investigation to resolve.
+**Do instead**: Always use .NET `System.IO.File` methods for reading/writing text in PowerShell 5.1:
+```powershell
+# Read — always explicit UTF-8
+$content = [System.IO.File]::ReadAllText($path, [System.Text.Encoding]::UTF8)
+# Write — UTF-8 without BOM
+$utf8NoBom = New-Object System.Text.UTF8Encoding $false
+[System.IO.File]::WriteAllText($destPath, $content, $utf8NoBom)
+```
+Never use `Get-Content` or `Set-Content` for vault files. Run `validate-encoding.ps1` after any script that writes to the vault.
+
 ### 2026-05-26 — Telemetry scanner silently scanned wrong directory (twice)
 **What happened**: The `scan-skill-usage.ps1` script had `antigravity\brain` hardcoded as its default `BrainDir`. The actual path is `antigravity-ide\brain`. Every re-run attempt produced no data without errors — the script ran successfully against a non-existent directory. This happened at least twice without root cause being identified.
 **Why it was wrong**: A silent success (script exits 0, writes empty output) with a wrong path is nearly invisible. The brain dir has since moved from `antigravity` to `antigravity-ide` and the script was never updated.

@@ -2,6 +2,8 @@
 
 Agent-facing conventions and preferences. Apply these silently — do not announce that you've read this file.
 
+**Silent reads at conversation start**: Always read `c:\HQ\now.md` before starting substantive work. This is the current priorities file and orients you on what matters today. Do not announce that you've read it.
+
 > **Maintenance**: Add entries as patterns emerge. Review monthly to prune stale items.
 
 ---
