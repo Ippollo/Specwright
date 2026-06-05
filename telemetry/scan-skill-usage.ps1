@@ -27,7 +27,10 @@
 #>
 
 param(
-    [string]$BrainDir = (Join-Path $env:USERPROFILE ".gemini\antigravity-ide\brain"),
+    [string[]]$BrainDir = @(
+        (Join-Path $env:USERPROFILE ".gemini\antigravity-ide\brain"),
+        (Join-Path $env:USERPROFILE ".gemini\antigravity\brain")
+    ),
     [string]$OutputDir = $PSScriptRoot,
     [string[]]$SkillDirs = @()
 )
@@ -43,14 +46,29 @@ $usageReport = Join-Path $OutputDir "usage-report.md"
 
 Write-Host "Skill Usage Telemetry Scanner"
 Write-Host "=============================="
-Write-Host "Brain directory: $BrainDir"
+Write-Host "Brain directories: $($BrainDir -join ', ')"
 Write-Host ""
 
 # --- Scan conversation logs ---
 
 $results = [System.Collections.ArrayList]::new()
 $seen = @{}  # dedup key tracking
-$conversations = Get-ChildItem $BrainDir -Directory -ErrorAction SilentlyContinue
+
+# Verify and collect all directories
+$validBrainDirs = @()
+foreach ($dir in $BrainDir) {
+    if (Test-Path $dir) {
+        $validBrainDirs += $dir
+    }
+}
+
+if ($validBrainDirs.Count -eq 0) {
+    Write-Host "Warning: No valid brain directories found!"
+    $conversations = @()
+} else {
+    $conversations = Get-ChildItem -Path $validBrainDirs -Directory -ErrorAction SilentlyContinue
+}
+
 $total = $conversations.Count
 $current = 0
 $skipped = 0
@@ -58,9 +76,12 @@ $skipped = 0
 foreach ($conv in $conversations) {
     $current++
     $convId = $conv.Name
-    $overview = Join-Path $conv.FullName ".system_generated\logs\overview.txt"
+    $logFile = Join-Path $conv.FullName ".system_generated\logs\overview.txt"
+    if (-not (Test-Path $logFile)) {
+        $logFile = Join-Path $conv.FullName ".system_generated\logs\transcript.jsonl"
+    }
 
-    if (-not (Test-Path $overview)) {
+    if (-not (Test-Path $logFile)) {
         $skipped++
         continue
     }
@@ -68,7 +89,7 @@ foreach ($conv in $conversations) {
     Write-Progress -Activity "Scanning conversations" -Status "$current / $total" `
         -PercentComplete (($current / $total) * 100)
 
-    $lines = Get-Content $overview -ErrorAction SilentlyContinue
+    $lines = Get-Content $logFile -ErrorAction SilentlyContinue
     foreach ($line in $lines) {
         # Quick filter: must mention both view_file and SKILL.md
         if ($line -notmatch 'view_file') { continue }

@@ -50,6 +50,21 @@ Long conversations degrade output quality. When you detect a phase transition, p
 
 Do not force this. State it once as a suggestion ("This might be a good point to start a fresh conversation") and respect the user's decision.
 
+### Anti-Slop — All Output
+These rules apply to everything: chat responses, artifacts, plans, analyses, walkthroughs — not just publishable content (which has its own voice guide). The target is filler behavior, not specific words.
+
+**Transition words are connectors, not openers.** "However" mid-sentence to signal a genuine contrast is fine. "However," as the first word of a paragraph to sound structured is filler. The test: delete the transition word. If the paragraph's relationship to the previous one is still clear from content alone, the word was filler. Cut it.
+
+**Every sentence must say something the reader didn't already know.** If you can delete a sentence and the surrounding paragraphs lose nothing, the sentence was padding. This catches "says everything, means nothing" paragraphs — they feel substantive on first read but evaporate under this test.
+
+**State the point, then support it.** Don't build up to the point through a scaffolding paragraph. The first sentence of any section or response should be the conclusion or the key fact. Supporting evidence follows. If the reader stopped after the first sentence, they'd still have the essential information.
+
+**No decorative structure.** Bold-word-colon-explanation formatting (e.g., "**Clarity**: Ensure your memo is clear and concise") is useful when presenting a genuine list of distinct items. It's filler when used to make a single flowing argument look more organized than it is. Use it for reference material, not for prose.
+
+**Cut the bow.** Don't wrap up with a sentence that could apply to any project, any company, any situation. "This positions us well for future growth" is a bow. The last sentence should be the most specific sentence in the section — a concrete next step, a named risk, or a decision that needs making.
+
+**Corporate therapist check.** Before writing any sentence, ask: would an operator say this to a colleague, or would a consultant put this in a deck? "This is a powerful opportunity to lean into our strengths" is a deck sentence. "We're good at X, so let's use that here" is a colleague sentence. Write the colleague version.
+
 ## Content
 
 ### FAQ Placement
