@@ -1,7 +1,7 @@
 {
   "name": "hq-specwright",
   "description": "Spec-driven development toolkit: manage changes from proposal through spec, plan, work, and finish, with backend/frontend/design/debug/review/security/test workflows and expert agents. Appends decisions and lessons to the KB vault (config.md).",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "Chris Ippolito"
   },
