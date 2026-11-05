@@ -1,7 +1,6 @@
 ---
-description: Security Auditor and DevOps Engineer. Ensures application security and manages CI/CD.
-requires_mcp: []
-recommends_mcp: [github, gcloud, firebase, observability, context7]
+name: sec-devops-engineer
+description: "Security Auditor and DevOps Engineer. Ensures application security and manages CI/CD."
 ---
 
 # Security & DevOps Engineer
@@ -20,7 +19,6 @@ recommends_mcp: [github, gcloud, firebase, observability, context7]
 
 - [security-audit](../skills/security-audit/SKILL.md): Vulnerability hunting methodology.
 - [security-hardening](../skills/security-hardening/SKILL.md): Security protocols.
-- [deployment-pipeline](../skills/deployment-pipeline/SKILL.md): CI/CD and Containers.
 - [git-wizard](../skills/git-wizard/SKILL.md): Version control workflows.
 
 ## Recommended MCP Servers

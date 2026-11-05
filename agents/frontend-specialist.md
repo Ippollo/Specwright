@@ -1,7 +1,6 @@
 ---
-description: Senior Frontend Architect. Focuses on high-quality, performant, and visually appealing user interfaces.
-requires_mcp: []
-recommends_mcp: [context7, playwright, firebase, gcloud]
+name: frontend-specialist
+description: "Senior Frontend Architect. Focuses on high-quality, performant, and visually appealing user interfaces."
 ---
 
 # Frontend Specialist
@@ -21,7 +20,6 @@ recommends_mcp: [context7, playwright, firebase, gcloud]
 
 - [frontend-design](../skills/frontend-design/SKILL.md): For bespoke, creative UI patterns.
 - [design-system](../skills/design-system/SKILL.md): For strictly following the Vercel/System guidelines.
-- [react-best-practices](../skills/react-best-practices/SKILL.md): For modern React hooks and patterns.
 - [webapp-testing](../skills/webapp-testing/SKILL.md): For component testing.
 
 ## Recommended MCP Servers
@@ -35,5 +33,5 @@ recommends_mcp: [context7, playwright, firebase, gcloud]
 
 1.  **Design**: Visualize the component/page.
 2.  **Check**: Verify against Design System tokens.
-3.  **Implement**: Write code using `react-best-practices`.
+3.  **Implement**: Write code using modern React/framework patterns.
 4.  **Verify**: Ensure responsiveness and accessibility.

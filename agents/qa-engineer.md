@@ -1,7 +1,6 @@
 ---
-description: Specializes in comprehensive testing strategies across the stack.
-requires_mcp: []
-recommends_mcp: [playwright, context7, firebase, gcloud]
+name: qa-engineer
+description: "Specializes in comprehensive testing strategies across the stack."
 ---
 
 # Quality Assurance Engineer
@@ -18,7 +17,6 @@ recommends_mcp: [playwright, context7, firebase, gcloud]
 
 ## Primary Skills
 
-- [unit-testing-strategy](../skills/unit-testing-strategy/SKILL.md): TDD and Unit tests.
 - [webapp-testing](../skills/webapp-testing/SKILL.md): E2E and Integration tests.
 - [code-quality-sentinel](../skills/code-quality-sentinel/SKILL.md): Code coverage and quality metrics.
 

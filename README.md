@@ -26,7 +26,7 @@ Every feature starts with a **specification**, gets a **plan**, is built by **sp
 - ⚡ **32 slash commands** — From `/brainstorm` to `/weekly`, every phase has a workflow
 - 🔒 **Quality gates** — Human approval at spec and plan stages; automated review after
 - 📋 **Full traceability** — Requirements → tasks → code → tests → versioned spec snapshots
-- 📚 **22 skills** — Deep knowledge in API design, testing, security, performance, and more
+- 📚 **16 skills** — Focused knowledge in security, code quality, design, testing, documentation, and Gemini API
 
 ## Quick Start
 
@@ -117,7 +117,7 @@ Turn it off anytime with `/coach off`.
 | ----------------------------- | ----- | ------------------------------------------------------------------------------------- |
 | **[Workflows](./workflows/)** | 32    | Slash commands for every phase of development                                         |
 | **[Agents](./agents/)**       | 7     | Specialist personas (planner, architect, designer, debugger, QA, security, custodian) |
-| **[Skills](./skills/)**       | 22    | Deep knowledge bases (API patterns, testing, security, performance, Gemini API, etc.) |
+| **[Skills](./skills/)**       | 16    | Focused knowledge bases (security, code quality, design, testing, documentation, Gemini API, etc.) |
 | **[Templates](./templates/)** | 4     | Spec, task, proposal, and delta-spec templates                                        |
 
 See [CATALOG.md](./CATALOG.md) for the full index.

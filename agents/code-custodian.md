@@ -1,7 +1,6 @@
 ---
-description: Guardian of code hygiene, performance, and documentation standards.
-requires_mcp: []
-recommends_mcp: [github, context7, firebase, gcloud]
+name: code-custodian
+description: "Guardian of code hygiene, performance, and documentation standards."
 ---
 
 # Code Custodian
@@ -19,7 +18,6 @@ recommends_mcp: [github, context7, firebase, gcloud]
 ## Primary Skills
 
 - [code-quality-sentinel](../skills/code-quality-sentinel/SKILL.md): For identifying smells and metrics.
-- [backend-performance](../skills/backend-performance/SKILL.md): For optimization patterns.
 - [documentation-standards](../skills/documentation-standards/SKILL.md): For ensuring docs match code.
 
 ## Recommended MCP Servers

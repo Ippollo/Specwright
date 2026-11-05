@@ -128,7 +128,7 @@ Before starting, analyze the user request to determine the correct mode.
     - Is the user asking to _improve_, _fix_, or _audit_ an existing skill?
 
 2.  **Check Catalog**:
-    - Read `c:\HQ\specwright\CATALOG.md`.
+    - Read `{plugin_root}\CATALOG.md`.
     - Also check `.agents/skills/` in the current project for local skills.
     - **No Match** → Go to **[CREATE Mode](#create-mode)**.
     - **Partial/Full Match** → Go to **[MODIFY Mode](#modify-mode)**.
@@ -145,7 +145,7 @@ Ask the user:
 
 > _"Should this be a **global** skill (useful across any project) or a **local** skill (specific to this project)?"_
 
-- **Global** → Creates in `c:\HQ\specwright\skills\<skill-name>\`
+- **Global** → Creates in `{plugin_root}\skills\<skill-name>\`
 - **Local** → Creates in `.agents/skills/<skill-name>\` within the current project
 
 If invoked from `/discover` gap-filling, default to **local**.
@@ -190,7 +190,7 @@ Choose a template based on the content design assessment and the classified patt
 
 **If Global:**
 
-1.  **Create Directory**: `c:\HQ\specwright\skills\<skill-name>\`
+1.  **Create Directory**: `{plugin_root}\skills\<skill-name>\`
 2.  **Write SKILL.md**: Use the selected template, populated with content from Steps 3-4.
 3.  **Create Subdirectories**: `scripts/`, `resources/`, `docs/` (if Intermediate/Advanced).
 
@@ -204,7 +204,7 @@ Choose a template based on the content design assessment and the classified patt
 
 **If Global:**
 
-- Append the new skill to `c:\HQ\specwright\CATALOG.md` in the appropriate category section.
+- Append the new skill to `{plugin_root}\CATALOG.md` in the appropriate category section.
 - Format: `- [skill-name](./skills/skill-name/SKILL.md): <description>`
 
 **If Local:**
@@ -280,7 +280,7 @@ Certify the skill is **effective**:
 
 ## Skill Governance
 
-Rules for maintaining the skill library. These apply to both global (`c:\HQ\specwright\skills\`) and local (`.agents/skills/`) skills.
+Rules for maintaining the skill library. These apply to both global (`{plugin_root}\skills\`) and local (`.agents/skills/`) skills.
 
 ### Lifecycle Stages
 
@@ -308,7 +308,7 @@ If a new skill overlaps with an existing one:
 
 When a local skill proves valuable across multiple projects:
 
-1. Copy the skill folder to `c:\HQ\specwright\skills\`.
+1. Copy the skill folder to `{plugin_root}\skills\`.
 2. Run through both Validation Checklists above.
 3. Add an entry to `CATALOG.md`.
 4. Remove or replace the local copy with a note pointing to the global version.

@@ -1,7 +1,6 @@
 ---
-description: Dedicated to systematic root cause analysis using structured phase gates. Use for test failures, regressions, performance bottlenecks, and unexpected behavior.
-requires_mcp: []
-recommends_mcp: [github, context7, firebase, gcloud, observability]
+name: debugger
+description: "Dedicated to systematic root cause analysis using structured phase gates. Use for test failures, regressions, performance bottlenecks, and unexpected behavior."
 ---
 
 # Debugger
@@ -30,7 +29,6 @@ If you haven't completed Phase 1, you cannot propose fixes. No exceptions.
 
 - [webapp-testing](../skills/webapp-testing/SKILL.md): For writing reproduction tests.
 - [code-quality-sentinel](../skills/code-quality-sentinel/SKILL.md): For analyzing code logic.
-- [unit-testing-strategy](../skills/unit-testing-strategy/SKILL.md): For TDD fixes.
 - [verification-gate](../skills/verification-gate/SKILL.md): For evidence-backed completion claims.
 - [gemini-api-dev](../skills/gemini-api-dev/SKILL.md): Correct API usage and model specs. _(Use when debugging Gemini API errors.)_
 
